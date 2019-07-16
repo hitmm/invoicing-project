@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/invoicing-core/invoicing-core.iml" filepath="$PROJECT_DIR$/invoicing-core/invoicing-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/invoicing-module/invoicing-module.iml" filepath="$PROJECT_DIR$/invoicing-module/invoicing-module.iml" />
       <module fileurl="file://$PROJECT_DIR$/invoicing-project.iml" filepath="$PROJECT_DIR$/invoicing-project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/invoicing-webapp/invoicing-webapp.iml" filepath="$PROJECT_DIR$/invoicing-webapp/invoicing-webapp.iml" />
     </modules>
   </component>
 </project>

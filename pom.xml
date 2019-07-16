@@ -17,11 +17,12 @@
 		<!-- 编译源时候默认的编码 -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<!-- quartz begin -->
-		<quartz.version>2.2.1</quartz.version>
+		<quartz.version>2.3.1</quartz.version>
 		<!-- quartz end -->
 		<!-- jackson begin -->
 		<jackson.core.asl.version>1.9.8</jackson.core.asl.version>
 		<jackson.mapper.asl.version>1.9.8</jackson.mapper.asl.version>
+		<jackson.version>2.9.9</jackson.version>
 		<!-- jackson end -->
 		<!-- avax.mail begin -->
 		<javax.mail.version>1.4.7</javax.mail.version>
@@ -45,7 +46,7 @@
 		<ch.qos.logback.version>1.0.7</ch.qos.logback.version>
 		<!--log end -->
 		<!--Spring begin -->
-		<spring.version>3.2.0.RELEASE</spring.version>
+		<spring.version>4.3.24.RELEASE</spring.version>
 		<!--Spring end -->
 		<!-- dao begin -->
 		<hibernate.version>4.1.8.Final</hibernate.version>
@@ -76,6 +77,32 @@
 	<!-- 管理jar的依赖，在此处相当于生命各种jar的版本和作用域，那么在子POM中就可以不用重复定义该jar的版本和作用,默认的scope为compile,默认的type为jar -->
 	<dependencyManagement>
 		<dependencies>
+
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-core</artifactId>
+				<version>${jackson.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-databind</artifactId>
+				<version>${jackson.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.fasterxml.jackson.core</groupId>
+				<artifactId>jackson-annotations</artifactId>
+				<version>${jackson.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.fasterxml.jackson.module</groupId>
+				<artifactId>jackson-module-jaxb-annotations</artifactId>
+				<version>${jackson.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.fasterxml.jackson.dataformat</groupId>
+				<artifactId>jackson-dataformat-xml</artifactId>
+				<version>${jackson.version}</version>
+			</dependency>
 			<!-- quartz begin -->
 			<dependency>
 				<groupId>org.quartz-scheduler</groupId>
@@ -356,12 +383,6 @@
 				<groupId>com.alibaba</groupId>
 				<artifactId>fastjson</artifactId>
 				<version>${com.alibaba.fastjson.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.google.code.kaptcha</groupId>
-				<artifactId>kaptcha</artifactId>
-				<classifier>jdk15</classifier>
-				<version>${com.google.code.kaptcha}</version>
 			</dependency>
 			<!-- compent end -->
 

@@ -1,0 +1,15 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="invoicing-webapp:war">
+    <output-path>$PROJECT_DIR$/invoicing-webapp/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>invoicing-webapp</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="invoicing-webapp.war">
+      <element id="artifact" artifact-name="invoicing-webapp:war exploded" />
+      <element id="library" level="project" name="kaptcha-2.3" />
+    </root>
+  </artifact>
+</component>

@@ -13,6 +13,8 @@ File Encoding         : 65001
 Date: 2015-02-03 13:24:44
 */
 
+create database invoicing;
+use invoicing;
 SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------
