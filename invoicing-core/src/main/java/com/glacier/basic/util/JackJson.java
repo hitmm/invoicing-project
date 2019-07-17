@@ -134,7 +134,7 @@ public class JackJson {
         ObjectMapper mapper = new ObjectMapper();
         FilterProvider filters = new SimpleFilterProvider().addFilter(filterName, SimpleBeanPropertyFilter.serializeAllExcept(properties));
         mapper.setSerializationInclusion(Include.NON_NULL);
-        mapper.setFilters(filters);
+        mapper.setFilterProvider(filters);
         try {
             return mapper.writeValueAsString(object);
         } catch (JsonGenerationException e) {
