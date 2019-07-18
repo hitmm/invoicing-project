@@ -230,7 +230,7 @@ public class ResourcesController extends AbstractController{
 			String fPath = ""+sqlWebapp+"\\src\\main\\webapp\\resources\\backupsql\\" + netlaon_name+ "";
 			Runtime rt = Runtime.getRuntime();
             // 调用 mysql命令
-			Process child = rt.exec(""+sqlWebapp+"\\src\\main\\webapp\\resources\\mysql\\mysql.exe -uroot -proot frame");
+			Process child = rt.exec("C:\\Users\\IdeaProjects\\invoicing\\invoicing-webapp\\src\\main\\webapp\\resources\\mysql\\mysql.exe -uroot -proot frame");
 			OutputStream out = child.getOutputStream();// 控制台的输入信息作为输出流
 			String inStr;
 			StringBuffer sb = new StringBuffer("");
