@@ -7,14 +7,14 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="invoicing-core" />
-        <module name="invoicing-module" />
         <module name="invoicing-webapp" />
+        <module name="invoicing-module" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="invoicing-core" target="1.8" />
       <module name="invoicing-module" target="1.8" />
-      <module name="invoicing-project" target="1.8" />
+      <module name="invoicing-project" target="1.5" />
       <module name="invoicing-webapp" target="1.8" />
     </bytecodeTargetLevel>
   </component>
