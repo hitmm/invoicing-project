@@ -19,14 +19,13 @@
  */
 package com.glacier.frame.service.system;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.Set;
-
+import com.glacier.frame.dao.system.*;
+import com.glacier.frame.dto.service.system.AuthMenuActionDTO;
+import com.glacier.frame.entity.common.util.CommonBuiltin;
+import com.glacier.frame.entity.system.*;
+import com.glacier.frame.util.MethodLog;
+import com.glacier.jqueryui.util.JqReturnJson;
+import com.glacier.jqueryui.util.Tree;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.subject.Subject;
@@ -35,31 +34,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.glacier.frame.dao.system.ActionMapper;
-import com.glacier.frame.dao.system.AuthorityMapper;
-import com.glacier.frame.dao.system.DepRoleMapper;
-import com.glacier.frame.dao.system.MenuMapper;
-import com.glacier.frame.dao.system.RoleMapper;
-import com.glacier.frame.dao.system.UserMapper;
-import com.glacier.frame.dao.system.UserRoleMapper;
-import com.glacier.frame.dto.service.system.AuthMenuActionDTO;
-import com.glacier.frame.entity.common.util.CommonBuiltin;
-import com.glacier.frame.entity.system.Action;
-import com.glacier.frame.entity.system.ActionExample;
-import com.glacier.frame.entity.system.Authority;
-import com.glacier.frame.entity.system.AuthorityExample;
-import com.glacier.frame.entity.system.DepRoleExample;
-import com.glacier.frame.entity.system.DepRoleKey;
-import com.glacier.frame.entity.system.Menu;
-import com.glacier.frame.entity.system.MenuExample;
-import com.glacier.frame.entity.system.Role;
-import com.glacier.frame.entity.system.RoleExample;
-import com.glacier.frame.entity.system.User;
-import com.glacier.frame.entity.system.UserRoleExample;
-import com.glacier.frame.entity.system.UserRoleKey;
-import com.glacier.frame.util.MethodLog;
-import com.glacier.jqueryui.util.JqReturnJson;
-import com.glacier.jqueryui.util.Tree;
+import java.util.*;
+import java.util.Map.Entry;
  
 /***
  * @ClassName:  AuthorityService
@@ -215,7 +191,7 @@ public class AuthorityService {
      * @Description: TODO(根据用户Id获取角色列表)
      * @param @param userId
      * @param @return
-     * @throws 备注
+     * @throws Exception
      *<p>
      *已检查测试:Green
      *<p>
@@ -243,7 +219,7 @@ public class AuthorityService {
      * @param  @param depId
      * @param  @return
      * @throws 
-     * 备注<p>已检查测试:Green<p>
+     * 已检查测试:Green<p>
      */
     public Object getRolesAndRationalByDepId(String depId) {
         RoleExample roleExample = new RoleExample();// 后面做优化，需要
@@ -284,7 +260,7 @@ public class AuthorityService {
         // 管理员类型用户只有所属创建者才能进行修改
         Role originalRole = roleMapper.selectByPrimaryKey(roleId);// 获取原角色相关信息
         // 管理员类型角色只有所属创建者才能进行修改
-        if (originalRole.getBuiltin() == CommonBuiltin.admin) {
+        if (Objects.equals(originalRole.getBuiltin(), CommonBuiltin.admin.name())) {
             if (!pricipalUser.getUserId().equals(originalRole.getCreater())) {
                 returnResult.setMsg("管理员类型角色只有所属创建者才能对其进行授权");
                 return returnResult;

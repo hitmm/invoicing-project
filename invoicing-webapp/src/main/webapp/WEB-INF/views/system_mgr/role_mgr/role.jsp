@@ -67,6 +67,11 @@
 				title:'创建者',
 				sortable:true,
 				width:120
+			},{
+				field:'companyId',
+				title:'公司ID',
+				sortable:true,
+				width:120
 			}
 		]],
 		pagination : true,//True 就会在 datagrid 的底部显示分页栏

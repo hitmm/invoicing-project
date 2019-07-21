@@ -10,31 +10,6 @@
  */
 package com.glacier.frame.compent.realm;
 
-import java.lang.reflect.InvocationTargetException;
-import java.util.Date;
-import java.util.List;
-
-import javax.annotation.PostConstruct;
-
-import org.apache.commons.lang3.StringUtils;
-import org.apache.shiro.SecurityUtils;
-import org.apache.shiro.authc.AuthenticationException;
-import org.apache.shiro.authc.AuthenticationInfo;
-import org.apache.shiro.authc.AuthenticationToken;
-import org.apache.shiro.authc.DisabledAccountException;
-import org.apache.shiro.authc.SimpleAuthenticationInfo;
-import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
-import org.apache.shiro.authz.AuthorizationInfo;
-import org.apache.shiro.authz.SimpleAuthorizationInfo;
-import org.apache.shiro.cache.Cache;
-import org.apache.shiro.realm.AuthorizingRealm;
-import org.apache.shiro.subject.PrincipalCollection;
-import org.apache.shiro.subject.SimplePrincipalCollection;
-import org.apache.shiro.subject.Subject;
-import org.apache.shiro.util.ByteSource;
-import org.springframework.beans.factory.annotation.Autowired;
-
-
 import com.glacier.basic.util.RandomGUID;
 import com.glacier.frame.dao.system.AuthorityMapper;
 import com.glacier.frame.dao.system.LoginLogMapper;
@@ -46,6 +21,24 @@ import com.glacier.frame.entity.system.User;
 import com.glacier.frame.entity.system.UserExample;
 import com.glacier.frame.service.system.UserService;
 import com.glacier.security.util.Encodes;
+import org.apache.commons.lang3.StringUtils;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authc.*;
+import org.apache.shiro.authc.credential.HashedCredentialsMatcher;
+import org.apache.shiro.authz.AuthorizationInfo;
+import org.apache.shiro.authz.SimpleAuthorizationInfo;
+import org.apache.shiro.cache.Cache;
+import org.apache.shiro.realm.AuthorizingRealm;
+import org.apache.shiro.subject.PrincipalCollection;
+import org.apache.shiro.subject.SimplePrincipalCollection;
+import org.apache.shiro.subject.Subject;
+import org.apache.shiro.util.ByteSource;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import javax.annotation.PostConstruct;
+import java.lang.reflect.InvocationTargetException;
+import java.util.Date;
+import java.util.List;
 
 /**
  * 

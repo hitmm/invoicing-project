@@ -19,13 +19,12 @@
  */
 package com.glacier.frame.dto.query.system;
 
-import java.util.Date;
-
+import com.glacier.frame.entity.system.Role;
+import com.glacier.frame.entity.system.RoleExample;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 
-import com.glacier.frame.entity.system.Role;
-import com.glacier.frame.entity.system.RoleExample.Criteria;
+import java.util.Date;
 
 /**
  * @ClassName: RoleQueryDTO
@@ -56,7 +55,7 @@ public class RoleQueryDTO extends Role {
         this.createEndTime = createEndTime;
     }
     
-    public void setQueryCondition(Criteria queryCriteria){
+    public void setQueryCondition(RoleExample.Criteria queryCriteria){
         if(null != this.getRoleCnName() && StringUtils.isNotBlank(this.getRoleCnName())){//角色名Like查询
             queryCriteria.andRoleCnNameLike("%" + this.getRoleCnName() + "%");
         }

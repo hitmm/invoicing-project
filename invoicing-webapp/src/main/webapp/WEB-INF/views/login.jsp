@@ -25,6 +25,22 @@
 			#login_kaptcha_span{
 				cursor: pointer;
 			}
+			body{
+				background-image: url("${pageContext.request.contextPath}/resources/images/login.jpg");
+			}
+			.content{
+				position: relative;
+				left: 50%;
+				top: 50%;
+				-webkit-transform: translate(-50%,50%);
+				-ms-transform: translate(-50%,50%);
+				transform: translate(-50%,50%);
+				background-color: rgba(255,255,255,0.5);
+				-moz-box-shadow:10px 10px 20px #333333;
+				-webkit-box-shadow:10px 10px 20px #333333;
+				box-shadow:10px 10px 20px #333333;
+				border-radius:10px;
+			}
 		</style>
 	</head>
 	<body>
@@ -36,14 +52,11 @@
 	    </div>
 		<div id="normal_container" class="container">
 			<div class="row">
-				<div class="col-md-6 hidden-sm hidden-xs">
-					<img src="${pageContext.request.contextPath}/resources/images/login.jpg" class="img-responsive" alt="Glacier Soft" />
-				</div>
-				<div class="col-md-6 col-xs-12">
+				<div class="content col-md-6 col-xs-12">
 					<div class="col-lg-12 visible-lg" style="height:120px;">
 					</div>
 					<div class="page-header">
-						<h1>Invoicing Management System <br><small>&nbsp;&nbsp;进 销 存 管 理 系 统</small></h1>
+						<h1 style="font-size:34px;font-weight:bold;">Invoicing Management System <br><br><small style="font-size:29px;color:grey;font-weight:bold;">&nbsp;&nbsp;进 销 存 管 理 系 统</small></h1>
 					</div>
 					<div class="row">
 						<div class="col-md-10 col-xs-12">
@@ -62,8 +75,8 @@
 								</div>
 								
 								<div id="captcha_form_group" class="form-group">
-									 
-									<div class="col-md-6 col-md-offset-3 col-xs-9">
+									<label for="captcha" class="control-label col-xs-3 hidden-sm hidden-xs">验证码</label>
+									<div class="col-md-9 col-xs-12">
 										<div class="input-group">
 											<span id="login_kaptcha_span" class="input-group-addon">
 												<div style="width:110px;height:32px;">
@@ -74,8 +87,9 @@
 										</div>
 									</div>
 									
-									<label for="submit" class="control-label col-xs-3 hidden-sm hidden-xs"></label>
+									<label for="login_submit" class="control-label col-xs-3 hidden-sm hidden-xs"></label>
 									<div class="col-md-3 col-xs-12" style="float: right">
+										<a><br></a>
 										<button id="login_submit" class="btn btn-primary btn-lg btn-block">登录</button>
 									</div>
 								</div>

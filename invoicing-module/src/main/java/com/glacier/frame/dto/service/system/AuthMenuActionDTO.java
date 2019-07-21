@@ -26,7 +26,7 @@ package com.glacier.frame.dto.service.system;
  * @email 289556866@qq.com
  * @date 2014-1-21 上午10:43:00
  */
-public class AuthMenuActionDTO {
+public class  AuthMenuActionDTO {
 
     private String id;
 

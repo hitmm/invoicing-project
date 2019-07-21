@@ -19,21 +19,7 @@
  */
 package com.glacier.frame.service.system;
 
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
-import org.apache.commons.lang3.StringUtils;
-import org.apache.shiro.SecurityUtils;
-import org.apache.shiro.subject.Subject;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Propagation;
-import org.springframework.transaction.annotation.Transactional;
 import com.glacier.basic.util.RandomGUID;
-import com.glacier.jqueryui.util.JqGridReturn;
-import com.glacier.jqueryui.util.JqPager;
-import com.glacier.jqueryui.util.JqReturnJson;
 import com.glacier.frame.dao.system.ActionMapper;
 import com.glacier.frame.dao.system.AuthorityMapper;
 import com.glacier.frame.dao.system.RoleMapper;
@@ -42,9 +28,24 @@ import com.glacier.frame.entity.common.util.CommonBuiltin;
 import com.glacier.frame.entity.system.AuthorityExample;
 import com.glacier.frame.entity.system.Role;
 import com.glacier.frame.entity.system.RoleExample;
-import com.glacier.frame.entity.system.RoleExample.Criteria;
 import com.glacier.frame.entity.system.User;
 import com.glacier.frame.util.MethodLog;
+import com.glacier.jqueryui.util.JqGridReturn;
+import com.glacier.jqueryui.util.JqPager;
+import com.glacier.jqueryui.util.JqReturnJson;
+import org.apache.commons.lang3.StringUtils;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.subject.Subject;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
+import java.util.Objects;
 
 /***
  * 
@@ -93,7 +94,7 @@ public class RoleService {
     public Object listAsGrid(RoleQueryDTO roleQueryDTO, JqPager pager) {
         JqGridReturn returnResult = new JqGridReturn();
         RoleExample roleExample = new RoleExample();
-        Criteria queryCriteria = roleExample.createCriteria();
+        RoleExample.Criteria queryCriteria = roleExample.createCriteria();
         roleQueryDTO.setQueryCondition(queryCriteria);
         if (null != pager.getPage() && null != pager.getRows()) {// 设置排序信息
             roleExample.setLimitStart((pager.getPage() - 1) * pager.getRows());
@@ -145,7 +146,7 @@ public class RoleService {
             return returnResult;
         }
         role.setRoleId(RandomGUID.getRandomGUID());// 初始化新建角色信息
-        role.setBuiltin(CommonBuiltin.custom);// 在业务新建的角色为自定义
+        role.setBuiltin(CommonBuiltin.custom.name());// 在业务新建的角色为自定义
         role.setCreater(pricipalUser.getUserId());
         //构建时间字符串
         Calendar cal = Calendar.getInstance();  
@@ -191,7 +192,7 @@ public class RoleService {
         int count = 0;
         Role originalRole = roleMapper.selectByPrimaryKey(role.getRoleId());// 获取原角色相关信息
         // 管理员类型角色只有所属创建者才能进行修改
-        if (originalRole.getBuiltin() == CommonBuiltin.admin) {
+        if (Objects.equals(originalRole.getBuiltin(), CommonBuiltin.admin.name())) {
             if (!pricipalUser.getUserId().equals(originalRole.getCreater())) {
                 returnResult.setMsg("管理员类型角色只有所属创建者才能对其进行修改");
                 return returnResult;

@@ -2,7 +2,6 @@ package com.glacier.frame.entity.system;
 
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.Iterator;
 import java.util.List;
 
 public class RoleExample {
@@ -12,12 +11,30 @@ public class RoleExample {
 
     protected List<Criteria> oredCriteria;
 
+
     protected int limitStart = -1;
 
     protected int limitEnd = -1;
 
+
     public RoleExample() {
         oredCriteria = new ArrayList<Criteria>();
+    }
+
+    public int getLimitStart() {
+        return limitStart;
+    }
+
+    public void setLimitStart(int limitStart) {
+        this.limitStart = limitStart;
+    }
+
+    public int getLimitEnd() {
+        return limitEnd;
+    }
+
+    public void setLimitEnd(int limitEnd) {
+        this.limitEnd = limitEnd;
     }
 
     public void setOrderByClause(String orderByClause) {
@@ -69,22 +86,6 @@ public class RoleExample {
         distinct = false;
     }
 
-    public void setLimitStart(int limitStart) {
-        this.limitStart=limitStart;
-    }
-
-    public int getLimitStart() {
-        return limitStart;
-    }
-
-    public void setLimitEnd(int limitEnd) {
-        this.limitEnd=limitEnd;
-    }
-
-    public int getLimitEnd() {
-        return limitEnd;
-    }
-
     protected abstract static class GeneratedCriteria {
         protected List<Criterion> criteria;
 
@@ -124,32 +125,6 @@ public class RoleExample {
                 throw new RuntimeException("Between values for " + property + " cannot be null");
             }
             criteria.add(new Criterion(condition, value1, value2));
-        }
-
-        protected void addCriterionForJDBCDate(String condition, Date value, String property) {
-            if (value == null) {
-                throw new RuntimeException("Value for " + property + " cannot be null");
-            }
-            addCriterion(condition, new java.sql.Date(value.getTime()), property);
-        }
-
-        protected void addCriterionForJDBCDate(String condition, List<Date> values, String property) {
-            if (values == null || values.size() == 0) {
-                throw new RuntimeException("Value list for " + property + " cannot be null or empty");
-            }
-            List<java.sql.Date> dateList = new ArrayList<java.sql.Date>();
-            Iterator<Date> iter = values.iterator();
-            while (iter.hasNext()) {
-                dateList.add(new java.sql.Date(iter.next().getTime()));
-            }
-            addCriterion(condition, dateList, property);
-        }
-
-        protected void addCriterionForJDBCDate(String condition, Date value1, Date value2, String property) {
-            if (value1 == null || value2 == null) {
-                throw new RuntimeException("Between values for " + property + " cannot be null");
-            }
-            addCriterion(condition, new java.sql.Date(value1.getTime()), new java.sql.Date(value2.getTime()), property);
         }
 
         public Criteria andRoleIdIsNull() {
@@ -583,52 +558,122 @@ public class RoleExample {
         }
 
         public Criteria andCreateTimeEqualTo(Date value) {
-            addCriterionForJDBCDate("temp_role.create_time =", value, "createTime");
+            addCriterion("temp_role.create_time =", value, "createTime");
             return (Criteria) this;
         }
 
         public Criteria andCreateTimeNotEqualTo(Date value) {
-            addCriterionForJDBCDate("temp_role.create_time <>", value, "createTime");
+            addCriterion("temp_role.create_time <>", value, "createTime");
             return (Criteria) this;
         }
 
         public Criteria andCreateTimeGreaterThan(Date value) {
-            addCriterionForJDBCDate("temp_role.create_time >", value, "createTime");
+            addCriterion("temp_role.create_time >", value, "createTime");
             return (Criteria) this;
         }
 
         public Criteria andCreateTimeGreaterThanOrEqualTo(Date value) {
-            addCriterionForJDBCDate("temp_role.create_time >=", value, "createTime");
+            addCriterion("temp_role.create_time >=", value, "createTime");
             return (Criteria) this;
         }
 
         public Criteria andCreateTimeLessThan(Date value) {
-            addCriterionForJDBCDate("temp_role.create_time <", value, "createTime");
+            addCriterion("temp_role.create_time <", value, "createTime");
             return (Criteria) this;
         }
 
         public Criteria andCreateTimeLessThanOrEqualTo(Date value) {
-            addCriterionForJDBCDate("temp_role.create_time <=", value, "createTime");
+            addCriterion("temp_role.create_time <=", value, "createTime");
             return (Criteria) this;
         }
 
         public Criteria andCreateTimeIn(List<Date> values) {
-            addCriterionForJDBCDate("temp_role.create_time in", values, "createTime");
+            addCriterion("temp_role.create_time in", values, "createTime");
             return (Criteria) this;
         }
 
         public Criteria andCreateTimeNotIn(List<Date> values) {
-            addCriterionForJDBCDate("temp_role.create_time not in", values, "createTime");
+            addCriterion("temp_role.create_time not in", values, "createTime");
             return (Criteria) this;
         }
 
         public Criteria andCreateTimeBetween(Date value1, Date value2) {
-            addCriterionForJDBCDate("temp_role.create_time between", value1, value2, "createTime");
+            addCriterion("temp_role.create_time between", value1, value2, "createTime");
             return (Criteria) this;
         }
 
         public Criteria andCreateTimeNotBetween(Date value1, Date value2) {
-            addCriterionForJDBCDate("temp_role.create_time not between", value1, value2, "createTime");
+            addCriterion("temp_role.create_time not between", value1, value2, "createTime");
+            return (Criteria) this;
+        }
+
+        public Criteria andCompanyIdIsNull() {
+            addCriterion("temp_role.company_id is null");
+            return (Criteria) this;
+        }
+
+        public Criteria andCompanyIdIsNotNull() {
+            addCriterion("temp_role.company_id is not null");
+            return (Criteria) this;
+        }
+
+        public Criteria andCompanyIdEqualTo(String value) {
+            addCriterion("temp_role.company_id =", value, "companyId");
+            return (Criteria) this;
+        }
+
+        public Criteria andCompanyIdNotEqualTo(String value) {
+            addCriterion("temp_role.company_id <>", value, "companyId");
+            return (Criteria) this;
+        }
+
+        public Criteria andCompanyIdGreaterThan(String value) {
+            addCriterion("temp_role.company_id >", value, "companyId");
+            return (Criteria) this;
+        }
+
+        public Criteria andCompanyIdGreaterThanOrEqualTo(String value) {
+            addCriterion("temp_role.company_id >=", value, "companyId");
+            return (Criteria) this;
+        }
+
+        public Criteria andCompanyIdLessThan(String value) {
+            addCriterion("temp_role.company_id <", value, "companyId");
+            return (Criteria) this;
+        }
+
+        public Criteria andCompanyIdLessThanOrEqualTo(String value) {
+            addCriterion("temp_role.company_id <=", value, "companyId");
+            return (Criteria) this;
+        }
+
+        public Criteria andCompanyIdLike(String value) {
+            addCriterion("temp_role.company_id like", value, "companyId");
+            return (Criteria) this;
+        }
+
+        public Criteria andCompanyIdNotLike(String value) {
+            addCriterion("temp_role.company_id not like", value, "companyId");
+            return (Criteria) this;
+        }
+
+        public Criteria andCompanyIdIn(List<String> values) {
+            addCriterion("temp_role.company_id in", values, "companyId");
+            return (Criteria) this;
+        }
+
+        public Criteria andCompanyIdNotIn(List<String> values) {
+            addCriterion("temp_role.company_id not in", values, "companyId");
+            return (Criteria) this;
+        }
+
+        public Criteria andCompanyIdBetween(String value1, String value2) {
+            addCriterion("temp_role.company_id between", value1, value2, "companyId");
+            return (Criteria) this;
+        }
+
+        public Criteria andCompanyIdNotBetween(String value1, String value2) {
+            addCriterion("temp_role.company_id not between", value1, value2, "companyId");
             return (Criteria) this;
         }
     }

@@ -23,6 +23,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import com.glacier.frame.dao.system.RoleMapper;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.subject.Subject;
@@ -35,7 +36,6 @@ import com.glacier.basic.util.JackJson;
 import com.glacier.basic.util.RandomGUID;
 import com.glacier.frame.dao.system.DepMapper;
 import com.glacier.frame.dao.system.DepRoleMapper;
-import com.glacier.frame.dao.system.RoleMapper;
 import com.glacier.frame.dao.system.UserMapper;
 import com.glacier.frame.dto.query.system.DepQueryDTO;
 import com.glacier.frame.entity.system.Dep;
@@ -132,8 +132,7 @@ public class DepService {
      * @Description: TODO(增加管理员)
      * @param @param dep
      * @param @return
-     * @throws Exception 
-     * @throws 备注
+     * @throws Exception
      * <p>
      * 已检查测试:Green
      * <p>
@@ -220,7 +219,7 @@ public class DepService {
      * @param  @param virtualRoot
      * @param  @return
      * @throws 
-     * 备注<p>已检查测试:Green<p>
+     * 已检查测试:Green<p>
      */
     public String getAllTreeDepNode(boolean virtualRoot) {
         List<Tree> items = new ArrayList<Tree>();

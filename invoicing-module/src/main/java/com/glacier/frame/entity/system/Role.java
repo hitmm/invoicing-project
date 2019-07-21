@@ -2,54 +2,37 @@ package com.glacier.frame.entity.system;
 
 import java.util.Date;
 
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-import javax.validation.constraints.Pattern;
-
-import com.alibaba.fastjson.annotation.JSONField;
-import com.glacier.frame.entity.common.util.CommonBuiltin;
-
 public class Role {
-    /**
-     * 角色主键ID
-     */
     private String roleId;
 
-    /**
-     * 角色英文名 字母组成，长度为2-25
-     */
-    @Pattern(regexp = "^[A-Z_]{4,16}$", message = "{Role.roleEnName.illegal}")
     private String roleEnName;
 
-    /**
-     * 角色名
-     */
-    @Pattern(regexp = "^[\u0391-\uFFE5]{2,10}", message = "{Role.roleCnName.illegal}")
     private String roleCnName;
 
-    private CommonBuiltin builtin;
+    private String builtin;
 
     private String remark;
 
     private String creater;
+
+    private Date createTime;
+
+    private String companyId;
+
+    private boolean checked;
+
 
     /**
      * 自定义字段：创建者显示字段
      */
     private String createrDisplay;
 
-    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
-    @Temporal(TemporalType.TIMESTAMP)
-    private Date createTime;
-
-    private boolean checked;
-
     public String getRoleId() {
         return roleId;
     }
 
     public void setRoleId(String roleId) {
-        this.roleId = roleId;
+        this.roleId = roleId == null ? null : roleId.trim();
     }
 
     public String getRoleEnName() {
@@ -57,7 +40,7 @@ public class Role {
     }
 
     public void setRoleEnName(String roleEnName) {
-        this.roleEnName = roleEnName;
+        this.roleEnName = roleEnName == null ? null : roleEnName.trim();
     }
 
     public String getRoleCnName() {
@@ -65,15 +48,15 @@ public class Role {
     }
 
     public void setRoleCnName(String roleCnName) {
-        this.roleCnName = roleCnName;
+        this.roleCnName = roleCnName == null ? null : roleCnName.trim();
     }
 
-    public CommonBuiltin getBuiltin() {
+    public String getBuiltin() {
         return builtin;
     }
 
-    public void setBuiltin(CommonBuiltin builtin) {
-        this.builtin = builtin;
+    public void setBuiltin(String builtin) {
+        this.builtin = builtin == null ? null : builtin.trim();
     }
 
     public String getRemark() {
@@ -81,7 +64,7 @@ public class Role {
     }
 
     public void setRemark(String remark) {
-        this.remark = remark;
+        this.remark = remark == null ? null : remark.trim();
     }
 
     public String getCreater() {
@@ -89,15 +72,7 @@ public class Role {
     }
 
     public void setCreater(String creater) {
-        this.creater = creater;
-    }
-
-    public String getCreaterDisplay() {
-        return createrDisplay;
-    }
-
-    public void setCreaterDisplay(String createrDisplay) {
-        this.createrDisplay = createrDisplay;
+        this.creater = creater == null ? null : creater.trim();
     }
 
     public Date getCreateTime() {
@@ -108,6 +83,14 @@ public class Role {
         this.createTime = createTime;
     }
 
+    public String getCompanyId() {
+        return companyId;
+    }
+
+    public void setCompanyId(String companyId) {
+        this.companyId = companyId == null ? null : companyId.trim();
+    }
+
     public boolean isChecked() {
         return checked;
     }
@@ -116,4 +99,11 @@ public class Role {
         this.checked = checked;
     }
 
+    public String getCreaterDisplay() {
+        return createrDisplay;
+    }
+
+    public void setCreaterDisplay(String createrDisplay) {
+        this.createrDisplay = createrDisplay;
+    }
 }
