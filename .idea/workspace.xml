@@ -6,7 +6,7 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="56247bc4-0c5f-41c7-b9af-6b54aaa88b15" name="Default Changelist" comment="add company">
+    <list default="true" id="56247bc4-0c5f-41c7-b9af-6b54aaa88b15" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/4/24df3cfe8cf5ea474bb9d231d78f53267afc4552" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/f/3f70204542cc3cc2bb5b04c15712d0e67fd70e61" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/2/52a9a6dac9344701da5644dda39f2094d7eecf53" afterDir="false" />
@@ -107,12 +107,13 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="GO_FMT" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="D:/Android/SDK" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/mybatis" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/invoicing-webapp/src/test/resources" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Artifacts" />
@@ -257,8 +258,16 @@
       <updated>1563680488832</updated>
       <workItem from="1563680498040" duration="21656000" />
       <workItem from="1567852174565" duration="1883000" />
-      <workItem from="1567854586810" duration="9473000" />
+      <workItem from="1567854586810" duration="9777000" />
     </task>
+    <task id="LOCAL-00001" summary="add company">
+      <created>1567870724119</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1567870724120</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
