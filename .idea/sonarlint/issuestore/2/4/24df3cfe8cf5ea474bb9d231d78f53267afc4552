@@ -1,0 +1,14 @@
+
+Gsquid:S1066Ä"/Merge this if statement with the enclosing one.(›­¡Ë
+Nsquid:S11355"2Complete the task associated to this TODO comment.(°±Ðþÿÿÿÿ
+Isquid:S1135I"2Complete the task associated to this TODO comment.(ñù­…
+Nsquid:S1135W"2Complete the task associated to this TODO comment.(ñ‡ßïüÿÿÿÿ
+Isquid:S1135t"2Complete the task associated to this TODO comment.(ÍöÖ
+Jsquid:S1135±"2Complete the task associated to this TODO comment.(ô„â³
+Osquid:S1135æ"2Complete the task associated to this TODO comment.(ÎëâÞøÿÿÿÿ
+Ysquid:CallToDeprecatedMethodž"0Remove this use of "getHours"; it is deprecated.(ä‰À
+]squid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(ñ·¼
+isquid:S00117k"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êÄÅé
+osquid:S00117ø"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(šÜÝ»ýÿÿÿÿ
+jsquid:S00117€"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”•¦ì
+[squid:S1155ú">Use isEmpty() to check whether the collection is empty or not.(›©­‘ûÿÿÿÿ

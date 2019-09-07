@@ -10,30 +10,12 @@ public class CompanyExample {
 
     protected List<Criteria> oredCriteria;
 
+    protected Integer limitStart = -1;
 
-    protected int limitStart = -1;
-
-    protected int limitEnd = -1;
-
+    protected Integer limitEnd = -1;
 
     public CompanyExample() {
         oredCriteria = new ArrayList<Criteria>();
-    }
-
-    public int getLimitStart() {
-        return limitStart;
-    }
-
-    public void setLimitStart(int limitStart) {
-        this.limitStart = limitStart;
-    }
-
-    public int getLimitEnd() {
-        return limitEnd;
-    }
-
-    public void setLimitEnd(int limitEnd) {
-        this.limitEnd = limitEnd;
     }
 
     public void setOrderByClause(String orderByClause) {
@@ -83,6 +65,22 @@ public class CompanyExample {
         oredCriteria.clear();
         orderByClause = null;
         distinct = false;
+    }
+
+    public void setLimitStart(Integer limitStart) {
+        this.limitStart=limitStart;
+    }
+
+    public Integer getLimitStart() {
+        return limitStart;
+    }
+
+    public void setLimitEnd(Integer limitEnd) {
+        this.limitEnd=limitEnd;
+    }
+
+    public Integer getLimitEnd() {
+        return limitEnd;
     }
 
     protected abstract static class GeneratedCriteria {
@@ -473,76 +471,6 @@ public class CompanyExample {
 
         public Criteria andCeoIdNotBetween(String value1, String value2) {
             addCriterion("temp_company.ceo_id not between", value1, value2, "ceoId");
-            return (Criteria) this;
-        }
-
-        public Criteria andAddressIsNull() {
-            addCriterion("temp_company.address is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andAddressIsNotNull() {
-            addCriterion("temp_company.address is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andAddressEqualTo(String value) {
-            addCriterion("temp_company.address =", value, "address");
-            return (Criteria) this;
-        }
-
-        public Criteria andAddressNotEqualTo(String value) {
-            addCriterion("temp_company.address <>", value, "address");
-            return (Criteria) this;
-        }
-
-        public Criteria andAddressGreaterThan(String value) {
-            addCriterion("temp_company.address >", value, "address");
-            return (Criteria) this;
-        }
-
-        public Criteria andAddressGreaterThanOrEqualTo(String value) {
-            addCriterion("temp_company.address >=", value, "address");
-            return (Criteria) this;
-        }
-
-        public Criteria andAddressLessThan(String value) {
-            addCriterion("temp_company.address <", value, "address");
-            return (Criteria) this;
-        }
-
-        public Criteria andAddressLessThanOrEqualTo(String value) {
-            addCriterion("temp_company.address <=", value, "address");
-            return (Criteria) this;
-        }
-
-        public Criteria andAddressLike(String value) {
-            addCriterion("temp_company.address like", value, "address");
-            return (Criteria) this;
-        }
-
-        public Criteria andAddressNotLike(String value) {
-            addCriterion("temp_company.address not like", value, "address");
-            return (Criteria) this;
-        }
-
-        public Criteria andAddressIn(List<String> values) {
-            addCriterion("temp_company.address in", values, "address");
-            return (Criteria) this;
-        }
-
-        public Criteria andAddressNotIn(List<String> values) {
-            addCriterion("temp_company.address not in", values, "address");
-            return (Criteria) this;
-        }
-
-        public Criteria andAddressBetween(String value1, String value2) {
-            addCriterion("temp_company.address between", value1, value2, "address");
-            return (Criteria) this;
-        }
-
-        public Criteria andAddressNotBetween(String value1, String value2) {
-            addCriterion("temp_company.address not between", value1, value2, "address");
             return (Criteria) this;
         }
 

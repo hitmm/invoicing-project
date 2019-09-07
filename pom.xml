@@ -55,7 +55,7 @@
 		<mybatis.core.version>3.1.1</mybatis.core.version>
 		<mybatis.spring.version>1.1.1</mybatis.spring.version>
 		<com.jolbox.version>0.7.1.RELEASE</com.jolbox.version>
-		<mysql.connector>5.1.9</mysql.connector>
+		<mysql.connector>5.1.44</mysql.connector>
 		<!-- dao end -->
 		<!-- shiro begin -->
 		<org.apache.shiro.version>1.2.2</org.apache.shiro.version>
@@ -93,15 +93,16 @@
 				<artifactId>jackson-annotations</artifactId>
 				<version>${jackson.version}</version>
 			</dependency>
+			<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.module/jackson-module-jaxb-annotations -->
 			<dependency>
 				<groupId>com.fasterxml.jackson.module</groupId>
 				<artifactId>jackson-module-jaxb-annotations</artifactId>
-				<version>${jackson.version}</version>
+				<version>2.9.9</version>
 			</dependency>
 			<dependency>
 				<groupId>com.fasterxml.jackson.dataformat</groupId>
 				<artifactId>jackson-dataformat-xml</artifactId>
-				<version>${jackson.version}</version>
+				<version>2.9.9</version>
 			</dependency>
 			<!-- quartz begin -->
 			<dependency>

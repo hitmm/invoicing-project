@@ -1,0 +1,18 @@
+
+dsquid:S1192Ó"LDefine a constant instead of duplicating this literal "roleEnName" 12 times.(şƒÎá
+esquid:S1192"HDefine a constant instead of duplicating this literal "roleId" 12 times.(ˆ’óøÿÿÿÿ
+fsquid:S1192ß"IDefine a constant instead of duplicating this literal "builtin" 12 times.(ĞìÕ‚ÿÿÿÿÿ
+dsquid:S1192±"LDefine a constant instead of duplicating this literal "createTime" 10 times.(øÄ”ë
+hsquid:S1192í"KDefine a constant instead of duplicating this literal "companyId" 12 times.( µÚ³ÿÿÿÿÿ
+asquid:S1192ë"IDefine a constant instead of duplicating this literal "creater" 12 times.(ÄÈ–ß
+`squid:S1192¥"HDefine a constant instead of duplicating this literal "remark" 12 times.(É³«
+isquid:S1192™"LDefine a constant instead of duplicating this literal "roleCnName" 12 times.(Ä›õ—ûÿÿÿÿ
+osquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÏßÉe
+psquid:S2293^"YReplace the type specification in this constructor call with the diamond operator ("<>").(óÎ³Ù
+wsquid:S1488O"`Immediately return this expression instead of assigning it to the temporary variable "criteria".(¶Õ¯ì
+csquid:S00112o"FDefine and throw a dedicated exception instead of using a generic one.(ÔÁñÍøÿÿÿÿ
+csquid:S00112v"FDefine and throw a dedicated exception instead of using a generic one.(õÜ—ºşÿÿÿÿ
+]squid:S00112}"FDefine and throw a dedicated exception instead of using a generic one.(ìá¤
+
+Tsquid:S1155H">Use isEmpty() to check whether the collection is empty or not.(Á½¼s
+Zsquid:S1155b">Use isEmpty() to check whether the collection is empty or not.(í´Õûüÿÿÿÿ

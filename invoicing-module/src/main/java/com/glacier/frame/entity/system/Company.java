@@ -11,8 +11,6 @@ public class Company {
 
     private String ceoId;
 
-    private String address;
-
     private String fax;
 
     private String hostUrl;
@@ -57,14 +55,6 @@ public class Company {
 
     public void setCeoId(String ceoId) {
         this.ceoId = ceoId == null ? null : ceoId.trim();
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address == null ? null : address.trim();
     }
 
     public String getFax() {

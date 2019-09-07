@@ -70,15 +70,20 @@
       </foreach>
     </where>
   </sql>
-  <sql id="Base_Column_List" >
-    temp_menu.menu_id as temp_menu_menu_id, temp_menu.pid as temp_menu_pid, temp_menu.menu_en_name as temp_menu_menu_en_name, 
-    temp_menu.menu_cn_name as temp_menu_menu_cn_name, temp_menu.icon_cls as temp_menu_icon_cls, 
+  <sql id="Base_Column_List_IncludeParent" >
+    temp_menu.menu_id as temp_menu_menu_id, temp_menu.pid as temp_menu_pid, temp_menu.menu_en_name as temp_menu_menu_en_name,
+    temp_menu.menu_cn_name as temp_menu_menu_cn_name, temp_menu.icon_cls as temp_menu_icon_cls,
     temp_menu.url as temp_menu_url, temp_menu.order_num as temp_menu_order_num, temp_menu.remark as temp_menu_remark
     <!-- 以下字段属于扩展 -->
-    ,temp_parentmenu.menu_cn_name as temp_action_parentMenuCnName
+    ,temp_parentMenu.menu_cn_name as temp_action_parentMenuCnName
+  </sql>
+  <sql id="Base_Column_List" >
+    temp_menu.menu_id as temp_menu_menu_id, temp_menu.pid as temp_menu_pid, temp_menu.menu_en_name as temp_menu_menu_en_name,
+    temp_menu.menu_cn_name as temp_menu_menu_cn_name, temp_menu.icon_cls as temp_menu_icon_cls,
+    temp_menu.url as temp_menu_url, temp_menu.order_num as temp_menu_order_num, temp_menu.remark as temp_menu_remark
   </sql>
   <sql id="Base_extend">
-  	LEFT JOIN t_menu temp_parentmenu ON temp_parentmenu.menu_id = temp_menu.pid <!-- 扩展 -->
+    LEFT JOIN t_menu temp_parentmenu ON temp_parentmenu.menu_id = temp_menu.pid <!-- 扩展 -->
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.glacier.frame.entity.system.MenuExample" >
     select
@@ -99,7 +104,7 @@
     </if>
   </select>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
-    select 
+    select
     <include refid="Base_Column_List" />
     from t_menu temp_menu
     <include refid="Base_extend" />
@@ -220,13 +225,13 @@
   <update id="updateByExample" parameterType="map" >
     update t_menu temp_menu
     set temp_menu.menu_id = #{record.menuId,jdbcType=VARCHAR},
-      temp_menu.pid = #{record.pid,jdbcType=VARCHAR},
-      temp_menu.menu_en_name = #{record.menuEnName,jdbcType=VARCHAR},
-      temp_menu.menu_cn_name = #{record.menuCnName,jdbcType=VARCHAR},
-      temp_menu.icon_cls = #{record.iconCls,jdbcType=VARCHAR},
-      temp_menu.url = #{record.url,jdbcType=VARCHAR},
-      temp_menu.order_num = #{record.orderNum,jdbcType=INTEGER},
-      temp_menu.remark = #{record.remark,jdbcType=VARCHAR}
+    temp_menu.pid = #{record.pid,jdbcType=VARCHAR},
+    temp_menu.menu_en_name = #{record.menuEnName,jdbcType=VARCHAR},
+    temp_menu.menu_cn_name = #{record.menuCnName,jdbcType=VARCHAR},
+    temp_menu.icon_cls = #{record.iconCls,jdbcType=VARCHAR},
+    temp_menu.url = #{record.url,jdbcType=VARCHAR},
+    temp_menu.order_num = #{record.orderNum,jdbcType=INTEGER},
+    temp_menu.remark = #{record.remark,jdbcType=VARCHAR}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -270,14 +275,14 @@
     where menu_id = #{menuId,jdbcType=VARCHAR}
   </update>
   <select id="selectByUserId" resultMap="BaseResultMap" parameterType="java.lang.String">
-	  	SELECT DISTINCT<include refid="Base_Column_List" /> FROM t_menu temp_menu 
-		INNER JOIN t_authority temp_auth ON  temp_menu.menu_id = temp_auth.menu_id
-		LEFT JOIN t_menu temp_parentMenu ON temp_menu.pid = temp_parentMenu.menu_id
-		WHERE temp_auth.role_id IN
-		(
-			SELECT temp_role.role_id FROM t_role temp_role
-			INNER JOIN t_user_role temp_user_role ON temp_role.role_id = temp_user_role.role_id
-			WHERE temp_user_role.user_id = #{userId}
-		) ORDER BY temp_menu.order_num asc
+    SELECT DISTINCT<include refid="Base_Column_List_IncludeParent" /> FROM t_menu temp_menu
+    INNER JOIN t_authority temp_auth ON  temp_menu.menu_id = temp_auth.menu_id
+    LEFT JOIN t_menu temp_parentMenu ON temp_menu.pid = temp_parentMenu.menu_id
+    WHERE temp_auth.role_id IN
+    (
+    SELECT temp_role.role_id FROM t_role temp_role
+    INNER JOIN t_user_role temp_user_role ON temp_role.role_id = temp_user_role.role_id
+    WHERE temp_user_role.user_id = #{userId}
+    ) ORDER BY temp_menu.order_num asc
   </select>
 </mapper>

@@ -4,7 +4,7 @@ public class Menu {
     private String menuId;
 
     private String pid;
-    
+
     /**
      * 自定义字段
      */
@@ -85,7 +85,7 @@ public class Menu {
     public void setRemark(String remark) {
         this.remark = remark;
     }
-    
+
     public String getParentMenuCnName() {
         return parentMenuCnName;
     }
@@ -107,13 +107,13 @@ public class Menu {
         }
         Menu other = (Menu) that;
         return (this.getMenuId() == null ? other.getMenuId() == null : this.getMenuId().equals(other.getMenuId()))
-            && (this.getPid() == null ? other.getPid() == null : this.getPid().equals(other.getPid()))
-            && (this.getMenuEnName() == null ? other.getMenuEnName() == null : this.getMenuEnName().equals(other.getMenuEnName()))
-            && (this.getMenuCnName() == null ? other.getMenuCnName() == null : this.getMenuCnName().equals(other.getMenuCnName()))
-            && (this.getIconCls() == null ? other.getIconCls() == null : this.getIconCls().equals(other.getIconCls()))
-            && (this.getUrl() == null ? other.getUrl() == null : this.getUrl().equals(other.getUrl()))
-            && (this.getOrderNum() == null ? other.getOrderNum() == null : this.getOrderNum().equals(other.getOrderNum()))
-            && (this.getRemark() == null ? other.getRemark() == null : this.getRemark().equals(other.getRemark()));
+                && (this.getPid() == null ? other.getPid() == null : this.getPid().equals(other.getPid()))
+                && (this.getMenuEnName() == null ? other.getMenuEnName() == null : this.getMenuEnName().equals(other.getMenuEnName()))
+                && (this.getMenuCnName() == null ? other.getMenuCnName() == null : this.getMenuCnName().equals(other.getMenuCnName()))
+                && (this.getIconCls() == null ? other.getIconCls() == null : this.getIconCls().equals(other.getIconCls()))
+                && (this.getUrl() == null ? other.getUrl() == null : this.getUrl().equals(other.getUrl()))
+                && (this.getOrderNum() == null ? other.getOrderNum() == null : this.getOrderNum().equals(other.getOrderNum()))
+                && (this.getRemark() == null ? other.getRemark() == null : this.getRemark().equals(other.getRemark()));
     }
 
     @Override

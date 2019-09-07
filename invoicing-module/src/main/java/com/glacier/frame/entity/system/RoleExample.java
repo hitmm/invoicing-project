@@ -11,30 +11,12 @@ public class RoleExample {
 
     protected List<Criteria> oredCriteria;
 
+    protected Integer limitStart = -1;
 
-    protected int limitStart = -1;
-
-    protected int limitEnd = -1;
-
+    protected Integer limitEnd = -1;
 
     public RoleExample() {
         oredCriteria = new ArrayList<Criteria>();
-    }
-
-    public int getLimitStart() {
-        return limitStart;
-    }
-
-    public void setLimitStart(int limitStart) {
-        this.limitStart = limitStart;
-    }
-
-    public int getLimitEnd() {
-        return limitEnd;
-    }
-
-    public void setLimitEnd(int limitEnd) {
-        this.limitEnd = limitEnd;
     }
 
     public void setOrderByClause(String orderByClause) {
@@ -84,6 +66,22 @@ public class RoleExample {
         oredCriteria.clear();
         orderByClause = null;
         distinct = false;
+    }
+
+    public void setLimitStart(Integer limitStart) {
+        this.limitStart=limitStart;
+    }
+
+    public Integer getLimitStart() {
+        return limitStart;
+    }
+
+    public void setLimitEnd(Integer limitEnd) {
+        this.limitEnd=limitEnd;
+    }
+
+    public Integer getLimitEnd() {
+        return limitEnd;
     }
 
     protected abstract static class GeneratedCriteria {
@@ -604,76 +602,6 @@ public class RoleExample {
 
         public Criteria andCreateTimeNotBetween(Date value1, Date value2) {
             addCriterion("temp_role.create_time not between", value1, value2, "createTime");
-            return (Criteria) this;
-        }
-
-        public Criteria andCompanyIdIsNull() {
-            addCriterion("temp_role.company_id is null");
-            return (Criteria) this;
-        }
-
-        public Criteria andCompanyIdIsNotNull() {
-            addCriterion("temp_role.company_id is not null");
-            return (Criteria) this;
-        }
-
-        public Criteria andCompanyIdEqualTo(String value) {
-            addCriterion("temp_role.company_id =", value, "companyId");
-            return (Criteria) this;
-        }
-
-        public Criteria andCompanyIdNotEqualTo(String value) {
-            addCriterion("temp_role.company_id <>", value, "companyId");
-            return (Criteria) this;
-        }
-
-        public Criteria andCompanyIdGreaterThan(String value) {
-            addCriterion("temp_role.company_id >", value, "companyId");
-            return (Criteria) this;
-        }
-
-        public Criteria andCompanyIdGreaterThanOrEqualTo(String value) {
-            addCriterion("temp_role.company_id >=", value, "companyId");
-            return (Criteria) this;
-        }
-
-        public Criteria andCompanyIdLessThan(String value) {
-            addCriterion("temp_role.company_id <", value, "companyId");
-            return (Criteria) this;
-        }
-
-        public Criteria andCompanyIdLessThanOrEqualTo(String value) {
-            addCriterion("temp_role.company_id <=", value, "companyId");
-            return (Criteria) this;
-        }
-
-        public Criteria andCompanyIdLike(String value) {
-            addCriterion("temp_role.company_id like", value, "companyId");
-            return (Criteria) this;
-        }
-
-        public Criteria andCompanyIdNotLike(String value) {
-            addCriterion("temp_role.company_id not like", value, "companyId");
-            return (Criteria) this;
-        }
-
-        public Criteria andCompanyIdIn(List<String> values) {
-            addCriterion("temp_role.company_id in", values, "companyId");
-            return (Criteria) this;
-        }
-
-        public Criteria andCompanyIdNotIn(List<String> values) {
-            addCriterion("temp_role.company_id not in", values, "companyId");
-            return (Criteria) this;
-        }
-
-        public Criteria andCompanyIdBetween(String value1, String value2) {
-            addCriterion("temp_role.company_id between", value1, value2, "companyId");
-            return (Criteria) this;
-        }
-
-        public Criteria andCompanyIdNotBetween(String value1, String value2) {
-            addCriterion("temp_role.company_id not between", value1, value2, "companyId");
             return (Criteria) this;
         }
     }

@@ -7,7 +7,6 @@
     <result column="temp_company_company_alias" property="companyAlias" jdbcType="VARCHAR" />
     <result column="temp_company_company_en_name" property="companyEnName" jdbcType="VARCHAR" />
     <result column="temp_company_ceo_id" property="ceoId" jdbcType="VARCHAR" />
-    <result column="temp_company_address" property="address" jdbcType="VARCHAR" />
     <result column="temp_company_fax" property="fax" jdbcType="VARCHAR" />
     <result column="temp_company_host_url" property="hostUrl" jdbcType="VARCHAR" />
     <result column="temp_company_intro" property="intro" jdbcType="VARCHAR" />
@@ -73,9 +72,8 @@
   <sql id="Base_Column_List" >
     temp_company.company_id as temp_company_company_id, temp_company.company_cn_name as temp_company_company_cn_name, 
     temp_company.company_alias as temp_company_company_alias, temp_company.company_en_name as temp_company_company_en_name, 
-    temp_company.ceo_id as temp_company_ceo_id, temp_company.address as temp_company_address, 
-    temp_company.fax as temp_company_fax, temp_company.host_url as temp_company_host_url, 
-    temp_company.intro as temp_company_intro
+    temp_company.ceo_id as temp_company_ceo_id, temp_company.fax as temp_company_fax, 
+    temp_company.host_url as temp_company_host_url, temp_company.intro as temp_company_intro
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.glacier.frame.entity.system.CompanyExample" >
     select
@@ -90,6 +88,9 @@
     </if>
     <if test="orderByClause != null" >
       order by ${orderByClause}
+    </if>
+    <if test="limitStart != null and limitStart >= 0 and limitEnd != null and limitEnd>=limitStart" >
+      limit ${limitStart} , ${limitEnd}
     </if>
   </select>
   <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
@@ -110,13 +111,11 @@
   </delete>
   <insert id="insert" parameterType="com.glacier.frame.entity.system.Company" >
     insert into t_company (company_id, company_cn_name, company_alias, 
-      company_en_name, ceo_id, address, 
-      fax, host_url, intro
-      )
+      company_en_name, ceo_id, fax, 
+      host_url, intro)
     values (#{companyId,jdbcType=VARCHAR}, #{companyCnName,jdbcType=VARCHAR}, #{companyAlias,jdbcType=VARCHAR}, 
-      #{companyEnName,jdbcType=VARCHAR}, #{ceoId,jdbcType=VARCHAR}, #{address,jdbcType=VARCHAR}, 
-      #{fax,jdbcType=VARCHAR}, #{hostUrl,jdbcType=VARCHAR}, #{intro,jdbcType=VARCHAR}
-      )
+      #{companyEnName,jdbcType=VARCHAR}, #{ceoId,jdbcType=VARCHAR}, #{fax,jdbcType=VARCHAR}, 
+      #{hostUrl,jdbcType=VARCHAR}, #{intro,jdbcType=VARCHAR})
   </insert>
   <insert id="insertSelective" parameterType="com.glacier.frame.entity.system.Company" >
     insert into t_company
@@ -135,9 +134,6 @@
       </if>
       <if test="ceoId != null" >
         ceo_id,
-      </if>
-      <if test="address != null" >
-        address,
       </if>
       <if test="fax != null" >
         fax,
@@ -164,9 +160,6 @@
       </if>
       <if test="ceoId != null" >
         #{ceoId,jdbcType=VARCHAR},
-      </if>
-      <if test="address != null" >
-        #{address,jdbcType=VARCHAR},
       </if>
       <if test="fax != null" >
         #{fax,jdbcType=VARCHAR},
@@ -203,9 +196,6 @@
       <if test="record.ceoId != null" >
         temp_company.ceo_id = #{record.ceoId,jdbcType=VARCHAR},
       </if>
-      <if test="record.address != null" >
-        temp_company.address = #{record.address,jdbcType=VARCHAR},
-      </if>
       <if test="record.fax != null" >
         temp_company.fax = #{record.fax,jdbcType=VARCHAR},
       </if>
@@ -227,7 +217,6 @@
       temp_company.company_alias = #{record.companyAlias,jdbcType=VARCHAR},
       temp_company.company_en_name = #{record.companyEnName,jdbcType=VARCHAR},
       temp_company.ceo_id = #{record.ceoId,jdbcType=VARCHAR},
-      temp_company.address = #{record.address,jdbcType=VARCHAR},
       temp_company.fax = #{record.fax,jdbcType=VARCHAR},
       temp_company.host_url = #{record.hostUrl,jdbcType=VARCHAR},
       temp_company.intro = #{record.intro,jdbcType=VARCHAR}
@@ -250,9 +239,6 @@
       <if test="ceoId != null" >
         ceo_id = #{ceoId,jdbcType=VARCHAR},
       </if>
-      <if test="address != null" >
-        address = #{address,jdbcType=VARCHAR},
-      </if>
       <if test="fax != null" >
         fax = #{fax,jdbcType=VARCHAR},
       </if>
@@ -271,7 +257,6 @@
       company_alias = #{companyAlias,jdbcType=VARCHAR},
       company_en_name = #{companyEnName,jdbcType=VARCHAR},
       ceo_id = #{ceoId,jdbcType=VARCHAR},
-      address = #{address,jdbcType=VARCHAR},
       fax = #{fax,jdbcType=VARCHAR},
       host_url = #{hostUrl,jdbcType=VARCHAR},
       intro = #{intro,jdbcType=VARCHAR}
