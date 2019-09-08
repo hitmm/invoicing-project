@@ -1,18 +1,16 @@
 package com.glacier.frame.entity.system;
 
-import java.io.Serializable;
-import java.util.Date;
+import com.alibaba.fastjson.annotation.JSONField;
+import com.glacier.frame.entity.common.util.CommonBuiltin;
+import com.glacier.frame.entity.common.util.CommonStatus;
+import org.hibernate.validator.constraints.Email;
+import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.Pattern;
-
-import org.hibernate.validator.constraints.Email;
-import org.hibernate.validator.constraints.Length;
-
-import com.alibaba.fastjson.annotation.JSONField;
-import com.glacier.frame.entity.common.util.CommonBuiltin;
-import com.glacier.frame.entity.common.util.CommonStatus;
+import java.io.Serializable;
+import java.util.Date;
 
 public class User implements Serializable {
 
@@ -69,6 +67,8 @@ public class User implements Serializable {
     @JSONField(format = "yyyy-MM-dd HH:mm:ss")
     @Temporal(TemporalType.TIMESTAMP)
     private Date createTime;
+
+    private String companyId;
 
     public String getUserId() {
         return userId;
@@ -265,6 +265,15 @@ public class User implements Serializable {
         result = prime * result + ((getCreater() == null) ? 0 : getCreater().hashCode());
         result = prime * result + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
         return result;
+    }
+
+
+    public String getCompanyId() {
+        return companyId;
+    }
+
+    public void setCompanyId(String companyId) {
+        this.companyId = companyId;
     }
 
     /*

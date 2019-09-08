@@ -5,9 +5,9 @@
     <groupId>com.glacier.project.invoicing</groupId>
     <version>0.0.1</version>
   </parent>
-  <groupId>com.glacier.project.invoicing</groupId>
-  <artifactId>invoicing-module</artifactId>
-  <version>0.0.1</version>
+    <groupId>com.glacier.project.invoicing</groupId>
+    <artifactId>invoicing-module</artifactId>
+    <version>0.0.1</version>
   
 	<dependencies>
 		<dependency>
@@ -16,18 +16,4 @@
 			<version>${project.version}</version>
 		</dependency>
 	</dependencies>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.mybatis.generator</groupId>
-                <artifactId>mybatis-generator-maven-plugin</artifactId>
-                <version>1.3.2</version>
-            </plugin>
-        </plugins>
-    </build>
 </project>

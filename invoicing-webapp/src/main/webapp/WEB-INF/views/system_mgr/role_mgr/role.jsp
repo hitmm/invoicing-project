@@ -68,8 +68,8 @@
 				sortable:true,
 				width:120
 			},{
-				field:'companyId',
-				title:'公司ID',
+				field:'companyCnName',
+				title:'公司名称',
 				sortable:true,
 				width:120
 			}

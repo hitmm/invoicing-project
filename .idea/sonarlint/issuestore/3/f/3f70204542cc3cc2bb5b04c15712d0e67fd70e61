@@ -1,4 +1,7 @@
 
 wsquid:S1488*"[Immediately return this expression instead of assigning it to the temporary variable "mav".(мЗ╧╜√    
+msquid:S4488^"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(д╗БЇ°    8аинс╨-
+msquid:S4488J"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ё√ё┤     8аинс╨-
+hsquid:S4488T"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(ж╠─║8аинс╨-
+hsquid:S4488C"JReplace "@RequestMapping(method = RequestMethod.POST)" with "@PostMapping"(Їс∙К8аинс╨-
 Isquid:S1135"2Complete the task associated to this TODO comment.(шЁ╟╢
-csquid:S00112L"FDefine and throw a dedicated exception instead of using a generic one.(╬е▐о■    

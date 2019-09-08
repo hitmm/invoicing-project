@@ -1,0 +1,8 @@
+
+;squid:S2629'"$Invoke method(s) only conditionally.(³σΡ
+;squid:S2629."$Invoke method(s) only conditionally.(”κ¶ϊ
+@squid:S2629/"$Invoke method(s) only conditionally.(•οχηÿÿÿÿÿ
+osquid:ModifiersOrderCheck"EReorder the modifiers to comply with the Java Language Specification.(Ψª™ώÿÿÿÿ
+Ssquid:S2441E"<Make "Object" serializable or don't store it in the session.(τέέ
+`squid:UselessImportCheck"<Remove this unused import 'com.alibaba.fastjson.JSONObject'.(δύµ
+fsquid:MaximumInheritanceDepth"=This class has 11 parents which is greater than 5 authorized.(¦«σ²

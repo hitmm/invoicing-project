@@ -1,19 +1,14 @@
 package com.glacier.frame.entity.system;
 
-import com.alibaba.fastjson.annotation.JSONField;
+import org.springframework.format.annotation.DateTimeFormat;
 
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-import javax.validation.constraints.Pattern;
 import java.util.Date;
 
 public class Role {
     private String roleId;
 
-    @Pattern(regexp = "^[A-Z_]{4,16}$", message = "{Role.roleEnName.illegal}")
     private String roleEnName;
 
-    @Pattern(regexp = "^[\u0391-\uFFE5]{2,10}", message = "{Role.roleCnName.illegal}")
     private String roleCnName;
 
     private String builtin;
@@ -22,24 +17,16 @@ public class Role {
 
     private String creater;
 
-    @JSONField(format = "yyyy-MM-dd HH:mm:ss")
-    @Temporal(TemporalType.TIMESTAMP)
+    @DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private Date createTime;
 
-    public String getCreaterDisplay() {
-        return createrDisplay;
-    }
+    private String companyId;
 
-    public void setCreaterDisplay(String createrDisplay) {
-        this.createrDisplay = createrDisplay;
-    }
-
-    /**
-     * 自定义字段：创建者显示字段
-     */
-    private String createrDisplay;
+    private String companyCnName;
 
     private boolean checked;
+
+    private String createrDisplay;
 
     public String getRoleId() {
         return roleId;
@@ -97,11 +84,35 @@ public class Role {
         this.createTime = createTime;
     }
 
+    public String getCompanyId() {
+        return companyId;
+    }
+
+    public void setCompanyId(String companyId) {
+        this.companyId = companyId == null ? null : companyId.trim();
+    }
+
+    public String getCompanyCnName() {
+        return companyCnName;
+    }
+
+    public void setCompanyCnName(String companyCnName) {
+        this.companyCnName = companyCnName;
+    }
+
     public boolean isChecked() {
         return checked;
     }
 
     public void setChecked(boolean checked) {
         this.checked = checked;
+    }
+
+    public String getCreaterDisplay() {
+        return createrDisplay;
+    }
+
+    public void setCreaterDisplay(String createrDisplay) {
+        this.createrDisplay = createrDisplay;
     }
 }

@@ -19,6 +19,10 @@
 			<td><input class="spinner" style="width:168px" value="<fmt:formatDate value="${roleData.createTime}" pattern="yyyy-MM-dd HH:mm:ss"/>" readonly="readonly"/></td>
 		</tr>
 		<tr>
+			<td>公司：</td>
+			<td colspan="3"><textarea class="spinner" style="width:416px" readonly="readonly">${roleData.companyCnName}</textarea></td>
+		</tr>
+		<tr>
 			<td>备注：</td>
 			<td colspan="3"><textarea class="spinner" style="width:416px" readonly="readonly">${roleData.remark}</textarea></td>
 		</tr>
