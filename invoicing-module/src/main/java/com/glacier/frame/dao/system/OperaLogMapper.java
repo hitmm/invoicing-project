@@ -1,11 +1,10 @@
 package com.glacier.frame.dao.system;
 
-import java.util.List;
-
-import org.apache.ibatis.annotations.Param;
-
 import com.glacier.frame.entity.system.OperaLog;
 import com.glacier.frame.entity.system.OperaLogExample;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface OperaLogMapper {
     int countByExample(OperaLogExample example);

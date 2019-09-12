@@ -15,7 +15,10 @@
   <url>http://maven.apache.org</url>
   
   	<dependencies>
-
+		<dependency>
+			<groupId>com.google.code</groupId>
+			<artifactId>kaptcha</artifactId>
+		</dependency>
 		<!-- unit begin -->
 		<dependency>
 			<groupId>junit</groupId>

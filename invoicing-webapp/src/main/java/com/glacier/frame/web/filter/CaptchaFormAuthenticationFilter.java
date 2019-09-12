@@ -1,23 +1,21 @@
 package com.glacier.frame.web.filter;
 
-import javax.servlet.ServletRequest;
-import javax.servlet.ServletResponse;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
-
-import com.alibaba.fastjson.JSONObject;
+import com.glacier.basic.exception.IncorrectCaptchaException;
+import com.glacier.basic.util.IpUtil;
+import com.glacier.frame.compent.realm.CaptchaUsernamePasswordToken;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationToken;
 import org.apache.shiro.subject.Subject;
 import org.apache.shiro.web.filter.authc.FormAuthenticationFilter;
 import org.apache.shiro.web.util.WebUtils;
-
-import com.glacier.basic.exception.IncorrectCaptchaException;
-import com.glacier.basic.util.IpUtil;
-import com.glacier.frame.compent.realm.CaptchaUsernamePasswordToken;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 public class CaptchaFormAuthenticationFilter extends FormAuthenticationFilter {
 	private final static Logger LOGGER = LoggerFactory.getLogger(CaptchaFormAuthenticationFilter.class);

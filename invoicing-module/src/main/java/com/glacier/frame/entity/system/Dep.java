@@ -19,12 +19,14 @@ public class Dep {
 
     private Date createTime;
 
+    private String companyId;
+
     public String getDepId() {
         return depId;
     }
 
     public void setDepId(String depId) {
-        this.depId = depId;
+        this.depId = depId == null ? null : depId.trim();
     }
 
     public String getCnName() {
@@ -32,7 +34,7 @@ public class Dep {
     }
 
     public void setCnName(String cnName) {
-        this.cnName = cnName;
+        this.cnName = cnName == null ? null : cnName.trim();
     }
 
     public String getEnName() {
@@ -40,7 +42,7 @@ public class Dep {
     }
 
     public void setEnName(String enName) {
-        this.enName = enName;
+        this.enName = enName == null ? null : enName.trim();
     }
 
     public String getParentId() {
@@ -48,7 +50,7 @@ public class Dep {
     }
 
     public void setParentId(String parentId) {
-        this.parentId = parentId;
+        this.parentId = parentId == null ? null : parentId.trim();
     }
 
     public Integer getOrderNum() {
@@ -64,7 +66,7 @@ public class Dep {
     }
 
     public void setRemark(String remark) {
-        this.remark = remark;
+        this.remark = remark == null ? null : remark.trim();
     }
 
     public String getCreater() {
@@ -72,7 +74,7 @@ public class Dep {
     }
 
     public void setCreater(String creater) {
-        this.creater = creater;
+        this.creater = creater == null ? null : creater.trim();
     }
 
     public Date getCreateTime() {
@@ -83,40 +85,11 @@ public class Dep {
         this.createTime = createTime;
     }
 
-    @Override
-    public boolean equals(Object that) {
-        if (this == that) {
-            return true;
-        }
-        if (that == null) {
-            return false;
-        }
-        if (getClass() != that.getClass()) {
-            return false;
-        }
-        Dep other = (Dep) that;
-        return (this.getDepId() == null ? other.getDepId() == null : this.getDepId().equals(other.getDepId()))
-            && (this.getCnName() == null ? other.getCnName() == null : this.getCnName().equals(other.getCnName()))
-            && (this.getEnName() == null ? other.getEnName() == null : this.getEnName().equals(other.getEnName()))
-            && (this.getParentId() == null ? other.getParentId() == null : this.getParentId().equals(other.getParentId()))
-            && (this.getOrderNum() == null ? other.getOrderNum() == null : this.getOrderNum().equals(other.getOrderNum()))
-            && (this.getRemark() == null ? other.getRemark() == null : this.getRemark().equals(other.getRemark()))
-            && (this.getCreater() == null ? other.getCreater() == null : this.getCreater().equals(other.getCreater()))
-            && (this.getCreateTime() == null ? other.getCreateTime() == null : this.getCreateTime().equals(other.getCreateTime()));
+    public String getCompanyId() {
+        return companyId;
     }
 
-    @Override
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + ((getDepId() == null) ? 0 : getDepId().hashCode());
-        result = prime * result + ((getCnName() == null) ? 0 : getCnName().hashCode());
-        result = prime * result + ((getEnName() == null) ? 0 : getEnName().hashCode());
-        result = prime * result + ((getParentId() == null) ? 0 : getParentId().hashCode());
-        result = prime * result + ((getOrderNum() == null) ? 0 : getOrderNum().hashCode());
-        result = prime * result + ((getRemark() == null) ? 0 : getRemark().hashCode());
-        result = prime * result + ((getCreater() == null) ? 0 : getCreater().hashCode());
-        result = prime * result + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
-        return result;
+    public void setCompanyId(String companyId) {
+        this.companyId = companyId == null ? null : companyId.trim();
     }
 }

@@ -131,3 +131,25 @@ Cinvoicing-core/src/main/java/com/glacier/security/util/Encodes.java,1/c/1cc600
 `invoicing-module/src/main/java/com/glacier/frame/compent/realm/CaptchaUsernamePasswordToken.java,6/b/6bd60b5b622746546c3096e5ea13e2a650dec0a1
 Š
 Zinvoicing-module/src/main/java/com/glacier/frame/compent/realm/CustomPermissionsRealm.java,2/4/249ace591006abf6d4f1ba8785d4365542cc26f0
+F
+invoicing-core/pom.xml,f/3/f38ff45d42a44880fda66c2e003d9167cbc08a9b
+O
+.idea/libraries/kaptcha_2_3.xml,b/2/b25d5c49738782b4d0b1943c0c5380971ebf785e
+E
+invoicing-project.iml,7/d/7d00f8b088e9c4f57c8e56bf9981e5fe8c8d75e1
+{
+Kinvoicing-module/src/main/java/com/glacier/frame/dao/system/UserMapper.java,a/8/a8e3a8e7f57597332bb485082bddd30aee9e89a2
+~
+Ninvoicing-module/src/main/java/com/glacier/frame/dao/system/CompanyMapper.java,c/6/c6a582e9b5ecaa7f8579984074c290106ec231b0
+{
+Kinvoicing-module/src/main/java/com/glacier/frame/dao/system/RoleMapper.java,b/9/b930a3c6ec7bbb1e1618457daa4f73893c413efe
+
+Oinvoicing-module/src/main/java/com/glacier/frame/entity/system/UserRoleKey.java,c/c/cc813cd878aa977c91b2d8776335aa78f60cadbe
+€
+Pinvoicing-module/src/main/java/com/glacier/frame/service/system/MenuService.java,9/1/9136405787d1145c8522f88885976af587c90b0b
+
+Oinvoicing-module/src/main/java/com/glacier/frame/entity/system/MenuExample.java,a/d/ad02cac38c66a8120ef36931f7d7fe78da1ed0fb
+z
+Jinvoicing-module/src/main/java/com/glacier/frame/dao/system/DepMapper.java,b/5/b58a4872e8c080bac4810668bdd191d8a392ff15
+“
+cinvoicing-module/src/main/java/com/glacier/frame/entity/common/util/transfer/UserCompanyEntity.java,3/1/31a8dbfb7891ec693af364d565db0e6189370bcb

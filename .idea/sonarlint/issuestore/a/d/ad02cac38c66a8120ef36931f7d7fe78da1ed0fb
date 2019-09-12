@@ -1,0 +1,16 @@
+
+[squid:S11555">Use isEmpty() to check whether the collection is empty or not.(Á½¼s8½ØŽ¤Ò-
+lsquid:S1192ê"HDefine a constant instead of duplicating this literal "remark" 12 times.(³©™ªúÿÿÿÿ8½ØŽ¤Ò-
+asquid:S1155_">Use isEmpty() to check whether the collection is empty or not.(í´Õûüÿÿÿÿ8½ØŽ¤Ò-
+isquid:S1192®"JDefine a constant instead of duplicating this literal "orderNum" 10 times.(—ª½ý8½ØŽ¤Ò-
+jsquid:S00112s"FDefine and throw a dedicated exception instead of using a generic one.(õÜ—ºþÿÿÿÿ8½ØŽ¤Ò-
+~squid:S1488<"`Immediately return this expression instead of assigning it to the temporary variable "criteria".(¶Õ¯ì8½ØŽ¤Ò-
+msquid:S1192¢"IDefine a constant instead of duplicating this literal "iconCls" 12 times.(ï‡ùîøÿÿÿÿ8½ØŽ¤Ò-
+psquid:S1192Ü"LDefine a constant instead of duplicating this literal "menuCnName" 12 times.(’˜žÊüÿÿÿÿ8½ØŽ¤Ò-
+vsquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÏßÉe8½ØŽ¤Ò-
+wsquid:S2293["YReplace the type specification in this constructor call with the diamond operator ("<>").(óÎ³Ù8½ØŽ¤Ò-
+jsquid:S00112l"FDefine and throw a dedicated exception instead of using a generic one.(ÔÁñÍøÿÿÿÿ8½ØŽ¤Ò-
+gsquid:S1192Š"HDefine a constant instead of duplicating this literal "menuId" 12 times.(°Â–À8½ØŽ¤Ò-
+psquid:S1192–"LDefine a constant instead of duplicating this literal "menuEnName" 12 times.(Õðûƒüÿÿÿÿ8½ØŽ¤Ò-
+dsquid:S00112z"FDefine and throw a dedicated exception instead of using a generic one.(ìá¤
+8½ØŽ¤Ò-

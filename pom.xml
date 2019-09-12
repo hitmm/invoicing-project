@@ -127,6 +127,13 @@
 				<version>${jackson.mapper.asl.version}</version>
 			</dependency>
 			<!-- jackson end -->
+			<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>1.18.6</version>
+			</dependency>
+
 			<!-- avax.mail begin -->
 			<dependency>
 				<groupId>javax.mail</groupId>

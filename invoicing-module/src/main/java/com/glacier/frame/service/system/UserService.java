@@ -19,38 +19,33 @@
  */
 package com.glacier.frame.service.system;
 
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
-import com.glacier.frame.dao.system.RoleMapper;
+import com.alibaba.fastjson.JSONObject;
+import com.glacier.basic.util.JackJson;
+import com.glacier.basic.util.RandomGUID;
+import com.glacier.frame.dao.system.*;
+import com.glacier.frame.dto.query.system.UserQueryDTO;
+import com.glacier.frame.entity.common.util.CommonBuiltin;
+import com.glacier.frame.entity.common.util.transfer.UserCompanyEntity;
 import com.glacier.frame.entity.system.*;
+import com.glacier.frame.entity.system.UserExample.Criteria;
+import com.glacier.frame.util.MethodLog;
+import com.glacier.jqueryui.util.JqGridReturn;
+import com.glacier.jqueryui.util.JqPager;
+import com.glacier.jqueryui.util.JqReturnJson;
+import com.glacier.security.util.Digests;
+import com.glacier.security.util.Encodes;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.subject.Subject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.glacier.basic.util.JackJson;
-import com.glacier.basic.util.RandomGUID;
-import com.glacier.jqueryui.util.JqGridReturn;
-import com.glacier.jqueryui.util.JqPager;
-import com.glacier.jqueryui.util.JqReturnJson;
-import com.glacier.frame.dao.system.LoginLogMapper;
-import com.glacier.frame.dao.system.UserMapper;
-import com.glacier.frame.dao.system.UserRoleMapper;
-import com.glacier.frame.dto.query.system.UserQueryDTO;
-import com.glacier.frame.entity.common.util.CommonBuiltin;
-import com.glacier.frame.entity.system.UserExample.Criteria;
-import com.glacier.frame.util.MethodLog;
-import com.glacier.security.util.Digests;
-import com.glacier.security.util.Encodes;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 /**
  * @ClassName: UserService
@@ -62,6 +57,7 @@ import com.glacier.security.util.Encodes;
 @Service
 @Transactional(readOnly = false, propagation = Propagation.REQUIRED)
 public class UserService {
+    private Logger logger = LoggerFactory.getLogger(UserService.class);
 
     @Autowired
     private UserMapper userMapper;
@@ -74,6 +70,12 @@ public class UserService {
     
     @Autowired
     private UserRoleMapper userRoleMapper;
+
+    @Autowired
+    private CompanyMapper companyMapper;
+
+    @Autowired
+    private DepMapper depMapper;
      
 
     /**
@@ -233,6 +235,41 @@ public class UserService {
         }
         List<User> users = userMapper.selectByExample(userExample);
         return JackJson.fromObjectToJson(users);
+    }
+
+    public Object getUserCompany(String userId){
+        UserCompanyEntity userCompanyEntity = new UserCompanyEntity();
+        UserRoleExample userRoleExample = new UserRoleExample();
+        if (StringUtils.isNotBlank(userId)) {// 可以根据ID查找，如果参数Id为空，则查找所有的数据
+            userRoleExample.createCriteria().andUserIdEqualTo(userId);
+        }
+        List<UserRoleKey> userRoleKeys = userRoleMapper.selectByExample(userRoleExample);
+
+        if(userRoleKeys==null|| userRoleKeys.size()!=1){
+            return userCompanyEntity;
+        }
+        UserRoleKey userRoleKey = userRoleKeys.get(0);
+        if(userRoleKey== null || StringUtils.isEmpty(userRoleKey.getRoleId())){
+            return userCompanyEntity;
+        }
+        String roleId = userRoleKey.getRoleId();
+        Role role = roleMapper.selectByPrimaryKey(roleId);
+        if(role== null || StringUtils.isEmpty(role.getCompanyId())){
+            return userCompanyEntity;
+        }
+        String companyId = role.getCompanyId();
+        DepExample depExample = new DepExample();
+        depExample.createCriteria().andCompanyIdEqualTo(companyId);
+        List<Dep> deps = depMapper.selectByExample(depExample);
+        Company company = companyMapper.selectByPrimaryKey(companyId);
+
+        userCompanyEntity.setCompany(company);
+        userCompanyEntity.setRole(role);
+        userCompanyEntity.setDeps(deps);
+        userCompanyEntity.setUserId(userId);
+
+        logger.info(String.format("userCompanyEntity : %s.", JSONObject.toJSONString(userCompanyEntity)));
+        return userCompanyEntity;
     }
     
     /**

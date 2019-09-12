@@ -1,17 +1,16 @@
 
-csquid:S00112s"FDefine and throw a dedicated exception instead of using a generic one.(õÜ—ºşÿÿÿÿ
 lsquid:S1192Ü"ODefine a constant instead of duplicating this literal "companyEnName" 12 times.(êâ›Ìøÿÿÿÿ
 lsquid:S1192Ğ"ODefine a constant instead of duplicating this literal "companyCnName" 12 times.(İñì–øÿÿÿÿ
-osquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÏßÉe
-]squid:S00112z"FDefine and throw a dedicated exception instead of using a generic one.(ìá¤
-
-csquid:S1192Š"KDefine a constant instead of duplicating this literal "companyId" 12 times.(ÓÙ®Ÿ
-csquid:S00112l"FDefine and throw a dedicated exception instead of using a generic one.(ÔÁñÍøÿÿÿÿ
-dsquid:S1192ô"GDefine a constant instead of duplicating this literal "intro" 12 times.(Ôïá“ıÿÿÿÿ
-Zsquid:S1155_">Use isEmpty() to check whether the collection is empty or not.(í´Õûüÿÿÿÿ
-asquid:S1192®"IDefine a constant instead of duplicating this literal "hostUrl" 12 times.(Ô«Ò
+fsquid:S1192–"NDefine a constant instead of duplicating this literal "companyAlias" 12 times.(±‚‰ª
+csquid:S00112s"FDefine and throw a dedicated exception instead of using a generic one.(õÜ—ºşÿÿÿÿ
 Tsquid:S11555">Use isEmpty() to check whether the collection is empty or not.(Á½¼s
+Zsquid:S1155_">Use isEmpty() to check whether the collection is empty or not.(í´Õûüÿÿÿÿ
+csquid:S1192Š"KDefine a constant instead of duplicating this literal "companyId" 12 times.(ÓÙ®Ÿ
+dsquid:S1192ô"GDefine a constant instead of duplicating this literal "intro" 12 times.(Ôïá“ıÿÿÿÿ
+osquid:S2293"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÏßÉe
+psquid:S2293["YReplace the type specification in this constructor call with the diamond operator ("<>").(óÎ³Ù
+csquid:S00112l"FDefine and throw a dedicated exception instead of using a generic one.(ÔÁñÍøÿÿÿÿ
 wsquid:S1488<"`Immediately return this expression instead of assigning it to the temporary variable "criteria".(¶Õ¯ì
 dsquid:S1192¢"GDefine a constant instead of duplicating this literal "ceoId" 12 times.(ıÌÁßşÿÿÿÿ
-fsquid:S1192–"NDefine a constant instead of duplicating this literal "companyAlias" 12 times.(±‚‰ª
-psquid:S2293["YReplace the type specification in this constructor call with the diamond operator ("<>").(óÎ³Ù
+asquid:S1192®"IDefine a constant instead of duplicating this literal "hostUrl" 12 times.(Ô«Ò
+]squid:S00112z"FDefine and throw a dedicated exception instead of using a generic one.(ìá¤

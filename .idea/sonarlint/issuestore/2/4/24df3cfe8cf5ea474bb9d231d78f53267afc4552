@@ -1,14 +1,14 @@
 
-Qsquid:S1135±"2Complete the task associated to this TODO comment.(ô„â³8¬£ÂßĞ-
-Vsquid:S1135æ"2Complete the task associated to this TODO comment.(ÎëâŞøÿÿÿÿ8¬£ÂßĞ-
-Nsquid:S1066Ä"/Merge this if statement with the enclosing one.(›­¡Ë8¬£ÂßĞ-
-Usquid:S1135W"2Complete the task associated to this TODO comment.(ñ‡ßïüÿÿÿÿ8¬£ÂßĞ-
-dsquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(ñ·¼8¬£ÂßĞ-
-psquid:S00117k"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êÄÅé8¬£ÂßĞ-
-qsquid:S00117€"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”•¦ì8¬£ÂßĞ-
-`squid:CallToDeprecatedMethod"0Remove this use of "getHours"; it is deprecated.(ä‰À8¬£ÂßĞ-
 Usquid:S11355"2Complete the task associated to this TODO comment.(°±Ğşÿÿÿÿ8¬£ÂßĞ-
-Psquid:S1135t"2Complete the task associated to this TODO comment.(ÍöÖ8¬£ÂßĞ-
-vsquid:S00117ø"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(šÜİ»ıÿÿÿÿ8¬£ÂßĞ-
+psquid:S00117k"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(êÄÅé8¬£ÂßĞ-
+Nsquid:S1066Ä"/Merge this if statement with the enclosing one.(›­¡Ë8¬£ÂßĞ-
+`squid:CallToDeprecatedMethod"0Remove this use of "getHours"; it is deprecated.(ä‰À8¬£ÂßĞ-
 Psquid:S1135I"2Complete the task associated to this TODO comment.(ñù­…8¬£ÂßĞ-
+Vsquid:S1135æ"2Complete the task associated to this TODO comment.(ÎëâŞøÿÿÿÿ8¬£ÂßĞ-
 bsquid:S1155ú">Use isEmpty() to check whether the collection is empty or not.(›©­‘ûÿÿÿÿ8¬£ÂßĞ-
+dsquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(ñ·¼8¬£ÂßĞ-
+Usquid:S1135W"2Complete the task associated to this TODO comment.(ñ‡ßïüÿÿÿÿ8¬£ÂßĞ-
+Psquid:S1135t"2Complete the task associated to this TODO comment.(ÍöÖ8¬£ÂßĞ-
+qsquid:S00117€"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(”•¦ì8¬£ÂßĞ-
+Qsquid:S1135±"2Complete the task associated to this TODO comment.(ô„â³8¬£ÂßĞ-
+vsquid:S00117ø"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(šÜİ»ıÿÿÿÿ8¬£ÂßĞ-

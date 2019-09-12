@@ -1,33 +1,35 @@
 
-4squid:S1643Œ"Use a StringBuilder instead.(Öíğ¨
-–squid:S1192"yDefine a constant instead of duplicating this literal " æ•°æ®è¡Œ<font style='color:red;font-weight: bold;'>ã€" 3 times.(€ÄïÅüÿÿÿÿ
-Gsquid:S1066Á"/Merge this if statement with the enclosing one.(Ë”³
-psquid:S2293Î"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ö‹è)
-vsquid:S2293Ô"YReplace the type specification in this constructor call with the diamond operator ("<>").(™ºöºıÿÿÿÿ
-csquid:CommentedOutCodeLine¬"<This block of commented-out lines of code should be removed.(Çµí‘
-P
-squid:S106˜"9Replace this use of System.out or System.err by a logger.(ƒùµ²
-€squid:S1488u"dImmediately return this expression instead of assigning it to the temporary variable "pricipalUser".(ìèùçûÿÿÿÿ
-Nsquid:S11359"2Complete the task associated to this TODO comment.(®è»¾úÿÿÿÿ
-Isquid:S1135`"2Complete the task associated to this TODO comment.(á½±
-Isquid:S1135n"2Complete the task associated to this TODO comment.(íéô 
-Nsquid:S1135{"2Complete the task associated to this TODO comment.(îÊ—³øÿÿÿÿ
-Jsquid:S1135"2Complete the task associated to this TODO comment.(£è°½
-Osquid:S1135ª"2Complete the task associated to this TODO comment.(ŞÜ›Èûÿÿÿÿ
-Jsquid:S1135Ç"2Complete the task associated to this TODO comment.(óÏ˜²
-Jsquid:S1135ß"2Complete the task associated to this TODO comment.(é†
-Jsquid:S1135ğ"2Complete the task associated to this TODO comment.(¬Ó´ÿ
-Jsquid:S1135®"2Complete the task associated to this TODO comment.(÷£¿Ş
-Osquid:S1135ä"2Complete the task associated to this TODO comment.( ÖÛşÿÿÿÿ
-osquid:S3776ì"RRefactor this method to reduce its Cognitive Complexity from 35 to the 15 allowed.(¼ª‘”øÿÿÿÿ
-Ysquid:CallToDeprecatedMethod—"0Remove this use of "getHours"; it is deprecated.(ä‰À
-fsquid:S00100s"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ª½ÉÖ
-gsquid:S00100Í"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Œôı
-_squid:S00112û"FDefine and throw a dedicated exception instead of using a generic one.(Æ¶µÛ
-jsquid:S00117ñ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬®µØ
-osquid:S00117ó"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚çó©ÿÿÿÿÿ
-osquid:S00117ı"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›Ûéşÿÿÿÿ
-jsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„Ÿ«®
-jsquid:S00117…"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÃıÑó
-Vsquid:S1155Ò">Use isEmpty() to check whether the collection is empty or not.(¦ÍªË
-[squid:S1155÷">Use isEmpty() to check whether the collection is empty or not.(“‹ÓÎşÿÿÿÿ
+Isquid:S1135^"2Complete the task associated to this TODO comment.(á½±
+`squid:CallToDeprecatedMethod±"0Remove this use of "getHours"; it is deprecated.(ä‰À8Õ¢å£Ò-
+qsquid:S00117‹"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬®µØ8Õ¢å£Ò-
+fsquid:S00112•"FDefine and throw a dedicated exception instead of using a generic one.(Æ¶µÛ8Õ¢å£Ò-
+;squid:S1643¦"Use a StringBuilder instead.(Öíğ¨8Õ¢å£Ò-
+fsquid:S00100q"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ª½ÉÖ
+vsquid:S00117—"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›Ûéşÿÿÿÿ8Õ¢å£Ò-
+qsquid:S00117Ÿ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÃıÑó8Õ¢å£Ò-
+psquid:S2293Ì"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ö‹è)
+Qsquid:S1135Š"2Complete the task associated to this TODO comment.(¬Ó´ÿ8Õ¢å£Ò-
+€squid:S1488s"dImmediately return this expression instead of assigning it to the temporary variable "pricipalUser".(ìèùçûÿÿÿÿ
+qsquid:S00117›"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„Ÿ«®8Õ¢å£Ò-
+Msquid:S1481ƒ")Remove this unused "deps" local variable.(ñô™şÿÿÿÿ8ñ†œ¤Ò-
+gsquid:S00100Ë"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Œôı
+Jsquid:S1135œ"2Complete the task associated to this TODO comment.(£è°½
+vsquid:S2293Ò"YReplace the type specification in this constructor call with the diamond operator ("<>").(™ºöºıÿÿÿÿ
+Osquid:S1135¨"2Complete the task associated to this TODO comment.(ŞÜ›Èûÿÿÿÿ
+\squid:S1854ƒ"8Remove this useless assignment to local variable "deps".(ñô™şÿÿÿÿ8ñ†œ¤Ò-
+W
+squid:S106²"9Replace this use of System.out or System.err by a logger.(ƒùµ²8Õ¢å£Ò-
+jsquid:CommentedOutCodeLineÆ"<This block of commented-out lines of code should be removed.(Çµí‘8Õ¢å£Ò-
+Vsquid:S1135ş"2Complete the task associated to this TODO comment.( ÖÛşÿÿÿÿ8Õ¢å£Ò-
+Vsquid:S1155Ğ">Use isEmpty() to check whether the collection is empty or not.(¦ÍªË
+squid:S1192ª"yDefine a constant instead of duplicating this literal " æ•°æ®è¡Œ<font style='color:red;font-weight: bold;'>ã€" 3 times.(€ÄïÅüÿÿÿÿ8Õ¢å£Ò-
+Nsquid:S1135y"2Complete the task associated to this TODO comment.(îÊ—³øÿÿÿÿ
+Qsquid:S1135È"2Complete the task associated to this TODO comment.(÷£¿Ş8Õ¢å£Ò-
+Nsquid:S1066Û"/Merge this if statement with the enclosing one.(Ë”³8Õ¢å£Ò-
+Nsquid:S11351"2Complete the task associated to this TODO comment.(®è»¾úÿÿÿÿ
+vsquid:S00117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚çó©ÿÿÿÿÿ8Õ¢å£Ò-
+Isquid:S1135l"2Complete the task associated to this TODO comment.(íéô 
+Jsquid:S1135İ"2Complete the task associated to this TODO comment.(é†
+vsquid:S3776†"RRefactor this method to reduce its Cognitive Complexity from 35 to the 15 allowed.(¼ª‘”øÿÿÿÿ8Õ¢å£Ò-
+bsquid:S1155‘">Use isEmpty() to check whether the collection is empty or not.(“‹ÓÎşÿÿÿÿ8Õ¢å£Ò-
+Jsquid:S1135Å"2Complete the task associated to this TODO comment.(óÏ˜²
