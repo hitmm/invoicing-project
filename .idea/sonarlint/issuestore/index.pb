@@ -153,3 +153,7 @@ z
 Jinvoicing-module/src/main/java/com/glacier/frame/dao/system/DepMapper.java,b/5/b58a4872e8c080bac4810668bdd191d8a392ff15
 “
 cinvoicing-module/src/main/java/com/glacier/frame/entity/common/util/transfer/UserCompanyEntity.java,3/1/31a8dbfb7891ec693af364d565db0e6189370bcb
+
+Oinvoicing-module/src/main/java/com/glacier/frame/entity/system/UserSetting.java,0/2/02e36904749dedbd18f2dc00163c5224db12282e
+
+Oinvoicing-module/src/main/java/com/glacier/frame/dao/system/OperaLogMapper.java,2/4/248e7189d23d9eada2a864a13713e6a851774901

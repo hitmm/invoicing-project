@@ -234,6 +234,7 @@ public class UserService {
         	userExample.createCriteria().andUserIdEqualTo(userId);
         }
         List<User> users = userMapper.selectByExample(userExample);
+
         return JackJson.fromObjectToJson(users);
     }
 

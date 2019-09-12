@@ -1,35 +1,35 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.glacier.frame.dao.system.CompanyMapper">
-  <resultMap id="BaseResultMap" type="com.glacier.frame.entity.system.Company">
-    <id column="temp_company_company_id" jdbcType="VARCHAR" property="companyId" />
-    <result column="temp_company_company_cn_name" jdbcType="VARCHAR" property="companyCnName" />
-    <result column="temp_company_company_alias" jdbcType="VARCHAR" property="companyAlias" />
-    <result column="temp_company_company_en_name" jdbcType="VARCHAR" property="companyEnName" />
-    <result column="temp_company_ceo_id" jdbcType="VARCHAR" property="ceoId" />
-    <result column="temp_company_fax" jdbcType="VARCHAR" property="fax" />
-    <result column="temp_company_host_url" jdbcType="VARCHAR" property="hostUrl" />
-    <result column="temp_company_intro" jdbcType="VARCHAR" property="intro" />
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.glacier.frame.dao.system.CompanyMapper" >
+  <resultMap id="BaseResultMap" type="com.glacier.frame.entity.system.Company" >
+    <id column="temp_company_company_id" property="companyId" jdbcType="VARCHAR" />
+    <result column="temp_company_company_cn_name" property="companyCnName" jdbcType="VARCHAR" />
+    <result column="temp_company_company_alias" property="companyAlias" jdbcType="VARCHAR" />
+    <result column="temp_company_company_en_name" property="companyEnName" jdbcType="VARCHAR" />
+    <result column="temp_company_ceo_id" property="ceoId" jdbcType="VARCHAR" />
+    <result column="temp_company_fax" property="fax" jdbcType="VARCHAR" />
+    <result column="temp_company_host_url" property="hostUrl" jdbcType="VARCHAR" />
+    <result column="temp_company_intro" property="intro" jdbcType="VARCHAR" />
   </resultMap>
-  <sql id="Example_Where_Clause">
-    <where>
-      <foreach collection="oredCriteria" item="criteria" separator="or">
-        <if test="criteria.valid">
-          <trim prefix="(" prefixOverrides="and" suffix=")">
-            <foreach collection="criteria.criteria" item="criterion">
-              <choose>
-                <when test="criterion.noValue">
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
                   and ${criterion.condition}
                 </when>
-                <when test="criterion.singleValue">
+                <when test="criterion.singleValue" >
                   and ${criterion.condition} #{criterion.value}
                 </when>
-                <when test="criterion.betweenValue">
+                <when test="criterion.betweenValue" >
                   and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
                 </when>
-                <when test="criterion.listValue">
+                <when test="criterion.listValue" >
                   and ${criterion.condition}
-                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
                     #{listItem}
                   </foreach>
                 </when>
@@ -40,25 +40,25 @@
       </foreach>
     </where>
   </sql>
-  <sql id="Update_By_Example_Where_Clause">
-    <where>
-      <foreach collection="example.oredCriteria" item="criteria" separator="or">
-        <if test="criteria.valid">
-          <trim prefix="(" prefixOverrides="and" suffix=")">
-            <foreach collection="criteria.criteria" item="criterion">
-              <choose>
-                <when test="criterion.noValue">
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
                   and ${criterion.condition}
                 </when>
-                <when test="criterion.singleValue">
+                <when test="criterion.singleValue" >
                   and ${criterion.condition} #{criterion.value}
                 </when>
-                <when test="criterion.betweenValue">
+                <when test="criterion.betweenValue" >
                   and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
                 </when>
-                <when test="criterion.listValue">
+                <when test="criterion.listValue" >
                   and ${criterion.condition}
-                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
                     #{listItem}
                   </foreach>
                 </when>
@@ -69,47 +69,47 @@
       </foreach>
     </where>
   </sql>
-  <sql id="Base_Column_List">
+  <sql id="Base_Column_List" >
     temp_company.company_id as temp_company_company_id, temp_company.company_cn_name as temp_company_company_cn_name, 
     temp_company.company_alias as temp_company_company_alias, temp_company.company_en_name as temp_company_company_en_name, 
     temp_company.ceo_id as temp_company_ceo_id, temp_company.fax as temp_company_fax, 
     temp_company.host_url as temp_company_host_url, temp_company.intro as temp_company_intro
   </sql>
-  <select id="selectByExample" parameterType="com.glacier.frame.entity.system.CompanyExample" resultMap="BaseResultMap">
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.glacier.frame.entity.system.CompanyExample" >
     select
-    <if test="distinct">
+    <if test="distinct" >
       distinct
     </if>
     'true' as QUERYID,
     <include refid="Base_Column_List" />
     from t_company temp_company
-    <if test="_parameter != null">
+    <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
-    <if test="orderByClause != null">
+    <if test="orderByClause != null" >
       order by ${orderByClause}
     </if>
-    <if test="limitStart != null and limitStart &gt;= 0 and limitEnd != null and limitEnd&gt;=limitStart">
+    <if test="limitStart != null and limitStart >= 0 and limitEnd != null and limitEnd>=limitStart" >
       limit ${limitStart} , ${limitEnd}
     </if>
   </select>
-  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
     select 
     <include refid="Base_Column_List" />
     from t_company temp_company
     where temp_company.company_id = #{companyId,jdbcType=VARCHAR}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
     delete from t_company
     where company_id = #{companyId,jdbcType=VARCHAR}
   </delete>
-  <delete id="deleteByExample" parameterType="com.glacier.frame.entity.system.CompanyExample">
+  <delete id="deleteByExample" parameterType="com.glacier.frame.entity.system.CompanyExample" >
     delete from t_company temp_company
-    <if test="_parameter != null">
+    <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.glacier.frame.entity.system.Company">
+  <insert id="insert" parameterType="com.glacier.frame.entity.system.Company" >
     insert into t_company (company_id, company_cn_name, company_alias, 
       company_en_name, ceo_id, fax, 
       host_url, intro)
@@ -117,100 +117,100 @@
       #{companyEnName,jdbcType=VARCHAR}, #{ceoId,jdbcType=VARCHAR}, #{fax,jdbcType=VARCHAR}, 
       #{hostUrl,jdbcType=VARCHAR}, #{intro,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.glacier.frame.entity.system.Company">
+  <insert id="insertSelective" parameterType="com.glacier.frame.entity.system.Company" >
     insert into t_company
-    <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="companyId != null">
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="companyId != null" >
         company_id,
       </if>
-      <if test="companyCnName != null">
+      <if test="companyCnName != null" >
         company_cn_name,
       </if>
-      <if test="companyAlias != null">
+      <if test="companyAlias != null" >
         company_alias,
       </if>
-      <if test="companyEnName != null">
+      <if test="companyEnName != null" >
         company_en_name,
       </if>
-      <if test="ceoId != null">
+      <if test="ceoId != null" >
         ceo_id,
       </if>
-      <if test="fax != null">
+      <if test="fax != null" >
         fax,
       </if>
-      <if test="hostUrl != null">
+      <if test="hostUrl != null" >
         host_url,
       </if>
-      <if test="intro != null">
+      <if test="intro != null" >
         intro,
       </if>
     </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="companyId != null">
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="companyId != null" >
         #{companyId,jdbcType=VARCHAR},
       </if>
-      <if test="companyCnName != null">
+      <if test="companyCnName != null" >
         #{companyCnName,jdbcType=VARCHAR},
       </if>
-      <if test="companyAlias != null">
+      <if test="companyAlias != null" >
         #{companyAlias,jdbcType=VARCHAR},
       </if>
-      <if test="companyEnName != null">
+      <if test="companyEnName != null" >
         #{companyEnName,jdbcType=VARCHAR},
       </if>
-      <if test="ceoId != null">
+      <if test="ceoId != null" >
         #{ceoId,jdbcType=VARCHAR},
       </if>
-      <if test="fax != null">
+      <if test="fax != null" >
         #{fax,jdbcType=VARCHAR},
       </if>
-      <if test="hostUrl != null">
+      <if test="hostUrl != null" >
         #{hostUrl,jdbcType=VARCHAR},
       </if>
-      <if test="intro != null">
+      <if test="intro != null" >
         #{intro,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.glacier.frame.entity.system.CompanyExample" resultType="java.lang.Integer">
+  <select id="countByExample" parameterType="com.glacier.frame.entity.system.CompanyExample" resultType="java.lang.Integer" >
     select count(*) from t_company temp_company
-    <if test="_parameter != null">
+    <if test="_parameter != null" >
       <include refid="Example_Where_Clause" />
     </if>
   </select>
-  <update id="updateByExampleSelective" parameterType="map">
+  <update id="updateByExampleSelective" parameterType="map" >
     update t_company temp_company
-    <set>
-      <if test="record.companyId != null">
+    <set >
+      <if test="record.companyId != null" >
         temp_company.company_id = #{record.companyId,jdbcType=VARCHAR},
       </if>
-      <if test="record.companyCnName != null">
+      <if test="record.companyCnName != null" >
         temp_company.company_cn_name = #{record.companyCnName,jdbcType=VARCHAR},
       </if>
-      <if test="record.companyAlias != null">
+      <if test="record.companyAlias != null" >
         temp_company.company_alias = #{record.companyAlias,jdbcType=VARCHAR},
       </if>
-      <if test="record.companyEnName != null">
+      <if test="record.companyEnName != null" >
         temp_company.company_en_name = #{record.companyEnName,jdbcType=VARCHAR},
       </if>
-      <if test="record.ceoId != null">
+      <if test="record.ceoId != null" >
         temp_company.ceo_id = #{record.ceoId,jdbcType=VARCHAR},
       </if>
-      <if test="record.fax != null">
+      <if test="record.fax != null" >
         temp_company.fax = #{record.fax,jdbcType=VARCHAR},
       </if>
-      <if test="record.hostUrl != null">
+      <if test="record.hostUrl != null" >
         temp_company.host_url = #{record.hostUrl,jdbcType=VARCHAR},
       </if>
-      <if test="record.intro != null">
+      <if test="record.intro != null" >
         temp_company.intro = #{record.intro,jdbcType=VARCHAR},
       </if>
     </set>
-    <if test="_parameter != null">
+    <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByExample" parameterType="map">
+  <update id="updateByExample" parameterType="map" >
     update t_company temp_company
     set temp_company.company_id = #{record.companyId,jdbcType=VARCHAR},
       temp_company.company_cn_name = #{record.companyCnName,jdbcType=VARCHAR},
@@ -220,773 +220,38 @@
       temp_company.fax = #{record.fax,jdbcType=VARCHAR},
       temp_company.host_url = #{record.hostUrl,jdbcType=VARCHAR},
       temp_company.intro = #{record.intro,jdbcType=VARCHAR}
-    <if test="_parameter != null">
+    <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.glacier.frame.entity.system.Company">
+  <update id="updateByPrimaryKeySelective" parameterType="com.glacier.frame.entity.system.Company" >
     update t_company
-    <set>
-      <if test="companyCnName != null">
+    <set >
+      <if test="companyCnName != null" >
         company_cn_name = #{companyCnName,jdbcType=VARCHAR},
       </if>
-      <if test="companyAlias != null">
+      <if test="companyAlias != null" >
         company_alias = #{companyAlias,jdbcType=VARCHAR},
       </if>
-      <if test="companyEnName != null">
+      <if test="companyEnName != null" >
         company_en_name = #{companyEnName,jdbcType=VARCHAR},
       </if>
-      <if test="ceoId != null">
+      <if test="ceoId != null" >
         ceo_id = #{ceoId,jdbcType=VARCHAR},
       </if>
-      <if test="fax != null">
+      <if test="fax != null" >
         fax = #{fax,jdbcType=VARCHAR},
       </if>
-      <if test="hostUrl != null">
+      <if test="hostUrl != null" >
         host_url = #{hostUrl,jdbcType=VARCHAR},
       </if>
-      <if test="intro != null">
+      <if test="intro != null" >
         intro = #{intro,jdbcType=VARCHAR},
       </if>
     </set>
     where company_id = #{companyId,jdbcType=VARCHAR}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.glacier.frame.entity.system.Company">
-    update t_company
-    set company_cn_name = #{companyCnName,jdbcType=VARCHAR},
-      company_alias = #{companyAlias,jdbcType=VARCHAR},
-      company_en_name = #{companyEnName,jdbcType=VARCHAR},
-      ceo_id = #{ceoId,jdbcType=VARCHAR},
-      fax = #{fax,jdbcType=VARCHAR},
-      host_url = #{hostUrl,jdbcType=VARCHAR},
-      intro = #{intro,jdbcType=VARCHAR}
-    where company_id = #{companyId,jdbcType=VARCHAR}
-  </update>
-  <resultMap id="BaseResultMap" type="com.glacier.frame.entity.system.Company">
-    <id column="temp_company_company_id" jdbcType="VARCHAR" property="companyId" />
-    <result column="temp_company_company_cn_name" jdbcType="VARCHAR" property="companyCnName" />
-    <result column="temp_company_company_alias" jdbcType="VARCHAR" property="companyAlias" />
-    <result column="temp_company_company_en_name" jdbcType="VARCHAR" property="companyEnName" />
-    <result column="temp_company_ceo_id" jdbcType="VARCHAR" property="ceoId" />
-    <result column="temp_company_fax" jdbcType="VARCHAR" property="fax" />
-    <result column="temp_company_host_url" jdbcType="VARCHAR" property="hostUrl" />
-    <result column="temp_company_intro" jdbcType="VARCHAR" property="intro" />
-  </resultMap>
-  <sql id="Example_Where_Clause">
-    <where>
-      <foreach collection="oredCriteria" item="criteria" separator="or">
-        <if test="criteria.valid">
-          <trim prefix="(" prefixOverrides="and" suffix=")">
-            <foreach collection="criteria.criteria" item="criterion">
-              <choose>
-                <when test="criterion.noValue">
-                  and ${criterion.condition}
-                </when>
-                <when test="criterion.singleValue">
-                  and ${criterion.condition} #{criterion.value}
-                </when>
-                <when test="criterion.betweenValue">
-                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
-                </when>
-                <when test="criterion.listValue">
-                  and ${criterion.condition}
-                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
-                    #{listItem}
-                  </foreach>
-                </when>
-              </choose>
-            </foreach>
-          </trim>
-        </if>
-      </foreach>
-    </where>
-  </sql>
-  <sql id="Update_By_Example_Where_Clause">
-    <where>
-      <foreach collection="example.oredCriteria" item="criteria" separator="or">
-        <if test="criteria.valid">
-          <trim prefix="(" prefixOverrides="and" suffix=")">
-            <foreach collection="criteria.criteria" item="criterion">
-              <choose>
-                <when test="criterion.noValue">
-                  and ${criterion.condition}
-                </when>
-                <when test="criterion.singleValue">
-                  and ${criterion.condition} #{criterion.value}
-                </when>
-                <when test="criterion.betweenValue">
-                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
-                </when>
-                <when test="criterion.listValue">
-                  and ${criterion.condition}
-                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
-                    #{listItem}
-                  </foreach>
-                </when>
-              </choose>
-            </foreach>
-          </trim>
-        </if>
-      </foreach>
-    </where>
-  </sql>
-  <sql id="Base_Column_List">
-    temp_company.company_id as temp_company_company_id, temp_company.company_cn_name as temp_company_company_cn_name, 
-    temp_company.company_alias as temp_company_company_alias, temp_company.company_en_name as temp_company_company_en_name, 
-    temp_company.ceo_id as temp_company_ceo_id, temp_company.fax as temp_company_fax, 
-    temp_company.host_url as temp_company_host_url, temp_company.intro as temp_company_intro
-  </sql>
-  <select id="selectByExample" parameterType="com.glacier.frame.entity.system.CompanyExample" resultMap="BaseResultMap">
-    select
-    <if test="distinct">
-      distinct
-    </if>
-    'true' as QUERYID,
-    <include refid="Base_Column_List" />
-    from t_company temp_company
-    <if test="_parameter != null">
-      <include refid="Example_Where_Clause" />
-    </if>
-    <if test="orderByClause != null">
-      order by ${orderByClause}
-    </if>
-    <if test="limitStart != null and limitStart &gt;= 0 and limitEnd != null and limitEnd&gt;=limitStart">
-      limit ${limitStart} , ${limitEnd}
-    </if>
-  </select>
-  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
-    select 
-    <include refid="Base_Column_List" />
-    from t_company temp_company
-    where temp_company.company_id = #{companyId,jdbcType=VARCHAR}
-  </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
-    delete from t_company
-    where company_id = #{companyId,jdbcType=VARCHAR}
-  </delete>
-  <delete id="deleteByExample" parameterType="com.glacier.frame.entity.system.CompanyExample">
-    delete from t_company temp_company
-    <if test="_parameter != null">
-      <include refid="Example_Where_Clause" />
-    </if>
-  </delete>
-  <insert id="insert" parameterType="com.glacier.frame.entity.system.Company">
-    insert into t_company (company_id, company_cn_name, company_alias, 
-      company_en_name, ceo_id, fax, 
-      host_url, intro)
-    values (#{companyId,jdbcType=VARCHAR}, #{companyCnName,jdbcType=VARCHAR}, #{companyAlias,jdbcType=VARCHAR}, 
-      #{companyEnName,jdbcType=VARCHAR}, #{ceoId,jdbcType=VARCHAR}, #{fax,jdbcType=VARCHAR}, 
-      #{hostUrl,jdbcType=VARCHAR}, #{intro,jdbcType=VARCHAR})
-  </insert>
-  <insert id="insertSelective" parameterType="com.glacier.frame.entity.system.Company">
-    insert into t_company
-    <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="companyId != null">
-        company_id,
-      </if>
-      <if test="companyCnName != null">
-        company_cn_name,
-      </if>
-      <if test="companyAlias != null">
-        company_alias,
-      </if>
-      <if test="companyEnName != null">
-        company_en_name,
-      </if>
-      <if test="ceoId != null">
-        ceo_id,
-      </if>
-      <if test="fax != null">
-        fax,
-      </if>
-      <if test="hostUrl != null">
-        host_url,
-      </if>
-      <if test="intro != null">
-        intro,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="companyId != null">
-        #{companyId,jdbcType=VARCHAR},
-      </if>
-      <if test="companyCnName != null">
-        #{companyCnName,jdbcType=VARCHAR},
-      </if>
-      <if test="companyAlias != null">
-        #{companyAlias,jdbcType=VARCHAR},
-      </if>
-      <if test="companyEnName != null">
-        #{companyEnName,jdbcType=VARCHAR},
-      </if>
-      <if test="ceoId != null">
-        #{ceoId,jdbcType=VARCHAR},
-      </if>
-      <if test="fax != null">
-        #{fax,jdbcType=VARCHAR},
-      </if>
-      <if test="hostUrl != null">
-        #{hostUrl,jdbcType=VARCHAR},
-      </if>
-      <if test="intro != null">
-        #{intro,jdbcType=VARCHAR},
-      </if>
-    </trim>
-  </insert>
-  <select id="countByExample" parameterType="com.glacier.frame.entity.system.CompanyExample" resultType="java.lang.Long">
-    select count(*) from t_company temp_company
-    <if test="_parameter != null">
-      <include refid="Example_Where_Clause" />
-    </if>
-  </select>
-  <update id="updateByExampleSelective" parameterType="map">
-    update t_company temp_company
-    <set>
-      <if test="record.companyId != null">
-        temp_company.company_id = #{record.companyId,jdbcType=VARCHAR},
-      </if>
-      <if test="record.companyCnName != null">
-        temp_company.company_cn_name = #{record.companyCnName,jdbcType=VARCHAR},
-      </if>
-      <if test="record.companyAlias != null">
-        temp_company.company_alias = #{record.companyAlias,jdbcType=VARCHAR},
-      </if>
-      <if test="record.companyEnName != null">
-        temp_company.company_en_name = #{record.companyEnName,jdbcType=VARCHAR},
-      </if>
-      <if test="record.ceoId != null">
-        temp_company.ceo_id = #{record.ceoId,jdbcType=VARCHAR},
-      </if>
-      <if test="record.fax != null">
-        temp_company.fax = #{record.fax,jdbcType=VARCHAR},
-      </if>
-      <if test="record.hostUrl != null">
-        temp_company.host_url = #{record.hostUrl,jdbcType=VARCHAR},
-      </if>
-      <if test="record.intro != null">
-        temp_company.intro = #{record.intro,jdbcType=VARCHAR},
-      </if>
-    </set>
-    <if test="_parameter != null">
-      <include refid="Update_By_Example_Where_Clause" />
-    </if>
-  </update>
-  <update id="updateByExample" parameterType="map">
-    update t_company temp_company
-    set temp_company.company_id = #{record.companyId,jdbcType=VARCHAR},
-      temp_company.company_cn_name = #{record.companyCnName,jdbcType=VARCHAR},
-      temp_company.company_alias = #{record.companyAlias,jdbcType=VARCHAR},
-      temp_company.company_en_name = #{record.companyEnName,jdbcType=VARCHAR},
-      temp_company.ceo_id = #{record.ceoId,jdbcType=VARCHAR},
-      temp_company.fax = #{record.fax,jdbcType=VARCHAR},
-      temp_company.host_url = #{record.hostUrl,jdbcType=VARCHAR},
-      temp_company.intro = #{record.intro,jdbcType=VARCHAR}
-    <if test="_parameter != null">
-      <include refid="Update_By_Example_Where_Clause" />
-    </if>
-  </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.glacier.frame.entity.system.Company">
-    update t_company
-    <set>
-      <if test="companyCnName != null">
-        company_cn_name = #{companyCnName,jdbcType=VARCHAR},
-      </if>
-      <if test="companyAlias != null">
-        company_alias = #{companyAlias,jdbcType=VARCHAR},
-      </if>
-      <if test="companyEnName != null">
-        company_en_name = #{companyEnName,jdbcType=VARCHAR},
-      </if>
-      <if test="ceoId != null">
-        ceo_id = #{ceoId,jdbcType=VARCHAR},
-      </if>
-      <if test="fax != null">
-        fax = #{fax,jdbcType=VARCHAR},
-      </if>
-      <if test="hostUrl != null">
-        host_url = #{hostUrl,jdbcType=VARCHAR},
-      </if>
-      <if test="intro != null">
-        intro = #{intro,jdbcType=VARCHAR},
-      </if>
-    </set>
-    where company_id = #{companyId,jdbcType=VARCHAR}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="com.glacier.frame.entity.system.Company">
-    update t_company
-    set company_cn_name = #{companyCnName,jdbcType=VARCHAR},
-      company_alias = #{companyAlias,jdbcType=VARCHAR},
-      company_en_name = #{companyEnName,jdbcType=VARCHAR},
-      ceo_id = #{ceoId,jdbcType=VARCHAR},
-      fax = #{fax,jdbcType=VARCHAR},
-      host_url = #{hostUrl,jdbcType=VARCHAR},
-      intro = #{intro,jdbcType=VARCHAR}
-    where company_id = #{companyId,jdbcType=VARCHAR}
-  </update>
-  <resultMap id="BaseResultMap" type="com.glacier.frame.entity.system.Company">
-    <result column="temp_company_company_id" jdbcType="VARCHAR" property="companyId" />
-    <result column="temp_company_company_cn_name" jdbcType="VARCHAR" property="companyCnName" />
-    <result column="temp_company_company_alias" jdbcType="VARCHAR" property="companyAlias" />
-    <result column="temp_company_company_en_name" jdbcType="VARCHAR" property="companyEnName" />
-    <result column="temp_company_ceo_id" jdbcType="VARCHAR" property="ceoId" />
-    <result column="temp_company_fax" jdbcType="VARCHAR" property="fax" />
-    <result column="temp_company_host_url" jdbcType="VARCHAR" property="hostUrl" />
-    <result column="temp_company_intro" jdbcType="VARCHAR" property="intro" />
-  </resultMap>
-  <sql id="Example_Where_Clause">
-    <where>
-      <foreach collection="oredCriteria" item="criteria" separator="or">
-        <if test="criteria.valid">
-          <trim prefix="(" prefixOverrides="and" suffix=")">
-            <foreach collection="criteria.criteria" item="criterion">
-              <choose>
-                <when test="criterion.noValue">
-                  and ${criterion.condition}
-                </when>
-                <when test="criterion.singleValue">
-                  and ${criterion.condition} #{criterion.value}
-                </when>
-                <when test="criterion.betweenValue">
-                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
-                </when>
-                <when test="criterion.listValue">
-                  and ${criterion.condition}
-                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
-                    #{listItem}
-                  </foreach>
-                </when>
-              </choose>
-            </foreach>
-          </trim>
-        </if>
-      </foreach>
-    </where>
-  </sql>
-  <sql id="Update_By_Example_Where_Clause">
-    <where>
-      <foreach collection="example.oredCriteria" item="criteria" separator="or">
-        <if test="criteria.valid">
-          <trim prefix="(" prefixOverrides="and" suffix=")">
-            <foreach collection="criteria.criteria" item="criterion">
-              <choose>
-                <when test="criterion.noValue">
-                  and ${criterion.condition}
-                </when>
-                <when test="criterion.singleValue">
-                  and ${criterion.condition} #{criterion.value}
-                </when>
-                <when test="criterion.betweenValue">
-                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
-                </when>
-                <when test="criterion.listValue">
-                  and ${criterion.condition}
-                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
-                    #{listItem}
-                  </foreach>
-                </when>
-              </choose>
-            </foreach>
-          </trim>
-        </if>
-      </foreach>
-    </where>
-  </sql>
-  <sql id="Base_Column_List">
-    temp_company.company_id as temp_company_company_id, temp_company.company_cn_name as temp_company_company_cn_name, 
-    temp_company.company_alias as temp_company_company_alias, temp_company.company_en_name as temp_company_company_en_name, 
-    temp_company.ceo_id as temp_company_ceo_id, temp_company.fax as temp_company_fax, 
-    temp_company.host_url as temp_company_host_url, temp_company.intro as temp_company_intro
-  </sql>
-  <select id="selectByExample" parameterType="com.glacier.frame.entity.system.CompanyExample" resultMap="BaseResultMap">
-    select
-    <if test="distinct">
-      distinct
-    </if>
-    'true' as QUERYID,
-    <include refid="Base_Column_List" />
-    from t_company temp_company
-    <if test="_parameter != null">
-      <include refid="Example_Where_Clause" />
-    </if>
-    <if test="orderByClause != null">
-      order by ${orderByClause}
-    </if>
-    <if test="limitStart != null and limitStart &gt;= 0 and limitEnd != null and limitEnd&gt;=limitStart">
-      limit ${limitStart} , ${limitEnd}
-    </if>
-  </select>
-  <delete id="deleteByExample" parameterType="com.glacier.frame.entity.system.CompanyExample">
-    delete from t_company temp_company
-    <if test="_parameter != null">
-      <include refid="Example_Where_Clause" />
-    </if>
-  </delete>
-  <insert id="insert" parameterType="com.glacier.frame.entity.system.Company">
-    insert into t_company (company_id, company_cn_name, company_alias, 
-      company_en_name, ceo_id, fax, 
-      host_url, intro)
-    values (#{companyId,jdbcType=VARCHAR}, #{companyCnName,jdbcType=VARCHAR}, #{companyAlias,jdbcType=VARCHAR}, 
-      #{companyEnName,jdbcType=VARCHAR}, #{ceoId,jdbcType=VARCHAR}, #{fax,jdbcType=VARCHAR}, 
-      #{hostUrl,jdbcType=VARCHAR}, #{intro,jdbcType=VARCHAR})
-  </insert>
-  <insert id="insertSelective" parameterType="com.glacier.frame.entity.system.Company">
-    insert into t_company
-    <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="companyId != null">
-        company_id,
-      </if>
-      <if test="companyCnName != null">
-        company_cn_name,
-      </if>
-      <if test="companyAlias != null">
-        company_alias,
-      </if>
-      <if test="companyEnName != null">
-        company_en_name,
-      </if>
-      <if test="ceoId != null">
-        ceo_id,
-      </if>
-      <if test="fax != null">
-        fax,
-      </if>
-      <if test="hostUrl != null">
-        host_url,
-      </if>
-      <if test="intro != null">
-        intro,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="companyId != null">
-        #{companyId,jdbcType=VARCHAR},
-      </if>
-      <if test="companyCnName != null">
-        #{companyCnName,jdbcType=VARCHAR},
-      </if>
-      <if test="companyAlias != null">
-        #{companyAlias,jdbcType=VARCHAR},
-      </if>
-      <if test="companyEnName != null">
-        #{companyEnName,jdbcType=VARCHAR},
-      </if>
-      <if test="ceoId != null">
-        #{ceoId,jdbcType=VARCHAR},
-      </if>
-      <if test="fax != null">
-        #{fax,jdbcType=VARCHAR},
-      </if>
-      <if test="hostUrl != null">
-        #{hostUrl,jdbcType=VARCHAR},
-      </if>
-      <if test="intro != null">
-        #{intro,jdbcType=VARCHAR},
-      </if>
-    </trim>
-  </insert>
-  <select id="countByExample" parameterType="com.glacier.frame.entity.system.CompanyExample" resultType="java.lang.Long">
-    select count(*) from t_company temp_company
-    <if test="_parameter != null">
-      <include refid="Example_Where_Clause" />
-    </if>
-  </select>
-  <update id="updateByExampleSelective" parameterType="map">
-    update t_company temp_company
-    <set>
-      <if test="record.companyId != null">
-        temp_company.company_id = #{record.companyId,jdbcType=VARCHAR},
-      </if>
-      <if test="record.companyCnName != null">
-        temp_company.company_cn_name = #{record.companyCnName,jdbcType=VARCHAR},
-      </if>
-      <if test="record.companyAlias != null">
-        temp_company.company_alias = #{record.companyAlias,jdbcType=VARCHAR},
-      </if>
-      <if test="record.companyEnName != null">
-        temp_company.company_en_name = #{record.companyEnName,jdbcType=VARCHAR},
-      </if>
-      <if test="record.ceoId != null">
-        temp_company.ceo_id = #{record.ceoId,jdbcType=VARCHAR},
-      </if>
-      <if test="record.fax != null">
-        temp_company.fax = #{record.fax,jdbcType=VARCHAR},
-      </if>
-      <if test="record.hostUrl != null">
-        temp_company.host_url = #{record.hostUrl,jdbcType=VARCHAR},
-      </if>
-      <if test="record.intro != null">
-        temp_company.intro = #{record.intro,jdbcType=VARCHAR},
-      </if>
-    </set>
-    <if test="_parameter != null">
-      <include refid="Update_By_Example_Where_Clause" />
-    </if>
-  </update>
-  <update id="updateByExample" parameterType="map">
-    update t_company temp_company
-    set temp_company.company_id = #{record.companyId,jdbcType=VARCHAR},
-      temp_company.company_cn_name = #{record.companyCnName,jdbcType=VARCHAR},
-      temp_company.company_alias = #{record.companyAlias,jdbcType=VARCHAR},
-      temp_company.company_en_name = #{record.companyEnName,jdbcType=VARCHAR},
-      temp_company.ceo_id = #{record.ceoId,jdbcType=VARCHAR},
-      temp_company.fax = #{record.fax,jdbcType=VARCHAR},
-      temp_company.host_url = #{record.hostUrl,jdbcType=VARCHAR},
-      temp_company.intro = #{record.intro,jdbcType=VARCHAR}
-    <if test="_parameter != null">
-      <include refid="Update_By_Example_Where_Clause" />
-    </if>
-  </update>
-  <resultMap id="BaseResultMap" type="com.glacier.frame.entity.system.Company">
-    <id column="temp_company_company_id" jdbcType="VARCHAR" property="companyId" />
-    <result column="temp_company_company_cn_name" jdbcType="VARCHAR" property="companyCnName" />
-    <result column="temp_company_company_alias" jdbcType="VARCHAR" property="companyAlias" />
-    <result column="temp_company_company_en_name" jdbcType="VARCHAR" property="companyEnName" />
-    <result column="temp_company_ceo_id" jdbcType="VARCHAR" property="ceoId" />
-    <result column="temp_company_fax" jdbcType="VARCHAR" property="fax" />
-    <result column="temp_company_host_url" jdbcType="VARCHAR" property="hostUrl" />
-    <result column="temp_company_intro" jdbcType="VARCHAR" property="intro" />
-  </resultMap>
-  <sql id="Example_Where_Clause">
-    <where>
-      <foreach collection="oredCriteria" item="criteria" separator="or">
-        <if test="criteria.valid">
-          <trim prefix="(" prefixOverrides="and" suffix=")">
-            <foreach collection="criteria.criteria" item="criterion">
-              <choose>
-                <when test="criterion.noValue">
-                  and ${criterion.condition}
-                </when>
-                <when test="criterion.singleValue">
-                  and ${criterion.condition} #{criterion.value}
-                </when>
-                <when test="criterion.betweenValue">
-                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
-                </when>
-                <when test="criterion.listValue">
-                  and ${criterion.condition}
-                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
-                    #{listItem}
-                  </foreach>
-                </when>
-              </choose>
-            </foreach>
-          </trim>
-        </if>
-      </foreach>
-    </where>
-  </sql>
-  <sql id="Update_By_Example_Where_Clause">
-    <where>
-      <foreach collection="example.oredCriteria" item="criteria" separator="or">
-        <if test="criteria.valid">
-          <trim prefix="(" prefixOverrides="and" suffix=")">
-            <foreach collection="criteria.criteria" item="criterion">
-              <choose>
-                <when test="criterion.noValue">
-                  and ${criterion.condition}
-                </when>
-                <when test="criterion.singleValue">
-                  and ${criterion.condition} #{criterion.value}
-                </when>
-                <when test="criterion.betweenValue">
-                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
-                </when>
-                <when test="criterion.listValue">
-                  and ${criterion.condition}
-                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
-                    #{listItem}
-                  </foreach>
-                </when>
-              </choose>
-            </foreach>
-          </trim>
-        </if>
-      </foreach>
-    </where>
-  </sql>
-  <sql id="Base_Column_List">
-    temp_company.company_id as temp_company_company_id, temp_company.company_cn_name as temp_company_company_cn_name, 
-    temp_company.company_alias as temp_company_company_alias, temp_company.company_en_name as temp_company_company_en_name, 
-    temp_company.ceo_id as temp_company_ceo_id, temp_company.fax as temp_company_fax, 
-    temp_company.host_url as temp_company_host_url, temp_company.intro as temp_company_intro
-  </sql>
-  <select id="selectByExample" parameterType="com.glacier.frame.entity.system.CompanyExample" resultMap="BaseResultMap">
-    select
-    <if test="distinct">
-      distinct
-    </if>
-    'true' as QUERYID,
-    <include refid="Base_Column_List" />
-    from t_company temp_company
-    <if test="_parameter != null">
-      <include refid="Example_Where_Clause" />
-    </if>
-    <if test="orderByClause != null">
-      order by ${orderByClause}
-    </if>
-    <if test="limitStart != null and limitStart &gt;= 0 and limitEnd != null and limitEnd&gt;=limitStart">
-      limit ${limitStart} , ${limitEnd}
-    </if>
-  </select>
-  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
-    select 
-    <include refid="Base_Column_List" />
-    from t_company temp_company
-    where temp_company.company_id = #{companyId,jdbcType=VARCHAR}
-  </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
-    delete from t_company
-    where company_id = #{companyId,jdbcType=VARCHAR}
-  </delete>
-  <delete id="deleteByExample" parameterType="com.glacier.frame.entity.system.CompanyExample">
-    delete from t_company temp_company
-    <if test="_parameter != null">
-      <include refid="Example_Where_Clause" />
-    </if>
-  </delete>
-  <insert id="insert" parameterType="com.glacier.frame.entity.system.Company">
-    insert into t_company (company_id, company_cn_name, company_alias, 
-      company_en_name, ceo_id, fax, 
-      host_url, intro)
-    values (#{companyId,jdbcType=VARCHAR}, #{companyCnName,jdbcType=VARCHAR}, #{companyAlias,jdbcType=VARCHAR}, 
-      #{companyEnName,jdbcType=VARCHAR}, #{ceoId,jdbcType=VARCHAR}, #{fax,jdbcType=VARCHAR}, 
-      #{hostUrl,jdbcType=VARCHAR}, #{intro,jdbcType=VARCHAR})
-  </insert>
-  <insert id="insertSelective" parameterType="com.glacier.frame.entity.system.Company">
-    insert into t_company
-    <trim prefix="(" suffix=")" suffixOverrides=",">
-      <if test="companyId != null">
-        company_id,
-      </if>
-      <if test="companyCnName != null">
-        company_cn_name,
-      </if>
-      <if test="companyAlias != null">
-        company_alias,
-      </if>
-      <if test="companyEnName != null">
-        company_en_name,
-      </if>
-      <if test="ceoId != null">
-        ceo_id,
-      </if>
-      <if test="fax != null">
-        fax,
-      </if>
-      <if test="hostUrl != null">
-        host_url,
-      </if>
-      <if test="intro != null">
-        intro,
-      </if>
-    </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides=",">
-      <if test="companyId != null">
-        #{companyId,jdbcType=VARCHAR},
-      </if>
-      <if test="companyCnName != null">
-        #{companyCnName,jdbcType=VARCHAR},
-      </if>
-      <if test="companyAlias != null">
-        #{companyAlias,jdbcType=VARCHAR},
-      </if>
-      <if test="companyEnName != null">
-        #{companyEnName,jdbcType=VARCHAR},
-      </if>
-      <if test="ceoId != null">
-        #{ceoId,jdbcType=VARCHAR},
-      </if>
-      <if test="fax != null">
-        #{fax,jdbcType=VARCHAR},
-      </if>
-      <if test="hostUrl != null">
-        #{hostUrl,jdbcType=VARCHAR},
-      </if>
-      <if test="intro != null">
-        #{intro,jdbcType=VARCHAR},
-      </if>
-    </trim>
-  </insert>
-  <select id="countByExample" parameterType="com.glacier.frame.entity.system.CompanyExample" resultType="java.lang.Integer">
-    select count(*) from t_company temp_company
-    <if test="_parameter != null">
-      <include refid="Example_Where_Clause" />
-    </if>
-  </select>
-  <update id="updateByExampleSelective" parameterType="map">
-    update t_company temp_company
-    <set>
-      <if test="record.companyId != null">
-        temp_company.company_id = #{record.companyId,jdbcType=VARCHAR},
-      </if>
-      <if test="record.companyCnName != null">
-        temp_company.company_cn_name = #{record.companyCnName,jdbcType=VARCHAR},
-      </if>
-      <if test="record.companyAlias != null">
-        temp_company.company_alias = #{record.companyAlias,jdbcType=VARCHAR},
-      </if>
-      <if test="record.companyEnName != null">
-        temp_company.company_en_name = #{record.companyEnName,jdbcType=VARCHAR},
-      </if>
-      <if test="record.ceoId != null">
-        temp_company.ceo_id = #{record.ceoId,jdbcType=VARCHAR},
-      </if>
-      <if test="record.fax != null">
-        temp_company.fax = #{record.fax,jdbcType=VARCHAR},
-      </if>
-      <if test="record.hostUrl != null">
-        temp_company.host_url = #{record.hostUrl,jdbcType=VARCHAR},
-      </if>
-      <if test="record.intro != null">
-        temp_company.intro = #{record.intro,jdbcType=VARCHAR},
-      </if>
-    </set>
-    <if test="_parameter != null">
-      <include refid="Update_By_Example_Where_Clause" />
-    </if>
-  </update>
-  <update id="updateByExample" parameterType="map">
-    update t_company temp_company
-    set temp_company.company_id = #{record.companyId,jdbcType=VARCHAR},
-      temp_company.company_cn_name = #{record.companyCnName,jdbcType=VARCHAR},
-      temp_company.company_alias = #{record.companyAlias,jdbcType=VARCHAR},
-      temp_company.company_en_name = #{record.companyEnName,jdbcType=VARCHAR},
-      temp_company.ceo_id = #{record.ceoId,jdbcType=VARCHAR},
-      temp_company.fax = #{record.fax,jdbcType=VARCHAR},
-      temp_company.host_url = #{record.hostUrl,jdbcType=VARCHAR},
-      temp_company.intro = #{record.intro,jdbcType=VARCHAR}
-    <if test="_parameter != null">
-      <include refid="Update_By_Example_Where_Clause" />
-    </if>
-  </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.glacier.frame.entity.system.Company">
-    update t_company
-    <set>
-      <if test="companyCnName != null">
-        company_cn_name = #{companyCnName,jdbcType=VARCHAR},
-      </if>
-      <if test="companyAlias != null">
-        company_alias = #{companyAlias,jdbcType=VARCHAR},
-      </if>
-      <if test="companyEnName != null">
-        company_en_name = #{companyEnName,jdbcType=VARCHAR},
-      </if>
-      <if test="ceoId != null">
-        ceo_id = #{ceoId,jdbcType=VARCHAR},
-      </if>
-      <if test="fax != null">
-        fax = #{fax,jdbcType=VARCHAR},
-      </if>
-      <if test="hostUrl != null">
-        host_url = #{hostUrl,jdbcType=VARCHAR},
-      </if>
-      <if test="intro != null">
-        intro = #{intro,jdbcType=VARCHAR},
-      </if>
-    </set>
-    where company_id = #{companyId,jdbcType=VARCHAR}
-  </update>
-  <update id="updateByPrimaryKey" parameterType="com.glacier.frame.entity.system.Company">
+  <update id="updateByPrimaryKey" parameterType="com.glacier.frame.entity.system.Company" >
     update t_company
     set company_cn_name = #{companyCnName,jdbcType=VARCHAR},
       company_alias = #{companyAlias,jdbcType=VARCHAR},
