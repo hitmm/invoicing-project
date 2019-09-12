@@ -157,3 +157,5 @@ cinvoicing-module/src/main/java/com/glacier/frame/entity/common/util/transfer/Us
 Oinvoicing-module/src/main/java/com/glacier/frame/entity/system/UserSetting.java,0/2/02e36904749dedbd18f2dc00163c5224db12282e
 
 Oinvoicing-module/src/main/java/com/glacier/frame/dao/system/OperaLogMapper.java,2/4/248e7189d23d9eada2a864a13713e6a851774901
+|
+Linvoicing-module/src/main/java/com/glacier/frame/entity/system/OperaLog.java,4/e/4ee88ef71a1393107fd62c0b0976bbbb03ac815b

@@ -1,9 +1,11 @@
 package com.glacier.frame.web.controller.system;
 
-import java.util.List;
-
-import javax.validation.Valid;
-
+import com.glacier.core.controller.AbstractController;
+import com.glacier.frame.dto.query.system.UserQueryDTO;
+import com.glacier.frame.entity.system.User;
+import com.glacier.frame.service.system.DepService;
+import com.glacier.frame.service.system.UserService;
+import com.glacier.jqueryui.util.JqPager;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -14,12 +16,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.glacier.core.controller.AbstractController;
-import com.glacier.frame.dto.query.system.UserQueryDTO;
-import com.glacier.frame.entity.system.User;
-import com.glacier.frame.service.system.DepService;
-import com.glacier.frame.service.system.UserService;
-import com.glacier.jqueryui.util.JqPager;
+import javax.validation.Valid;
+import java.util.List;
 
 /*** 
  * @ClassName:  UserController
@@ -105,11 +103,18 @@ public class UserController extends AbstractController{
     public Object modifyPsd(String oldPassword, String newPassword) {
         return userService.modifyPsd(oldPassword, newPassword);
     }
-	
+
 	//查询指定部门下的用户信息
 	@RequestMapping(value="/dept.json", method = RequestMethod.POST)
 	@ResponseBody
-	 public Object ListAsDept(String depId) {
-        return userService.ListAsDept(depId);
-    }
+	public Object ListAsDept(String depId) {
+		return userService.ListAsDept(depId);
+	}
+
+	//查询当前用户所属公司的信息
+	@RequestMapping(value="/userDept.json", method = RequestMethod.POST)
+	@ResponseBody
+	public Object ListUserDept(String userId) {
+		return userService.getUserCompany(userId);
+	}
 }

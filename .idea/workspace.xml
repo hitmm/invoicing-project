@@ -7,15 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56247bc4-0c5f-41c7-b9af-6b54aaa88b15" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/2/52a9a6dac9344701da5644dda39f2094d7eecf53" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/2/52a9a6dac9344701da5644dda39f2094d7eecf53" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/a/7affce7c88f9df376d18b2671ce4e123af407429" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/a/7affce7c88f9df376d18b2671ce4e123af407429" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/6/b619527fb1baea13f37c7431e010e6869aa928f6" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/6/b619527fb1baea13f37c7431e010e6869aa928f6" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/invoicing-module/src/main/java/com/glacier/frame/dao/system/CompanyMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/invoicing-module/src/main/java/com/glacier/frame/dao/system/CompanyMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/invoicing-module/src/main/java/com/glacier/frame/entity/system/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/invoicing-module/src/main/java/com/glacier/frame/entity/system/Company.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/invoicing-module/src/main/java/com/glacier/frame/entity/system/CompanyExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/invoicing-module/src/main/java/com/glacier/frame/entity/system/CompanyExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/invoicing-module/src/main/resources/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/invoicing-module/src/main/resources/generatorConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/invoicing-module/src/main/resources/sqlmap/system/CompanyMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/invoicing-module/src/main/resources/sqlmap/system/CompanyMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/invoicing-webapp/src/main/java/com/glacier/frame/web/controller/system/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/invoicing-webapp/src/main/java/com/glacier/frame/web/controller/system/UserController.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -262,7 +258,9 @@
       <workItem from="1568272152031" duration="3985000" />
       <workItem from="1568276167446" duration="1160000" />
       <workItem from="1568277358620" duration="3391000" />
-      <workItem from="1568282258605" duration="220000" />
+      <workItem from="1568282258605" duration="853000" />
+      <workItem from="1568283322691" duration="70000" />
+      <workItem from="1568283435669" duration="648000" />
     </task>
     <task id="LOCAL-00001" summary="add company">
       <created>1567870724119</created>
@@ -292,7 +290,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568272220703</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="add company">
+      <created>1568282685285</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1568282685285</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
