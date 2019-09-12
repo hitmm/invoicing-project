@@ -1,0 +1,5 @@
+
+Ø%squid:RedundantThrowsDeclarationCheckw"yRemove the declaration of thrown exception 'org.apache.shiro.authc.AuthenticationException' which is a runtime exception.(»¸ïÅ˛ˇˇˇˇ
+Nsquid:S1135."2Complete the task associated to this TODO comment.(π˜‘£˙ˇˇˇˇ
+Jsquid:S1135ê"2Complete the task associated to this TODO comment.(éò›£
+Usquid:S1155V">Use isEmpty() to check whether the collection is empty or not.(À‰—Ø

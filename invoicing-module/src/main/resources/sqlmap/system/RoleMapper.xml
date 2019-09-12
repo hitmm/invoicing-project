@@ -1,36 +1,35 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.glacier.frame.dao.system.RoleMapper" >
-  <resultMap id="BaseResultMap" type="com.glacier.frame.entity.system.Role" >
-    <id column="temp_role_role_id" property="roleId" jdbcType="VARCHAR" />
-    <result column="temp_role_role_en_name" property="roleEnName" jdbcType="VARCHAR" />
-    <result column="temp_role_role_cn_name" property="roleCnName" jdbcType="VARCHAR" />
-    <result column="temp_role_builtin" property="builtin" jdbcType="VARCHAR" />
-    <result column="temp_role_remark" property="remark" jdbcType="VARCHAR" />
-    <result column="temp_role_creater" property="creater" jdbcType="VARCHAR" />
-    <result column="temp_role_create_time" property="createTime" jdbcType="TIMESTAMP" />
-    <result column="temp_role_company_id" property="companyId" jdbcType="VARCHAR" />
-    <result column="temp_company_company_cn_name" property="companyCnName" jdbcType="VARCHAR" />
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.glacier.frame.dao.system.RoleMapper">
+  <resultMap id="BaseResultMap" type="com.glacier.frame.entity.system.Role">
+    <id column="temp_role_role_id" jdbcType="VARCHAR" property="roleId" />
+    <result column="temp_role_role_en_name" jdbcType="VARCHAR" property="roleEnName" />
+    <result column="temp_role_role_cn_name" jdbcType="VARCHAR" property="roleCnName" />
+    <result column="temp_role_builtin" jdbcType="VARCHAR" property="builtin" />
+    <result column="temp_role_remark" jdbcType="VARCHAR" property="remark" />
+    <result column="temp_role_creater" jdbcType="VARCHAR" property="creater" />
+    <result column="temp_role_create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="temp_role_company_id" jdbcType="VARCHAR" property="companyId" />
   </resultMap>
-  <sql id="Example_Where_Clause" >
-    <where >
-      <foreach collection="oredCriteria" item="criteria" separator="or" >
-        <if test="criteria.valid" >
-          <trim prefix="(" suffix=")" prefixOverrides="and" >
-            <foreach collection="criteria.criteria" item="criterion" >
-              <choose >
-                <when test="criterion.noValue" >
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
                   and ${criterion.condition}
                 </when>
-                <when test="criterion.singleValue" >
+                <when test="criterion.singleValue">
                   and ${criterion.condition} #{criterion.value}
                 </when>
-                <when test="criterion.betweenValue" >
+                <when test="criterion.betweenValue">
                   and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
                 </when>
-                <when test="criterion.listValue" >
+                <when test="criterion.listValue">
                   and ${criterion.condition}
-                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
                     #{listItem}
                   </foreach>
                 </when>
@@ -41,25 +40,25 @@
       </foreach>
     </where>
   </sql>
-  <sql id="Update_By_Example_Where_Clause" >
-    <where >
-      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
-        <if test="criteria.valid" >
-          <trim prefix="(" suffix=")" prefixOverrides="and" >
-            <foreach collection="criteria.criteria" item="criterion" >
-              <choose >
-                <when test="criterion.noValue" >
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
                   and ${criterion.condition}
                 </when>
-                <when test="criterion.singleValue" >
+                <when test="criterion.singleValue">
                   and ${criterion.condition} #{criterion.value}
                 </when>
-                <when test="criterion.betweenValue" >
+                <when test="criterion.betweenValue">
                   and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
                 </when>
-                <when test="criterion.listValue" >
+                <when test="criterion.listValue">
                   and ${criterion.condition}
-                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
                     #{listItem}
                   </foreach>
                 </when>
@@ -70,50 +69,47 @@
       </foreach>
     </where>
   </sql>
-  <sql id="Base_Column_List" >
+  <sql id="Base_Column_List">
     temp_role.role_id as temp_role_role_id, temp_role.role_en_name as temp_role_role_en_name, 
     temp_role.role_cn_name as temp_role_role_cn_name, temp_role.builtin as temp_role_builtin, 
     temp_role.remark as temp_role_remark, temp_role.creater as temp_role_creater, temp_role.create_time as temp_role_create_time, 
-    temp_role.company_id as temp_role_company_id,
-    temp_company.company_cn_name as temp_company_company_cn_name
+    temp_role.company_id as temp_role_company_id
   </sql>
-  <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.glacier.frame.entity.system.RoleExample" >
+  <select id="selectByExample" parameterType="com.glacier.frame.entity.system.RoleExample" resultMap="BaseResultMap">
     select
-    <if test="distinct" >
+    <if test="distinct">
       distinct
     </if>
     'true' as QUERYID,
     <include refid="Base_Column_List" />
     from t_role temp_role
-    LEFT JOIN t_company temp_company ON temp_company.company_id = temp_role.company_id
-    <if test="_parameter != null" >
+    <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
-    <if test="orderByClause != null" >
+    <if test="orderByClause != null">
       order by ${orderByClause}
     </if>
-    <if test="limitStart != null and limitStart >= 0 and limitEnd != null and limitEnd>=limitStart" >
+    <if test="limitStart != null and limitStart &gt;= 0 and limitEnd != null and limitEnd&gt;=limitStart">
       limit ${limitStart} , ${limitEnd}
     </if>
   </select>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
     from t_role temp_role
-    LEFT JOIN t_company temp_company ON temp_company.company_id = temp_role.company_id
     where temp_role.role_id = #{roleId,jdbcType=VARCHAR}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
     delete from t_role
     where role_id = #{roleId,jdbcType=VARCHAR}
   </delete>
-  <delete id="deleteByExample" parameterType="com.glacier.frame.entity.system.RoleExample" >
+  <delete id="deleteByExample" parameterType="com.glacier.frame.entity.system.RoleExample">
     delete from t_role temp_role
-    <if test="_parameter != null" >
+    <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="com.glacier.frame.entity.system.Role" >
+  <insert id="insert" parameterType="com.glacier.frame.entity.system.Role">
     insert into t_role (role_id, role_en_name, role_cn_name, 
       builtin, remark, creater, 
       create_time, company_id)
@@ -121,100 +117,100 @@
       #{builtin,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, #{creater,jdbcType=VARCHAR}, 
       #{createTime,jdbcType=TIMESTAMP}, #{companyId,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="com.glacier.frame.entity.system.Role" >
+  <insert id="insertSelective" parameterType="com.glacier.frame.entity.system.Role">
     insert into t_role
-    <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="roleId != null" >
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="roleId != null">
         role_id,
       </if>
-      <if test="roleEnName != null" >
+      <if test="roleEnName != null">
         role_en_name,
       </if>
-      <if test="roleCnName != null" >
+      <if test="roleCnName != null">
         role_cn_name,
       </if>
-      <if test="builtin != null" >
+      <if test="builtin != null">
         builtin,
       </if>
-      <if test="remark != null" >
+      <if test="remark != null">
         remark,
       </if>
-      <if test="creater != null" >
+      <if test="creater != null">
         creater,
       </if>
-      <if test="createTime != null" >
+      <if test="createTime != null">
         create_time,
       </if>
-      <if test="companyId != null" >
+      <if test="companyId != null">
         company_id,
       </if>
     </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="roleId != null" >
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="roleId != null">
         #{roleId,jdbcType=VARCHAR},
       </if>
-      <if test="roleEnName != null" >
+      <if test="roleEnName != null">
         #{roleEnName,jdbcType=VARCHAR},
       </if>
-      <if test="roleCnName != null" >
+      <if test="roleCnName != null">
         #{roleCnName,jdbcType=VARCHAR},
       </if>
-      <if test="builtin != null" >
+      <if test="builtin != null">
         #{builtin,jdbcType=VARCHAR},
       </if>
-      <if test="remark != null" >
+      <if test="remark != null">
         #{remark,jdbcType=VARCHAR},
       </if>
-      <if test="creater != null" >
+      <if test="creater != null">
         #{creater,jdbcType=VARCHAR},
       </if>
-      <if test="createTime != null" >
+      <if test="createTime != null">
         #{createTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="companyId != null" >
+      <if test="companyId != null">
         #{companyId,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="com.glacier.frame.entity.system.RoleExample" resultType="java.lang.Integer" >
+  <select id="countByExample" parameterType="com.glacier.frame.entity.system.RoleExample" resultType="java.lang.Integer">
     select count(*) from t_role temp_role
-    <if test="_parameter != null" >
+    <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </select>
-  <update id="updateByExampleSelective" parameterType="map" >
+  <update id="updateByExampleSelective" parameterType="map">
     update t_role temp_role
-    <set >
-      <if test="record.roleId != null" >
+    <set>
+      <if test="record.roleId != null">
         temp_role.role_id = #{record.roleId,jdbcType=VARCHAR},
       </if>
-      <if test="record.roleEnName != null" >
+      <if test="record.roleEnName != null">
         temp_role.role_en_name = #{record.roleEnName,jdbcType=VARCHAR},
       </if>
-      <if test="record.roleCnName != null" >
+      <if test="record.roleCnName != null">
         temp_role.role_cn_name = #{record.roleCnName,jdbcType=VARCHAR},
       </if>
-      <if test="record.builtin != null" >
+      <if test="record.builtin != null">
         temp_role.builtin = #{record.builtin,jdbcType=VARCHAR},
       </if>
-      <if test="record.remark != null" >
+      <if test="record.remark != null">
         temp_role.remark = #{record.remark,jdbcType=VARCHAR},
       </if>
-      <if test="record.creater != null" >
+      <if test="record.creater != null">
         temp_role.creater = #{record.creater,jdbcType=VARCHAR},
       </if>
-      <if test="record.createTime != null" >
+      <if test="record.createTime != null">
         temp_role.create_time = #{record.createTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="record.companyId != null" >
+      <if test="record.companyId != null">
         temp_role.company_id = #{record.companyId,jdbcType=VARCHAR},
       </if>
     </set>
-    <if test="_parameter != null" >
+    <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByExample" parameterType="map" >
+  <update id="updateByExample" parameterType="map">
     update t_role temp_role
     set temp_role.role_id = #{record.roleId,jdbcType=VARCHAR},
       temp_role.role_en_name = #{record.roleEnName,jdbcType=VARCHAR},
@@ -224,38 +220,990 @@
       temp_role.creater = #{record.creater,jdbcType=VARCHAR},
       temp_role.create_time = #{record.createTime,jdbcType=TIMESTAMP},
       temp_role.company_id = #{record.companyId,jdbcType=VARCHAR}
-    <if test="_parameter != null" >
+    <if test="_parameter != null">
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="com.glacier.frame.entity.system.Role" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.glacier.frame.entity.system.Role">
     update t_role
-    <set >
-      <if test="roleEnName != null" >
+    <set>
+      <if test="roleEnName != null">
         role_en_name = #{roleEnName,jdbcType=VARCHAR},
       </if>
-      <if test="roleCnName != null" >
+      <if test="roleCnName != null">
         role_cn_name = #{roleCnName,jdbcType=VARCHAR},
       </if>
-      <if test="builtin != null" >
+      <if test="builtin != null">
         builtin = #{builtin,jdbcType=VARCHAR},
       </if>
-      <if test="remark != null" >
+      <if test="remark != null">
         remark = #{remark,jdbcType=VARCHAR},
       </if>
-      <if test="creater != null" >
+      <if test="creater != null">
         creater = #{creater,jdbcType=VARCHAR},
       </if>
-      <if test="createTime != null" >
+      <if test="createTime != null">
         create_time = #{createTime,jdbcType=TIMESTAMP},
       </if>
-      <if test="companyId != null" >
+      <if test="companyId != null">
         company_id = #{companyId,jdbcType=VARCHAR},
       </if>
     </set>
     where role_id = #{roleId,jdbcType=VARCHAR}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.glacier.frame.entity.system.Role" >
+  <update id="updateByPrimaryKey" parameterType="com.glacier.frame.entity.system.Role">
+    update t_role
+    set role_en_name = #{roleEnName,jdbcType=VARCHAR},
+      role_cn_name = #{roleCnName,jdbcType=VARCHAR},
+      builtin = #{builtin,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      creater = #{creater,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      company_id = #{companyId,jdbcType=VARCHAR}
+    where role_id = #{roleId,jdbcType=VARCHAR}
+  </update>
+  <resultMap id="BaseResultMap" type="com.glacier.frame.entity.system.Role">
+    <id column="temp_role_role_id" jdbcType="VARCHAR" property="roleId" />
+    <result column="temp_role_role_en_name" jdbcType="VARCHAR" property="roleEnName" />
+    <result column="temp_role_role_cn_name" jdbcType="VARCHAR" property="roleCnName" />
+    <result column="temp_role_builtin" jdbcType="VARCHAR" property="builtin" />
+    <result column="temp_role_remark" jdbcType="VARCHAR" property="remark" />
+    <result column="temp_role_creater" jdbcType="VARCHAR" property="creater" />
+    <result column="temp_role_create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="temp_role_company_id" jdbcType="VARCHAR" property="companyId" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    temp_role.role_id as temp_role_role_id, temp_role.role_en_name as temp_role_role_en_name, 
+    temp_role.role_cn_name as temp_role_role_cn_name, temp_role.builtin as temp_role_builtin, 
+    temp_role.remark as temp_role_remark, temp_role.creater as temp_role_creater, temp_role.create_time as temp_role_create_time, 
+    temp_role.company_id as temp_role_company_id
+  </sql>
+  <select id="selectByExample" parameterType="com.glacier.frame.entity.system.RoleExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    'true' as QUERYID,
+    <include refid="Base_Column_List" />
+    from t_role temp_role
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+    <if test="limitStart != null and limitStart &gt;= 0 and limitEnd != null and limitEnd&gt;=limitStart">
+      limit ${limitStart} , ${limitEnd}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_role temp_role
+    where temp_role.role_id = #{roleId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from t_role
+    where role_id = #{roleId,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.glacier.frame.entity.system.RoleExample">
+    delete from t_role temp_role
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.glacier.frame.entity.system.Role">
+    insert into t_role (role_id, role_en_name, role_cn_name, 
+      builtin, remark, creater, 
+      create_time, company_id)
+    values (#{roleId,jdbcType=VARCHAR}, #{roleEnName,jdbcType=VARCHAR}, #{roleCnName,jdbcType=VARCHAR}, 
+      #{builtin,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, #{creater,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{companyId,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.glacier.frame.entity.system.Role">
+    insert into t_role
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="roleId != null">
+        role_id,
+      </if>
+      <if test="roleEnName != null">
+        role_en_name,
+      </if>
+      <if test="roleCnName != null">
+        role_cn_name,
+      </if>
+      <if test="builtin != null">
+        builtin,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+      <if test="creater != null">
+        creater,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="companyId != null">
+        company_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="roleId != null">
+        #{roleId,jdbcType=VARCHAR},
+      </if>
+      <if test="roleEnName != null">
+        #{roleEnName,jdbcType=VARCHAR},
+      </if>
+      <if test="roleCnName != null">
+        #{roleCnName,jdbcType=VARCHAR},
+      </if>
+      <if test="builtin != null">
+        #{builtin,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="creater != null">
+        #{creater,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="companyId != null">
+        #{companyId,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.glacier.frame.entity.system.RoleExample" resultType="java.lang.Long">
+    select count(*) from t_role temp_role
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update t_role temp_role
+    <set>
+      <if test="record.roleId != null">
+        temp_role.role_id = #{record.roleId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.roleEnName != null">
+        temp_role.role_en_name = #{record.roleEnName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.roleCnName != null">
+        temp_role.role_cn_name = #{record.roleCnName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.builtin != null">
+        temp_role.builtin = #{record.builtin,jdbcType=VARCHAR},
+      </if>
+      <if test="record.remark != null">
+        temp_role.remark = #{record.remark,jdbcType=VARCHAR},
+      </if>
+      <if test="record.creater != null">
+        temp_role.creater = #{record.creater,jdbcType=VARCHAR},
+      </if>
+      <if test="record.createTime != null">
+        temp_role.create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.companyId != null">
+        temp_role.company_id = #{record.companyId,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update t_role temp_role
+    set temp_role.role_id = #{record.roleId,jdbcType=VARCHAR},
+      temp_role.role_en_name = #{record.roleEnName,jdbcType=VARCHAR},
+      temp_role.role_cn_name = #{record.roleCnName,jdbcType=VARCHAR},
+      temp_role.builtin = #{record.builtin,jdbcType=VARCHAR},
+      temp_role.remark = #{record.remark,jdbcType=VARCHAR},
+      temp_role.creater = #{record.creater,jdbcType=VARCHAR},
+      temp_role.create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      temp_role.company_id = #{record.companyId,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.glacier.frame.entity.system.Role">
+    update t_role
+    <set>
+      <if test="roleEnName != null">
+        role_en_name = #{roleEnName,jdbcType=VARCHAR},
+      </if>
+      <if test="roleCnName != null">
+        role_cn_name = #{roleCnName,jdbcType=VARCHAR},
+      </if>
+      <if test="builtin != null">
+        builtin = #{builtin,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="creater != null">
+        creater = #{creater,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="companyId != null">
+        company_id = #{companyId,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where role_id = #{roleId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.glacier.frame.entity.system.Role">
+    update t_role
+    set role_en_name = #{roleEnName,jdbcType=VARCHAR},
+      role_cn_name = #{roleCnName,jdbcType=VARCHAR},
+      builtin = #{builtin,jdbcType=VARCHAR},
+      remark = #{remark,jdbcType=VARCHAR},
+      creater = #{creater,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      company_id = #{companyId,jdbcType=VARCHAR}
+    where role_id = #{roleId,jdbcType=VARCHAR}
+  </update>
+  <resultMap id="BaseResultMap" type="com.glacier.frame.entity.system.Role">
+    <result column="temp_role_role_id" jdbcType="VARCHAR" property="roleId" />
+    <result column="temp_role_role_en_name" jdbcType="VARCHAR" property="roleEnName" />
+    <result column="temp_role_role_cn_name" jdbcType="VARCHAR" property="roleCnName" />
+    <result column="temp_role_builtin" jdbcType="VARCHAR" property="builtin" />
+    <result column="temp_role_remark" jdbcType="VARCHAR" property="remark" />
+    <result column="temp_role_creater" jdbcType="VARCHAR" property="creater" />
+    <result column="temp_role_create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="temp_role_company_id" jdbcType="VARCHAR" property="companyId" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    temp_role.role_id as temp_role_role_id, temp_role.role_en_name as temp_role_role_en_name, 
+    temp_role.role_cn_name as temp_role_role_cn_name, temp_role.builtin as temp_role_builtin, 
+    temp_role.remark as temp_role_remark, temp_role.creater as temp_role_creater, temp_role.create_time as temp_role_create_time, 
+    temp_role.company_id as temp_role_company_id
+  </sql>
+  <select id="selectByExample" parameterType="com.glacier.frame.entity.system.RoleExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    'true' as QUERYID,
+    <include refid="Base_Column_List" />
+    from t_role temp_role
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+    <if test="limitStart != null and limitStart &gt;= 0 and limitEnd != null and limitEnd&gt;=limitStart">
+      limit ${limitStart} , ${limitEnd}
+    </if>
+  </select>
+  <delete id="deleteByExample" parameterType="com.glacier.frame.entity.system.RoleExample">
+    delete from t_role temp_role
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.glacier.frame.entity.system.Role">
+    insert into t_role (role_id, role_en_name, role_cn_name, 
+      builtin, remark, creater, 
+      create_time, company_id)
+    values (#{roleId,jdbcType=VARCHAR}, #{roleEnName,jdbcType=VARCHAR}, #{roleCnName,jdbcType=VARCHAR}, 
+      #{builtin,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, #{creater,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{companyId,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.glacier.frame.entity.system.Role">
+    insert into t_role
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="roleId != null">
+        role_id,
+      </if>
+      <if test="roleEnName != null">
+        role_en_name,
+      </if>
+      <if test="roleCnName != null">
+        role_cn_name,
+      </if>
+      <if test="builtin != null">
+        builtin,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+      <if test="creater != null">
+        creater,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="companyId != null">
+        company_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="roleId != null">
+        #{roleId,jdbcType=VARCHAR},
+      </if>
+      <if test="roleEnName != null">
+        #{roleEnName,jdbcType=VARCHAR},
+      </if>
+      <if test="roleCnName != null">
+        #{roleCnName,jdbcType=VARCHAR},
+      </if>
+      <if test="builtin != null">
+        #{builtin,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="creater != null">
+        #{creater,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="companyId != null">
+        #{companyId,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.glacier.frame.entity.system.RoleExample" resultType="java.lang.Long">
+    select count(*) from t_role temp_role
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update t_role temp_role
+    <set>
+      <if test="record.roleId != null">
+        temp_role.role_id = #{record.roleId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.roleEnName != null">
+        temp_role.role_en_name = #{record.roleEnName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.roleCnName != null">
+        temp_role.role_cn_name = #{record.roleCnName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.builtin != null">
+        temp_role.builtin = #{record.builtin,jdbcType=VARCHAR},
+      </if>
+      <if test="record.remark != null">
+        temp_role.remark = #{record.remark,jdbcType=VARCHAR},
+      </if>
+      <if test="record.creater != null">
+        temp_role.creater = #{record.creater,jdbcType=VARCHAR},
+      </if>
+      <if test="record.createTime != null">
+        temp_role.create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.companyId != null">
+        temp_role.company_id = #{record.companyId,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update t_role temp_role
+    set temp_role.role_id = #{record.roleId,jdbcType=VARCHAR},
+      temp_role.role_en_name = #{record.roleEnName,jdbcType=VARCHAR},
+      temp_role.role_cn_name = #{record.roleCnName,jdbcType=VARCHAR},
+      temp_role.builtin = #{record.builtin,jdbcType=VARCHAR},
+      temp_role.remark = #{record.remark,jdbcType=VARCHAR},
+      temp_role.creater = #{record.creater,jdbcType=VARCHAR},
+      temp_role.create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      temp_role.company_id = #{record.companyId,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <resultMap id="BaseResultMap" type="com.glacier.frame.entity.system.Role">
+    <result column="temp_role_role_id" jdbcType="VARCHAR" property="roleId" />
+    <result column="temp_role_role_en_name" jdbcType="VARCHAR" property="roleEnName" />
+    <result column="temp_role_role_cn_name" jdbcType="VARCHAR" property="roleCnName" />
+    <result column="temp_role_builtin" jdbcType="VARCHAR" property="builtin" />
+    <result column="temp_role_remark" jdbcType="VARCHAR" property="remark" />
+    <result column="temp_role_creater" jdbcType="VARCHAR" property="creater" />
+    <result column="temp_role_create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="temp_role_company_id" jdbcType="VARCHAR" property="companyId" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    temp_role.role_id as temp_role_role_id, temp_role.role_en_name as temp_role_role_en_name, 
+    temp_role.role_cn_name as temp_role_role_cn_name, temp_role.builtin as temp_role_builtin, 
+    temp_role.remark as temp_role_remark, temp_role.creater as temp_role_creater, temp_role.create_time as temp_role_create_time, 
+    temp_role.company_id as temp_role_company_id
+  </sql>
+  <select id="selectByExample" parameterType="com.glacier.frame.entity.system.RoleExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    'true' as QUERYID,
+    <include refid="Base_Column_List" />
+    from t_role temp_role
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+    <if test="limitStart != null and limitStart &gt;= 0 and limitEnd != null and limitEnd&gt;=limitStart">
+      limit ${limitStart} , ${limitEnd}
+    </if>
+  </select>
+  <delete id="deleteByExample" parameterType="com.glacier.frame.entity.system.RoleExample">
+    delete from t_role temp_role
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.glacier.frame.entity.system.Role">
+    insert into t_role (role_id, role_en_name, role_cn_name, 
+      builtin, remark, creater, 
+      create_time, company_id)
+    values (#{roleId,jdbcType=VARCHAR}, #{roleEnName,jdbcType=VARCHAR}, #{roleCnName,jdbcType=VARCHAR}, 
+      #{builtin,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, #{creater,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{companyId,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.glacier.frame.entity.system.Role">
+    insert into t_role
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="roleId != null">
+        role_id,
+      </if>
+      <if test="roleEnName != null">
+        role_en_name,
+      </if>
+      <if test="roleCnName != null">
+        role_cn_name,
+      </if>
+      <if test="builtin != null">
+        builtin,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+      <if test="creater != null">
+        creater,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="companyId != null">
+        company_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="roleId != null">
+        #{roleId,jdbcType=VARCHAR},
+      </if>
+      <if test="roleEnName != null">
+        #{roleEnName,jdbcType=VARCHAR},
+      </if>
+      <if test="roleCnName != null">
+        #{roleCnName,jdbcType=VARCHAR},
+      </if>
+      <if test="builtin != null">
+        #{builtin,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="creater != null">
+        #{creater,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="companyId != null">
+        #{companyId,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.glacier.frame.entity.system.RoleExample" resultType="java.lang.Long">
+    select count(*) from t_role temp_role
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update t_role temp_role
+    <set>
+      <if test="record.roleId != null">
+        temp_role.role_id = #{record.roleId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.roleEnName != null">
+        temp_role.role_en_name = #{record.roleEnName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.roleCnName != null">
+        temp_role.role_cn_name = #{record.roleCnName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.builtin != null">
+        temp_role.builtin = #{record.builtin,jdbcType=VARCHAR},
+      </if>
+      <if test="record.remark != null">
+        temp_role.remark = #{record.remark,jdbcType=VARCHAR},
+      </if>
+      <if test="record.creater != null">
+        temp_role.creater = #{record.creater,jdbcType=VARCHAR},
+      </if>
+      <if test="record.createTime != null">
+        temp_role.create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.companyId != null">
+        temp_role.company_id = #{record.companyId,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update t_role temp_role
+    set temp_role.role_id = #{record.roleId,jdbcType=VARCHAR},
+      temp_role.role_en_name = #{record.roleEnName,jdbcType=VARCHAR},
+      temp_role.role_cn_name = #{record.roleCnName,jdbcType=VARCHAR},
+      temp_role.builtin = #{record.builtin,jdbcType=VARCHAR},
+      temp_role.remark = #{record.remark,jdbcType=VARCHAR},
+      temp_role.creater = #{record.creater,jdbcType=VARCHAR},
+      temp_role.create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      temp_role.company_id = #{record.companyId,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <resultMap id="BaseResultMap" type="com.glacier.frame.entity.system.Role">
+    <id column="temp_role_role_id" jdbcType="VARCHAR" property="roleId" />
+    <result column="temp_role_role_en_name" jdbcType="VARCHAR" property="roleEnName" />
+    <result column="temp_role_role_cn_name" jdbcType="VARCHAR" property="roleCnName" />
+    <result column="temp_role_builtin" jdbcType="VARCHAR" property="builtin" />
+    <result column="temp_role_remark" jdbcType="VARCHAR" property="remark" />
+    <result column="temp_role_creater" jdbcType="VARCHAR" property="creater" />
+    <result column="temp_role_create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="temp_role_company_id" jdbcType="VARCHAR" property="companyId" />
+    <result column="temp_company_company_cn_name" jdbcType="VARCHAR" property="companyCnName" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    temp_role.role_id as temp_role_role_id, temp_role.role_en_name as temp_role_role_en_name, 
+    temp_role.role_cn_name as temp_role_role_cn_name, temp_role.builtin as temp_role_builtin, 
+    temp_role.remark as temp_role_remark, temp_role.creater as temp_role_creater, temp_role.create_time as temp_role_create_time, 
+    temp_role.company_id as temp_role_company_id,
+    temp_company.company_cn_name as temp_company_company_cn_name
+  </sql>
+  <select id="selectByExample" parameterType="com.glacier.frame.entity.system.RoleExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    'true' as QUERYID,
+    <include refid="Base_Column_List" />
+    from t_role temp_role
+    LEFT JOIN t_company temp_company ON temp_company.company_id = temp_role.company_id
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+    <if test="limitStart != null and limitStart &gt;= 0 and limitEnd != null and limitEnd&gt;=limitStart">
+      limit ${limitStart} , ${limitEnd}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_role temp_role
+    LEFT JOIN t_company temp_company ON temp_company.company_id = temp_role.company_id
+    where temp_role.role_id = #{roleId,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from t_role
+    where role_id = #{roleId,jdbcType=VARCHAR}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.glacier.frame.entity.system.RoleExample">
+    delete from t_role temp_role
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.glacier.frame.entity.system.Role">
+    insert into t_role (role_id, role_en_name, role_cn_name, 
+      builtin, remark, creater, 
+      create_time, company_id)
+    values (#{roleId,jdbcType=VARCHAR}, #{roleEnName,jdbcType=VARCHAR}, #{roleCnName,jdbcType=VARCHAR}, 
+      #{builtin,jdbcType=VARCHAR}, #{remark,jdbcType=VARCHAR}, #{creater,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{companyId,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.glacier.frame.entity.system.Role">
+    insert into t_role
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="roleId != null">
+        role_id,
+      </if>
+      <if test="roleEnName != null">
+        role_en_name,
+      </if>
+      <if test="roleCnName != null">
+        role_cn_name,
+      </if>
+      <if test="builtin != null">
+        builtin,
+      </if>
+      <if test="remark != null">
+        remark,
+      </if>
+      <if test="creater != null">
+        creater,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="companyId != null">
+        company_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="roleId != null">
+        #{roleId,jdbcType=VARCHAR},
+      </if>
+      <if test="roleEnName != null">
+        #{roleEnName,jdbcType=VARCHAR},
+      </if>
+      <if test="roleCnName != null">
+        #{roleCnName,jdbcType=VARCHAR},
+      </if>
+      <if test="builtin != null">
+        #{builtin,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="creater != null">
+        #{creater,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="companyId != null">
+        #{companyId,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.glacier.frame.entity.system.RoleExample" resultType="java.lang.Integer">
+    select count(*) from t_role temp_role
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update t_role temp_role
+    <set>
+      <if test="record.roleId != null">
+        temp_role.role_id = #{record.roleId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.roleEnName != null">
+        temp_role.role_en_name = #{record.roleEnName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.roleCnName != null">
+        temp_role.role_cn_name = #{record.roleCnName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.builtin != null">
+        temp_role.builtin = #{record.builtin,jdbcType=VARCHAR},
+      </if>
+      <if test="record.remark != null">
+        temp_role.remark = #{record.remark,jdbcType=VARCHAR},
+      </if>
+      <if test="record.creater != null">
+        temp_role.creater = #{record.creater,jdbcType=VARCHAR},
+      </if>
+      <if test="record.createTime != null">
+        temp_role.create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.companyId != null">
+        temp_role.company_id = #{record.companyId,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update t_role temp_role
+    set temp_role.role_id = #{record.roleId,jdbcType=VARCHAR},
+      temp_role.role_en_name = #{record.roleEnName,jdbcType=VARCHAR},
+      temp_role.role_cn_name = #{record.roleCnName,jdbcType=VARCHAR},
+      temp_role.builtin = #{record.builtin,jdbcType=VARCHAR},
+      temp_role.remark = #{record.remark,jdbcType=VARCHAR},
+      temp_role.creater = #{record.creater,jdbcType=VARCHAR},
+      temp_role.create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      temp_role.company_id = #{record.companyId,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.glacier.frame.entity.system.Role">
+    update t_role
+    <set>
+      <if test="roleEnName != null">
+        role_en_name = #{roleEnName,jdbcType=VARCHAR},
+      </if>
+      <if test="roleCnName != null">
+        role_cn_name = #{roleCnName,jdbcType=VARCHAR},
+      </if>
+      <if test="builtin != null">
+        builtin = #{builtin,jdbcType=VARCHAR},
+      </if>
+      <if test="remark != null">
+        remark = #{remark,jdbcType=VARCHAR},
+      </if>
+      <if test="creater != null">
+        creater = #{creater,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="companyId != null">
+        company_id = #{companyId,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where role_id = #{roleId,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.glacier.frame.entity.system.Role">
     update t_role
     set role_en_name = #{roleEnName,jdbcType=VARCHAR},
       role_cn_name = #{roleCnName,jdbcType=VARCHAR},

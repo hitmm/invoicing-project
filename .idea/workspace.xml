@@ -7,92 +7,77 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56247bc4-0c5f-41c7-b9af-6b54aaa88b15" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/2/0232f226b4beaa1d0a1e75518e6b9637ecceb6a2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/2/029adc4b018af3df309ab7a56006678f033739cb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/2/02d19e2307d38de8bad583dab008729b0870d07b" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/4/04181ea39b09cc8842109677cfcc8deeb343424c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/a/0a9b95975a87021df9675a62a039b8c9b34fd757" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/f/0f10d1966e10cbc068a533e2ba872233c0d73f43" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/4/14992d92d60afc6ae0c7cf3e1bdedc27104dd842" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/7/1709ab8ad09813210d16971078da58471b473495" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/7/17270b2e19b58e96dfce6aa6ffdfee81a9f60a33" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/d/1d289ecead76c26401825a89a020d20d534d387e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/1/21bbf11fdd0a0cd6ca3ec07ee2e494202072934e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/2/22eb9495396e4b895ebd1fda83c38713c8849341" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/2/22fcd27fb8befaad1565d99c83a15ca81add99b3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/3/23d8d3958645a5915ff6c6860e698ce0c4308fa5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/4/249380a113df0503d64fe99b2ded062a48591e33" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/4/24a1a307bb45f10b0588d57b645302b264491fdb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/5/25d82a18bd11c25d79330ea24d14162d992db1b3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/6/2634863d05b933516b4b29369571d07dd65be385" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/b/2be5b6651b00d856b4342305e044827afded99fd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/3/33038b1f097cd406fe00291b81d61c3b239844b7" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/4/3463a49b26339be48444030f87701023ce039fac" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/7/37a0dc4d90751e92488100f108fcecd61573c17e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/9/39a5639ef90e7500a14247f86d0b4d59dfa5360a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/4/442292b8a7efeabbe4cc176709b833b1792140ec" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/c/4c3c90e9705262279f478eaade6358df2a1f43c2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/f/4f3b88ab289a0420025c695edaa8fff45a6df8d8" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/5/55aa20a4089f2ab6893588766b904f6c218f5677" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/0/606d13aae1040db762f81c897adf00adee5acf8a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/4/64e9e23519ba534c61501811c0b7da68464d05d1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/6/669b3480b46f595819ca36828dbb94875a8e180d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/8/6844ecfff7b8a0703afd527a9cf69eba2a9d493d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/d/6d2a919a79d48c9e5853d9d4557380fb195066d6" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/e/6e6bdb7f3a2febe35c02062443e5f658a84092c5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/1/71b07d2d46d663ab66187028358d087794de8335" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/a/7affce7c88f9df376d18b2671ce4e123af407429" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/e/7eb1ee8d57d3c2b938554f494e4ad765824ddbd7" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/0/80195ae37eac8e77fca84a83652841c090b88f74" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/0/808603a51bf676fee45825dd691c6d67746629f5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/3/83fe79c9d261afa63508cb3985f685ea68ddac03" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/4/8415f06379402cc38a20cc9f09a0c86dcb411f41" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/e/8ef5fdeba0d102df6e7012d45d56bee7faa4a86e" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/0/90082087b3c8b52efb9fbce6e8c53620e3b09caf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/3/938f524b5be9411782fcc663eb42a8b22a6dd4dc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/8/98a11a8979779901263eb0e0cc1415cbaa3622bb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/d/9d169674110ffdf1b125c261ba167ec5640c10f8" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/1/b1710fbe165dc30317530e162e1c28cfe00b1ce1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/3/b3c32b20b148d2bbaf0fc1ca0957ca2c5d722a72" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/4/b4dd78b16560107b102e378aaba0349c4f20ee35" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/6/b619527fb1baea13f37c7431e010e6869aa928f6" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/8/b8f94946f56e8cc0e39f46c2245f930670c0c811" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/9/b930a3c6ec7bbb1e1618457daa4f73893c413efe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/d/bd6fa295d57a1daf54b634fceab0c7dd761c9d04" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/8/c8828ec5e334ed813f4e2952078ddabdf340c0df" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/5/e51ae7e2f63aa33b8548152c892f7d047b00263d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/7/f78ad2eb20fa5774b0399143aca9d0573df6655c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/7/f7efdbe8a11870ed8d4a13833d1de1d7c9c84649" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/8/f8eb7924e7e5c67abd5f1bc46a1bc5a107348f31" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/invoicing-module/src/main/java/com/glacier/frame/dao/system/RoleMapper.java.10" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/invoicing-module/src/main/java/com/glacier/frame/dao/system/RoleMapper.java.11" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/invoicing-webapp/src/main/resources/libs/jackson-dataformat-xml-2.9.9.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/invoicing-webapp/src/main/resources/libs/jackson-module-jaxb-annotations-2.9.9.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/invoicing-webapp/src/main/resources/libs/kaptcha-2.3.2.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/invoicing-webapp/src/main/resources/libs/spring-asm-3.1.4.RELEASE.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/6/063b1dc935727d6b186d683b6b6e1fc87c2c36cd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/f/0fc0db3874239248801664bc5bc14dcbb51b8c35" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/6/16ae6792cc8f42a8a49d0754537f35acb19d9dc5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/b/1b1b4a0451de09ecb064f7393f9414024f314f72" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/c/1cc600a910dd0a0b77c5007b05682d65c737e562" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/d/1d08102970a02c2ac2843f44c3e6f798c7b9ae40" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/4/242d7dced0dbe4f7fe2a257a9d485cd1c68b8509" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/4/249ace591006abf6d4f1ba8785d4365542cc26f0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/8/4873c53a93fe639614405c78acb4ddf1cd8c8208" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/2/62896c4d67bada122ead8ed54ec0ac95322caa6e" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/b/6bd60b5b622746546c3096e5ea13e2a650dec0a1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/6/76a3dd61b38f7296861cb19adede19dc92aae1c5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/0/80ffead580ef7b2630edc5e4eb58e1f2fc1677db" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/a/3/a39171403072873f2500a180d97a892df4071a17" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/d/bd88d6ddb799cbb1dcbb1d8d8180fa6d7cfaa78c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/7/c78c241a689abd54d07a6cf69963b05f32e91313" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/e/5/e5319b546ef245761a77cedfe34ea58053f7ce9f" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/invoicing_webapp_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/invoicing_webapp_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/kaptcha_2_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/kaptcha_2_3.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/4/24df3cfe8cf5ea474bb9d231d78f53267afc4552" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/4/24df3cfe8cf5ea474bb9d231d78f53267afc4552" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/f/3f70204542cc3cc2bb5b04c15712d0e67fd70e61" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/f/3f70204542cc3cc2bb5b04c15712d0e67fd70e61" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/2/52a9a6dac9344701da5644dda39f2094d7eecf53" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/2/52a9a6dac9344701da5644dda39f2094d7eecf53" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/a/5ac84551c599465d3cb28251a1c2918daafcbdc6" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/a/5ac84551c599465d3cb28251a1c2918daafcbdc6" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/c/5c62473b35b4ca521b56f70295f94a854d94e4fb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/c/5c62473b35b4ca521b56f70295f94a854d94e4fb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/2/02d19e2307d38de8bad583dab008729b0870d07b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/f/0f10d1966e10cbc068a533e2ba872233c0d73f43" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/f/0f10d1966e10cbc068a533e2ba872233c0d73f43" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/2/22eb9495396e4b895ebd1fda83c38713c8849341" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/2/22fcd27fb8befaad1565d99c83a15ca81add99b3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/3/23d8d3958645a5915ff6c6860e698ce0c4308fa5" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/3/23d8d3958645a5915ff6c6860e698ce0c4308fa5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/5/25d82a18bd11c25d79330ea24d14162d992db1b3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/2/b/2be5b6651b00d856b4342305e044827afded99fd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/3/9/39a5639ef90e7500a14247f86d0b4d59dfa5360a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/4/c/4c3c90e9705262279f478eaade6358df2a1f43c2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/5/55aa20a4089f2ab6893588766b904f6c218f5677" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/8/6844ecfff7b8a0703afd527a9cf69eba2a9d493d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/d/6d2a919a79d48c9e5853d9d4557380fb195066d6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/6/e/6e6bdb7f3a2febe35c02062443e5f658a84092c5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/1/71b07d2d46d663ab66187028358d087794de8335" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/0/80195ae37eac8e77fca84a83652841c090b88f74" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/0/80195ae37eac8e77fca84a83652841c090b88f74" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/3/83fe79c9d261afa63508cb3985f685ea68ddac03" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/f/8f59a9f90bf5cc6962b268c1ca2135c13761dcba" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/f/8f59a9f90bf5cc6962b268c1ca2135c13761dcba" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/0/90082087b3c8b52efb9fbce6e8c53620e3b09caf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/4/b4dd78b16560107b102e378aaba0349c4f20ee35" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/4/b4dd78b16560107b102e378aaba0349c4f20ee35" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/8/b8f94946f56e8cc0e39f46c2245f930670c0c811" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/b/9/b930a3c6ec7bbb1e1618457daa4f73893c413efe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/c/6/c6a582e9b5ecaa7f8579984074c290106ec231b0" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/invoicing-module/invoicing-module.iml" beforeDir="false" afterPath="$PROJECT_DIR$/invoicing-module/invoicing-module.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/invoicing-module/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/invoicing-module/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/invoicing-module/src/main/java/com/glacier/frame/entity/system/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/invoicing-module/src/main/java/com/glacier/frame/entity/system/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/invoicing-module/src/main/java/com/glacier/frame/entity/system/RoleExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/invoicing-module/src/main/java/com/glacier/frame/entity/system/RoleExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/invoicing-module/src/main/java/com/glacier/frame/entity/system/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/invoicing-module/src/main/java/com/glacier/frame/entity/system/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/invoicing-module/src/main/java/com/glacier/frame/dao/system/CompanyMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/invoicing-module/src/main/java/com/glacier/frame/dao/system/CompanyMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/invoicing-module/src/main/java/com/glacier/frame/dao/system/CompanyMapper.java.1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/invoicing-module/src/main/java/com/glacier/frame/dao/system/CompanyMapper.java.2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/invoicing-module/src/main/java/com/glacier/frame/dao/system/CompanyMapper.java.3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/invoicing-module/src/main/java/com/glacier/frame/dao/system/CompanyMapper.java.4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/invoicing-module/src/main/java/com/glacier/frame/dao/system/CompanyMapper.java.5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/invoicing-module/src/main/java/com/glacier/frame/dao/system/CompanyMapper.java.6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/invoicing-module/src/main/java/com/glacier/frame/dao/system/CompanyMapper.java.7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/invoicing-module/src/main/java/com/glacier/frame/dao/system/CompanyMapper.java.8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/invoicing-module/src/main/java/com/glacier/frame/dao/system/RoleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/invoicing-module/src/main/java/com/glacier/frame/dao/system/RoleMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/invoicing-module/src/main/java/com/glacier/frame/dao/system/RoleMapper.java.1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/invoicing-module/src/main/java/com/glacier/frame/dao/system/RoleMapper.java.10" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/invoicing-module/src/main/java/com/glacier/frame/dao/system/RoleMapper.java.11" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/invoicing-module/src/main/java/com/glacier/frame/dao/system/RoleMapper.java.2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/invoicing-module/src/main/java/com/glacier/frame/dao/system/RoleMapper.java.3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/invoicing-module/src/main/java/com/glacier/frame/dao/system/RoleMapper.java.4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/invoicing-module/src/main/java/com/glacier/frame/dao/system/RoleMapper.java.5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/invoicing-module/src/main/java/com/glacier/frame/dao/system/RoleMapper.java.6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/invoicing-module/src/main/java/com/glacier/frame/dao/system/RoleMapper.java.7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/invoicing-module/src/main/java/com/glacier/frame/dao/system/RoleMapper.java.8" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/invoicing-module/src/main/java/com/glacier/frame/dao/system/RoleMapper.java.9" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/invoicing-module/src/main/resources/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/invoicing-module/src/main/resources/generatorConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/invoicing-module/src/main/resources/sqlmap/system/CompanyMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/invoicing-module/src/main/resources/sqlmap/system/CompanyMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/invoicing-module/src/main/resources/sqlmap/system/RoleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/invoicing-module/src/main/resources/sqlmap/system/RoleMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/invoicing-project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/invoicing-project.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/invoicing-webapp/invoicing-webapp.iml" beforeDir="false" afterPath="$PROJECT_DIR$/invoicing-webapp/invoicing-webapp.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/invoicing-webapp/src/main/webapp/WEB-INF/views/system_mgr/role_mgr/role.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/invoicing-webapp/src/main/webapp/WEB-INF/views/system_mgr/role_mgr/role.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/invoicing-webapp/src/main/webapp/WEB-INF/views/system_mgr/role_mgr/role_detail.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/invoicing-webapp/src/main/webapp/WEB-INF/views/system_mgr/role_mgr/role_detail.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -135,7 +120,7 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="userSettingsFile" value="$PROJECT_DIR$/../../maven/setting_self.xml" />
+        <option name="userSettingsFile" value="$PROJECT_DIR$/../../maven/setting_58.xml" />
       </MavenGeneralSettings>
     </option>
     <option name="importingSettings">
@@ -169,13 +154,13 @@
     <property name="aspect.path.notification.shown" value="true" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="go.import.settings.migrated" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/invoicing-webapp/src/main/resources/libs" />
+    <property name="last_opened_file_path" value="$USER_HOME$/IdeaProjects/mybatis" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -321,7 +306,13 @@
       <workItem from="1567854586810" duration="12096000" />
       <workItem from="1567906812877" duration="12027000" />
       <workItem from="1567939221853" duration="1358000" />
-      <workItem from="1567944296510" duration="5429000" />
+      <workItem from="1567944296510" duration="5696000" />
+      <workItem from="1567995058981" duration="697000" />
+      <workItem from="1568267968633" duration="1339000" />
+      <workItem from="1568269335267" duration="1155000" />
+      <workItem from="1568270534410" duration="485000" />
+      <workItem from="1568271179362" duration="858000" />
+      <workItem from="1568272152031" duration="29000" />
     </task>
     <task id="LOCAL-00001" summary="add company">
       <created>1567870724119</created>
@@ -337,7 +328,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567870904895</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="add company">
+      <created>1567954517628</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1567954517628</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
