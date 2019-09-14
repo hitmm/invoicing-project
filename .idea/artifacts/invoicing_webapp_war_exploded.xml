@@ -93,6 +93,7 @@
           <element id="library" level="project" name="Maven: org.apache.poi:poi:3.10-FINAL" />
           <element id="library" level="project" name="Maven: mysql:mysql-connector-java:5.1.44" />
           <element id="library" level="project" name="Maven: org.projectlombok:lombok:1.18.6" />
+          <element id="library" level="project" name="kaptcha-2.3" />
         </element>
       </element>
       <element id="directory" name="META-INF">

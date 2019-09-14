@@ -1,5 +1,7 @@
 package com.glacier.frame.entity.system;
 
+import java.util.Date;
+
 public class Company {
     private String companyId;
 
@@ -16,6 +18,8 @@ public class Company {
     private String hostUrl;
 
     private String intro;
+
+    private Date createTime;
 
     public String getCompanyId() {
         return companyId;
@@ -79,5 +83,13 @@ public class Company {
 
     public void setIntro(String intro) {
         this.intro = intro == null ? null : intro.trim();
+    }
+
+    public Date getCreateTime() {
+        return createTime;
+    }
+
+    public void setCreateTime(Date createTime) {
+        this.createTime = createTime;
     }
 }

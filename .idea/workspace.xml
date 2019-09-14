@@ -7,11 +7,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="56247bc4-0c5f-41c7-b9af-6b54aaa88b15" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/invoicing-module/src/main/java/com/glacier/frame/dto/query/system/CompanyQueryDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/invoicing-module/src/main/java/com/glacier/frame/service/system/CompanyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/invoicing_webapp_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/invoicing_webapp_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/4/14992d92d60afc6ae0c7cf3e1bdedc27104dd842" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/1/4/14992d92d60afc6ae0c7cf3e1bdedc27104dd842" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/2/52a9a6dac9344701da5644dda39f2094d7eecf53" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/2/52a9a6dac9344701da5644dda39f2094d7eecf53" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/a/7affce7c88f9df376d18b2671ce4e123af407429" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/7/a/7affce7c88f9df376d18b2671ce4e123af407429" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/0/808603a51bf676fee45825dd691c6d67746629f5" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/8/0/808603a51bf676fee45825dd691c6d67746629f5" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/invoicing-webapp/src/main/java/com/glacier/frame/web/controller/system/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/invoicing-webapp/src/main/java/com/glacier/frame/web/controller/system/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/invoicing-module/src/main/java/com/glacier/frame/dao/system/CompanyMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/invoicing-module/src/main/java/com/glacier/frame/dao/system/CompanyMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/invoicing-module/src/main/java/com/glacier/frame/entity/system/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/invoicing-module/src/main/java/com/glacier/frame/entity/system/Company.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/invoicing-module/src/main/java/com/glacier/frame/entity/system/CompanyExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/invoicing-module/src/main/java/com/glacier/frame/entity/system/CompanyExample.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/invoicing-module/src/main/resources/generatorConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/invoicing-module/src/main/resources/generatorConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/invoicing-module/src/main/resources/sqlmap/system/CompanyMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/invoicing-module/src/main/resources/sqlmap/system/CompanyMapper.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -100,10 +110,10 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../test" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -126,7 +136,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.RandomGUID">
+    <configuration name="RandomGUID" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.glacier.basic.util.RandomGUID" />
+      <module name="invoicing-core" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.glacier.basic.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Tomcat" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8" ALTERNATIVE_JRE_ENABLED="false">
       <option name="BROWSER_ID" value="98ca6316-2f89-46d9-a9e5-fa9e2b0625b3" />
       <option name="UPDATING_POLICY" value="restart-server" />
@@ -233,6 +256,11 @@
         </option>
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.RandomGUID" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -260,7 +288,9 @@
       <workItem from="1568277358620" duration="3391000" />
       <workItem from="1568282258605" duration="853000" />
       <workItem from="1568283322691" duration="70000" />
-      <workItem from="1568283435669" duration="648000" />
+      <workItem from="1568283435669" duration="675000" />
+      <workItem from="1568365267873" duration="4779000" />
+      <workItem from="1568457954628" duration="3302000" />
     </task>
     <task id="LOCAL-00001" summary="add company">
       <created>1567870724119</created>
@@ -297,7 +327,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568282685285</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add company">
+      <created>1568284101213</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1568284101214</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -10,6 +10,7 @@
     <result column="temp_company_fax" property="fax" jdbcType="VARCHAR" />
     <result column="temp_company_host_url" property="hostUrl" jdbcType="VARCHAR" />
     <result column="temp_company_intro" property="intro" jdbcType="VARCHAR" />
+    <result column="temp_company_create_time" property="createTime" jdbcType="TIMESTAMP" />
   </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
@@ -73,7 +74,8 @@
     temp_company.company_id as temp_company_company_id, temp_company.company_cn_name as temp_company_company_cn_name, 
     temp_company.company_alias as temp_company_company_alias, temp_company.company_en_name as temp_company_company_en_name, 
     temp_company.ceo_id as temp_company_ceo_id, temp_company.fax as temp_company_fax, 
-    temp_company.host_url as temp_company_host_url, temp_company.intro as temp_company_intro
+    temp_company.host_url as temp_company_host_url, temp_company.intro as temp_company_intro, 
+    temp_company.create_time as temp_company_create_time
   </sql>
   <select id="selectByExample" resultMap="BaseResultMap" parameterType="com.glacier.frame.entity.system.CompanyExample" >
     select
@@ -112,10 +114,12 @@
   <insert id="insert" parameterType="com.glacier.frame.entity.system.Company" >
     insert into t_company (company_id, company_cn_name, company_alias, 
       company_en_name, ceo_id, fax, 
-      host_url, intro)
+      host_url, intro, create_time
+      )
     values (#{companyId,jdbcType=VARCHAR}, #{companyCnName,jdbcType=VARCHAR}, #{companyAlias,jdbcType=VARCHAR}, 
       #{companyEnName,jdbcType=VARCHAR}, #{ceoId,jdbcType=VARCHAR}, #{fax,jdbcType=VARCHAR}, 
-      #{hostUrl,jdbcType=VARCHAR}, #{intro,jdbcType=VARCHAR})
+      #{hostUrl,jdbcType=VARCHAR}, #{intro,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}
+      )
   </insert>
   <insert id="insertSelective" parameterType="com.glacier.frame.entity.system.Company" >
     insert into t_company
@@ -144,6 +148,9 @@
       <if test="intro != null" >
         intro,
       </if>
+      <if test="createTime != null" >
+        create_time,
+      </if>
     </trim>
     <trim prefix="values (" suffix=")" suffixOverrides="," >
       <if test="companyId != null" >
@@ -169,6 +176,9 @@
       </if>
       <if test="intro != null" >
         #{intro,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null" >
+        #{createTime,jdbcType=TIMESTAMP},
       </if>
     </trim>
   </insert>
@@ -205,6 +215,9 @@
       <if test="record.intro != null" >
         temp_company.intro = #{record.intro,jdbcType=VARCHAR},
       </if>
+      <if test="record.createTime != null" >
+        temp_company.create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
     </set>
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
@@ -219,7 +232,8 @@
       temp_company.ceo_id = #{record.ceoId,jdbcType=VARCHAR},
       temp_company.fax = #{record.fax,jdbcType=VARCHAR},
       temp_company.host_url = #{record.hostUrl,jdbcType=VARCHAR},
-      temp_company.intro = #{record.intro,jdbcType=VARCHAR}
+      temp_company.intro = #{record.intro,jdbcType=VARCHAR},
+      temp_company.create_time = #{record.createTime,jdbcType=TIMESTAMP}
     <if test="_parameter != null" >
       <include refid="Update_By_Example_Where_Clause" />
     </if>
@@ -248,6 +262,9 @@
       <if test="intro != null" >
         intro = #{intro,jdbcType=VARCHAR},
       </if>
+      <if test="createTime != null" >
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
     </set>
     where company_id = #{companyId,jdbcType=VARCHAR}
   </update>
@@ -259,7 +276,8 @@
       ceo_id = #{ceoId,jdbcType=VARCHAR},
       fax = #{fax,jdbcType=VARCHAR},
       host_url = #{hostUrl,jdbcType=VARCHAR},
-      intro = #{intro,jdbcType=VARCHAR}
+      intro = #{intro,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP}
     where company_id = #{companyId,jdbcType=VARCHAR}
   </update>
 </mapper>

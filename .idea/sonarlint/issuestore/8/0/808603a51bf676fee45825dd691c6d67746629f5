@@ -1,18 +1,18 @@
 
-vsquid:S2293¸"YReplace the type specification in this constructor call with the diamond operator ("<>").(†üşÿÿÿÿ
-vsquid:S2293á"YReplace the type specification in this constructor call with the diamond operator ("<>").(é³ÇÊùÿÿÿÿ
-ƒsquid:S4165¹"kRemove this useless assignment; "retrunDepList" already holds the assigned value along all execution paths.(Áìñä
-squid:S1488U"cImmediately return this expression instead of assigning it to the temporary variable "pricipalDep".(ù‘ˆ¿øÿÿÿÿ
-Nsquid:S11357"2Complete the task associated to this TODO comment.(®è»¾úÿÿÿÿ
+dsquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(„ÓÙßşÿÿÿÿ
 Nsquid:S1135N"2Complete the task associated to this TODO comment.(ª¡Š’ûÿÿÿÿ
 Isquid:S1135["2Complete the task associated to this TODO comment.(¤îÔ
-Nsquid:S1135g"2Complete the task associated to this TODO comment.(ŞÜ›Èûÿÿÿÿ
 Jsquid:S1135„"2Complete the task associated to this TODO comment.(¬Ó´ÿ
-Jsquid:S1135®"2Complete the task associated to this TODO comment.(÷£¿Ş
-Jsquid:S1135Ú"2Complete the task associated to this TODO comment.(…¦É
+fsquid:S00100S"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“Õºö
+vsquid:S2293á"YReplace the type specification in this constructor call with the diamond operator ("<>").(é³ÇÊùÿÿÿÿ
+ƒsquid:S4165¹"kRemove this useless assignment; "retrunDepList" already holds the assigned value along all execution paths.(Áìñä
+Nsquid:S11357"2Complete the task associated to this TODO comment.(®è»¾úÿÿÿÿ
+Nsquid:S1135g"2Complete the task associated to this TODO comment.(ŞÜ›Èûÿÿÿÿ
 Jsquid:S1135ı"2Complete the task associated to this TODO comment.(ªÑ¯Ç
 Jsquid:S1135“"2Complete the task associated to this TODO comment.(‰Ì…ì
-fsquid:S00100S"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(“Õºö
-dsquid:S00112"FDefine and throw a dedicated exception instead of using a generic one.(„ÓÙßşÿÿÿÿ
 [squid:S1155ë">Use isEmpty() to check whether the collection is empty or not.(ÌàÓ•ùÿÿÿÿ
+Jsquid:S1135®"2Complete the task associated to this TODO comment.(÷£¿Ş
+Jsquid:S1135Ú"2Complete the task associated to this TODO comment.(…¦É
+squid:S1488U"cImmediately return this expression instead of assigning it to the temporary variable "pricipalDep".(ù‘ˆ¿øÿÿÿÿ
+vsquid:S2293¸"YReplace the type specification in this constructor call with the diamond operator ("<>").(†üşÿÿÿÿ
 [squid:S1155ˆ">Use isEmpty() to check whether the collection is empty or not.(–Ø¹÷üÿÿÿÿ

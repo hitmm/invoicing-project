@@ -1,34 +1,34 @@
 
-jsquid:CommentedOutCodeLineÒ"<This block of commented-out lines of code should be removed.(Çµí‘8Õ¢å£Ò-
-Vsquid:S1135Š"2Complete the task associated to this TODO comment.( ÖÛşÿÿÿÿ8Õ¢å£Ò-
 Psquid:S1135b"2Complete the task associated to this TODO comment.(á½±8é™“§Ò-
-Csquid:S2629"$Invoke method(s) only conditionally.(ÃšÑ…8é™“§Ò-
-qsquid:S00117§"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„Ÿ«®8Õ¢å£Ò-
-bsquid:S1155">Use isEmpty() to check whether the collection is empty or not.(“‹ÓÎşÿÿÿÿ8Õ¢å£Ò-
-Nsquid:S1066ç"/Merge this if statement with the enclosing one.(Ë”³8Õ¢å£Ò-
-vsquid:S00117£"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›Ûéşÿÿÿÿ8Õ¢å£Ò-
-Psquid:S1135p"2Complete the task associated to this TODO comment.(íéô 8é™“§Ò-
-Qsquid:S1135 "2Complete the task associated to this TODO comment.(£è°½8é™“§Ò-
 Qsquid:S1135Ô"2Complete the task associated to this TODO comment.(÷£¿Ş8Õ¢å£Ò-
-Usquid:S11354"2Complete the task associated to this TODO comment.(®è»¾úÿÿÿÿ8é™“§Ò-
-}squid:S2293Ö"YReplace the type specification in this constructor call with the diamond operator ("<>").(™ºöºıÿÿÿÿ8é™“§Ò-
-‡squid:S1488w"dImmediately return this expression instead of assigning it to the temporary variable "pricipalUser".(ìèùçûÿÿÿÿ8é™“§Ò-
-Vsquid:S1135¬"2Complete the task associated to this TODO comment.(ŞÜ›Èûÿÿÿÿ8é™“§Ò-
-Qsquid:S1135É"2Complete the task associated to this TODO comment.(óÏ˜²8é™“§Ò-
-Qsquid:S1135á"2Complete the task associated to this TODO comment.(é†8é™“§Ò-
+qsquid:S00117§"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(„Ÿ«®8Õ¢å£Ò-
+Csquid:S2629"$Invoke method(s) only conditionally.(ÃšÑ…8é™“§Ò-
+jsquid:CommentedOutCodeLineÒ"<This block of commented-out lines of code should be removed.(Çµí‘8Õ¢å£Ò-
+squid:S1192¶"yDefine a constant instead of duplicating this literal " æ•°æ®è¡Œ<font style='color:red;font-weight: bold;'>ã€" 3 times.(€ÄïÅüÿÿÿÿ8Õ¢å£Ò-
 ]squid:S1155Ô">Use isEmpty() to check whether the collection is empty or not.(¦ÍªË8é™“§Ò-
-vsquid:S3776’"RRefactor this method to reduce its Cognitive Complexity from 35 to the 15 allowed.(¼ª‘”øÿÿÿÿ8Õ¢å£Ò-
-msquid:S00100u"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ª½ÉÖ8é™“§Ò-
-fsquid:S00112¡"FDefine and throw a dedicated exception instead of using a generic one.(Æ¶µÛ8Õ¢å£Ò-
-qsquid:S00117«"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÃıÑó8Õ¢å£Ò-
-wsquid:S2293Ğ"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ö‹è)8é™“§Ò-
+nsquid:S00100Ï"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Œôı8é™“§Ò-
 Usquid:S1135}"2Complete the task associated to this TODO comment.(îÊ—³øÿÿÿÿ8é™“§Ò-
 `squid:CallToDeprecatedMethod½"0Remove this use of "getHours"; it is deprecated.(ä‰À8Õ¢å£Ò-
+}squid:S2293Ö"YReplace the type specification in this constructor call with the diamond operator ("<>").(™ºöºıÿÿÿÿ8é™“§Ò-
+qsquid:S00117—"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬®µØ8Õ¢å£Ò-
+qsquid:S00117«"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÃıÑó8Õ¢å£Ò-
+;squid:S1643²"Use a StringBuilder instead.(Öíğ¨8Õ¢å£Ò-
+‡squid:S1488w"dImmediately return this expression instead of assigning it to the temporary variable "pricipalUser".(ìèùçûÿÿÿÿ8é™“§Ò-
+Nsquid:S1066ç"/Merge this if statement with the enclosing one.(Ë”³8Õ¢å£Ò-
+Qsquid:S1135 "2Complete the task associated to this TODO comment.(£è°½8é™“§Ò-
+Vsquid:S1135Š"2Complete the task associated to this TODO comment.( ÖÛşÿÿÿÿ8Õ¢å£Ò-
+wsquid:S2293Ğ"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ö‹è)8é™“§Ò-
+Qsquid:S1135É"2Complete the task associated to this TODO comment.(óÏ˜²8é™“§Ò-
+fsquid:S00112¡"FDefine and throw a dedicated exception instead of using a generic one.(Æ¶µÛ8Õ¢å£Ò-
+Vsquid:S1135¬"2Complete the task associated to this TODO comment.(ŞÜ›Èûÿÿÿÿ8é™“§Ò-
+Qsquid:S1135á"2Complete the task associated to this TODO comment.(é†8é™“§Ò-
+vsquid:S00117™"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚çó©ÿÿÿÿÿ8Õ¢å£Ò-
+bsquid:S1155">Use isEmpty() to check whether the collection is empty or not.(“‹ÓÎşÿÿÿÿ8Õ¢å£Ò-
+vsquid:S00117£"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(›Ûéşÿÿÿÿ8Õ¢å£Ò-
+Qsquid:S1135–"2Complete the task associated to this TODO comment.(¬Ó´ÿ8Õ¢å£Ò-
+Usquid:S11354"2Complete the task associated to this TODO comment.(®è»¾úÿÿÿÿ8é™“§Ò-
+msquid:S00100u"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ª½ÉÖ8é™“§Ò-
+vsquid:S3776’"RRefactor this method to reduce its Cognitive Complexity from 35 to the 15 allowed.(¼ª‘”øÿÿÿÿ8Õ¢å£Ò-
 W
 squid:S106¾"9Replace this use of System.out or System.err by a logger.(ƒùµ²8Õ¢å£Ò-
-nsquid:S00100Ï"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Œôı8é™“§Ò-
-Qsquid:S1135–"2Complete the task associated to this TODO comment.(¬Ó´ÿ8Õ¢å£Ò-
-qsquid:S00117—"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬®µØ8Õ¢å£Ò-
-;squid:S1643²"Use a StringBuilder instead.(Öíğ¨8Õ¢å£Ò-
-squid:S1192¶"yDefine a constant instead of duplicating this literal " æ•°æ®è¡Œ<font style='color:red;font-weight: bold;'>ã€" 3 times.(€ÄïÅüÿÿÿÿ8Õ¢å£Ò-
-vsquid:S00117™"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‚çó©ÿÿÿÿÿ8Õ¢å£Ò-
+Psquid:S1135p"2Complete the task associated to this TODO comment.(íéô 8é™“§Ò-
