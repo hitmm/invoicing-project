@@ -21,7 +21,7 @@
 		<!-- jackson begin -->
 		<jackson.core.asl.version>1.9.8</jackson.core.asl.version>
 		<jackson.mapper.asl.version>1.9.8</jackson.mapper.asl.version>
-		<jackson.version>2.9.9</jackson.version>
+		<jackson.version>2.12.6.1</jackson.version>
 		<!-- jackson end -->
 		<!-- avax.mail begin -->
 		<javax.mail.version>1.4.7</javax.mail.version>
@@ -389,7 +389,7 @@
 			<dependency>
 				<groupId>com.fasterxml.jackson.core</groupId>
 				<artifactId>jackson-databind</artifactId>
-				<version>2.9.9</version>
+				<version>2.12.6.1</version>
 			</dependency>
 			<dependency>
 				<groupId>com.alibaba</groupId>
